@@ -14,6 +14,7 @@ import 'package:ioe/screens/components/notification.dart';
 final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
+  //test comment
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await FirebaseAPI().initNotification();
