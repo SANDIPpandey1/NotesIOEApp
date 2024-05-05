@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
         '/college_notes': (context) => CollegeNotes(),
         '/news_results': (context) => NewsResults(),
         '/Articles': (context) => Articles(),
-        '/notification': (context) => NotificationPage(),
+        //'/notification': (context) => NotificationPage(),
       },
     );
   }
