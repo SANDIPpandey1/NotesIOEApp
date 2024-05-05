@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe/Subject_Pages/Applied%20Mechanics%20Dynamics.dart';
 import 'package:ioe/Subject_Pages/Artificial%20Intelligence.dart';
 import 'package:ioe/Subject_Pages/Civil%20Engineering%20Materials.dart';
 import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
@@ -10,7 +11,9 @@ import 'package:ioe/Subject_Pages/Digital%20Signal%20Analysis%20and%20Processing
 import 'package:ioe/Subject_Pages/Distributed%20System.dart';
 import 'package:ioe/Subject_Pages/Embedded%20System.dart';
 import 'package:ioe/Subject_Pages/Energy%20Environment%20and%20society.dart';
+import 'package:ioe/Subject_Pages/Engineering%20Geology%20I.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Professional%20Practice.dart';
+import 'package:ioe/Subject_Pages/Fluid%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Information%20System.dart';
 import 'package:ioe/Subject_Pages/InstrimentationII.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
@@ -23,6 +26,8 @@ import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
 import 'package:ioe/Subject_Pages/Project%20Management.dart';
 import 'package:ioe/Subject_Pages/Simulation%20and%20Modeling.dart';
 import 'package:ioe/Subject_Pages/Software%20Engineering.dart';
+import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
+import 'package:ioe/Subject_Pages/Surveying%20I.dart';
 import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/Subject_Pages/appliedmath.dart';
 import 'package:ioe/Subject_Pages/basicelectrical.dart';
@@ -428,6 +433,36 @@ class InsideCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => CivilEngineeringMaterial()),
+        );
+        break;
+      case 'Applied Mechanics Dynamics':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => AppliedMechanicsDynamics()),
+        );
+        break;
+      case 'Engineering Geology I':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => EngineeringGeologyI()),
+        );
+        break;
+      case 'Strength of Materials':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => StrengthOfMaterials()),
+        );
+        break;
+      case 'Surveying I':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SurveyingI()),
+        );
+        break;
+      case 'Fluid Mechanics':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => FluidMechanics()),
         );
         break;
       // Add cases for other subjects and their corresponding pages
