@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
 import 'package:ioe/Subject_Pages/engineeringdrawing1.dart';
-import 'package:ioe/Subject_Pages/basicelectrical.dart';
+
 import 'package:ioe/Subject_Pages/cprogramming.dart';
-import 'package:ioe/Subject_Pages/engineeringphysics.dart';
+
 import 'package:ioe/Subject_Pages/engineerinmath1.dart';
 import 'package:ioe/Subject_Pages/thermodymanics.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
-import 'package:ioe/Subject_Pages/applied_mechanics.dart';
+
 import 'package:ioe/screens/otherpageappbar.dart';
 
 class BCESem1 extends StatelessWidget {
