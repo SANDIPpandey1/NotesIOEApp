@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1075312743224",
+    "firebase_url": "https://notesioelogin-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "notesioelogin",
+    "storage_bucket": "notesioelogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075312743224:android:6b756a40c6b3167aaba7cd",
+        "android_client_info": {
+          "package_name": "com.example.ioe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075312743224-g6cl11g9pi08bi5u9v6fa611u4q1k2ut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB2lvB_ETBN2UmMLgBAgVakKWF2zEuQfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075312743224-g6cl11g9pi08bi5u9v6fa611u4q1k2ut.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075312743224-et6j5rkjfticgmokbcr5u4hkm1nj4hel.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ioe"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

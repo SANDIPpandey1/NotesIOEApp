@@ -1,7 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:ioe/constants.dart';
 
 class SideBarNavigation extends StatelessWidget {
   const SideBarNavigation({super.key});
+
+  void signUserOut() {
+    FirebaseAuth.instance.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +19,7 @@ class SideBarNavigation extends StatelessWidget {
             height: 200,
             child: DrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 134, 231, 238),
+                color: kblue,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,18 +64,11 @@ class SideBarNavigation extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.support),
-            title: Text('Support Us'),
-            onTap: () {
-              // Navigate to Support Us page
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.contact_phone),
+            leading: Icon(
+              Icons.contact_phone,
+            ),
             title: Text('Contact Us'),
-            onTap: () {
-              // Navigate to Contact Us page
-            },
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.star),
@@ -86,10 +85,24 @@ class SideBarNavigation extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(Icons.report),
+            title: Text('Report An Issue'),
+            onTap: () {
+              // Navigate to Updates page
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.person),
+            title: Text('About Us'),
+            onTap: () {
+              // Navigate to Updates page
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.logout),
             title: Text('Logout'),
             onTap: () {
-              // Implement Logout functionality
+              signUserOut();
             },
           ),
         ],

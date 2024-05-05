@@ -1,33 +1,21 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ioe/constants.dart';
+import 'package:ioe/main.dart';
 import 'package:ioe/model/product_model.dart';
+import 'package:ioe/screens/home_screen.dart';
 
 class HomeContent extends StatelessWidget {
+  final user = FirebaseAuth.instance.currentUser!;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: ListView(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              IconButton(
-                onPressed: () {
-                  // Open the drawer when IconButton is pressed
-                  Scaffold.of(context).openDrawer();
-                },
-                icon: Icon(
-                  Icons.dashboard_rounded,
-                  color: kblue,
-                ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search_rounded,
-                ),
-              ),
-            ],
+          AppBarTop(
+            pageTitle: 'Notes IOE',
+            // Pass the page title here
           ),
           const SizedBox(
             height: 20,
@@ -40,11 +28,11 @@ class HomeContent extends StatelessWidget {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
-                          "Hi User",
+                          "Hi ${user.email}",
                           style: TextStyle(
-                            fontSize: 28,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -69,7 +57,7 @@ class HomeContent extends StatelessWidget {
                           height: 70,
                           width: 70,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            //color: Colors.white,
                             borderRadius: BorderRadius.circular(15.0),
                           ),
                           child: Image.asset(
@@ -83,49 +71,62 @@ class HomeContent extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: kpink,
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: const Text(
-                        "Top",
-                        style: TextStyle(fontSize: 18.0, color: Colors.white),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 10),
-                      child: const Text(
-                        "Design",
-                        style: TextStyle(
-                          fontSize: 18.0,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 10),
+                        child: const Text(
+                          "IOE Entrance Materials",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            //color: Colors.white,
+                          ),
                         ),
+                        decoration: BoxDecoration(
+                            //color: kblue,
+                            border: Border.all(color: kblue),
+                            borderRadius: BorderRadius.circular(10)),
                       ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 10),
-                      child: const Text(
-                        "Marketing",
-                        style: TextStyle(
-                          fontSize: 18.0,
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 10),
+                        child: const Text(
+                          "License Preparation Syllabus",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
                         ),
+                        decoration: BoxDecoration(
+                            //color: kblue,
+                            border: Border.all(color: kblue),
+                            borderRadius: BorderRadius.circular(10)),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: Container(
-                        height: 20,
-                        child: Image.asset("assets/icon/sort.png"),
+                      SizedBox(
+                        width: 15,
                       ),
-                    ),
-                  ],
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 10),
+                        child: const Text(
+                          "CEE Materials",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            //color: kblue,
+                            border: Border.all(color: kblue),
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
@@ -140,41 +141,61 @@ class HomeContent extends StatelessWidget {
                   ),
                   itemBuilder: (context, index) => Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                      padding: const EdgeInsets.all(10.0),
-                      decoration: BoxDecoration(
-                        color: products[index].color,
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            products[index].image,
-                            height: 100,
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            products[index].title,
-                            style: const TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
+                    child: GestureDetector(
+                      onTap: () {
+                        if (products[index].title == "IOE Notes") {
+                          navigatorKey.currentState?.pushNamed('/ioe_notes');
+                        } else if (products[index].title == "IOE Syllabus") {
+                          navigatorKey.currentState?.pushNamed('/ioe_syllabus');
+                        } else if (products[index].title == "IOE Questions") {
+                          navigatorKey.currentState
+                              ?.pushNamed('/ioe_questions');
+                        } else if (products[index].title == "+2 Notes") {
+                          navigatorKey.currentState
+                              ?.pushNamed('/college_notes');
+                        } else if (products[index].title == "News/Results") {
+                          navigatorKey.currentState?.pushNamed('/news_results');
+                        } else if (products[index].title ==
+                            "Helpful Articles") {
+                          navigatorKey.currentState?.pushNamed('/Articles');
+                        }
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(10.0),
+                        decoration: BoxDecoration(
+                          color: products[index].color,
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              products[index].image,
+                              height: 100,
                             ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            products[index].courses,
-                            style: const TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                            const SizedBox(
+                              height: 10,
                             ),
-                          ),
-                        ],
+                            Text(
+                              products[index].title,
+                              style: const TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              products[index].courses,
+                              style: const TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
