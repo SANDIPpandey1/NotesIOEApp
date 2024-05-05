@@ -5,20 +5,18 @@ import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem3.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem4.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem5.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
+import 'package:ioe/screens/otherpageappbar.dart';
 
 class BCENotes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'BCE Notes',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
+      appBar: OtherPageAppBar(
+        heading: 'BCE Notes',
+        rightIcon: Icons.home,
+        onRightIconTap: () {
+          Navigator.popUntil(context, ModalRoute.withName('/'));
+        },
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
