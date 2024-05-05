@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ioe/Subject_Pages/appliedmath.dart';
 import 'package:ioe/Subject_Pages/digitallogic.dart';
 import 'package:ioe/Subject_Pages/electriccircuittheory.dart';
 import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
