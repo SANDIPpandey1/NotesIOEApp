@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioe/Subject_Pages/Artificial%20Intelligence.dart';
+import 'package:ioe/Subject_Pages/Civil%20Engineering%20Materials.dart';
 import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
 import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
 import 'package:ioe/Subject_Pages/Computer%20networt%20and%20Security.dart';
@@ -421,6 +422,12 @@ class InsideCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => SimulationandModeling()),
+        );
+        break;
+      case 'Civil Engineering Materials':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CivilEngineeringMaterial()),
         );
         break;
       // Add cases for other subjects and their corresponding pages
