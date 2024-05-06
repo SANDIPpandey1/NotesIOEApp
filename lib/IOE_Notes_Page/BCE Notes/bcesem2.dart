@@ -7,12 +7,12 @@ import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCTSem2 extends StatelessWidget {
+class BCESem2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 2 Notes',
+        heading: 'BCE Semester 2 Notes',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
