@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem1.dart';
+import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem2.dart';
+import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem3.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem1.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem2.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem3.dart';
@@ -29,7 +32,7 @@ class BCENotes extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTSem1()),
+                  MaterialPageRoute(builder: (context) => BCESem1()),
                 );
               },
             ),
@@ -40,7 +43,7 @@ class BCENotes extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTSem2()),
+                  MaterialPageRoute(builder: (context) => BCESem2()),
                 );
               },
             ),
@@ -51,7 +54,7 @@ class BCENotes extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTSem3()),
+                  MaterialPageRoute(builder: (context) => BCESem3()),
                 );
               },
             ),
