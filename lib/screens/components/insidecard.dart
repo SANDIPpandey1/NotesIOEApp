@@ -29,6 +29,7 @@ import 'package:ioe/Subject_Pages/Simulation%20and%20Modeling.dart';
 import 'package:ioe/Subject_Pages/Software%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
 import 'package:ioe/Subject_Pages/Surveying%20I.dart';
+import 'package:ioe/Subject_Pages/Surveying%20II.dart';
 import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/Subject_Pages/appliedmath.dart';
 import 'package:ioe/Subject_Pages/basicelectrical.dart';
@@ -471,6 +472,12 @@ class InsideCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => Hydraulics()),
+        );
+        break;
+      case 'Surveying II':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SurveyingII()),
         );
         break;
       // Add cases for other subjects and their corresponding pages
