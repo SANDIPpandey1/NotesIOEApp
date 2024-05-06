@@ -14,6 +14,7 @@ import 'package:ioe/Subject_Pages/Energy%20Environment%20and%20society.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Geology%20I.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Professional%20Practice.dart';
 import 'package:ioe/Subject_Pages/Fluid%20Mechanics.dart';
+import 'package:ioe/Subject_Pages/Hydraulics.dart';
 import 'package:ioe/Subject_Pages/Information%20System.dart';
 import 'package:ioe/Subject_Pages/InstrimentationII.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
@@ -450,7 +451,7 @@ class InsideCard extends StatelessWidget {
       case 'Strength of Materials':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => StrengthOfMaterial()),
+          MaterialPageRoute(builder: (context) => StrengthOfMaterials()),
         );
         break;
       case 'Surveying I':
@@ -463,6 +464,12 @@ class InsideCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => FluidMechanics()),
+        );
+        break;
+      case 'Hydraulics':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Hydraulics()),
         );
         break;
       // Add cases for other subjects and their corresponding pages
