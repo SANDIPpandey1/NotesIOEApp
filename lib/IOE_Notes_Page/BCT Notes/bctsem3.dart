@@ -14,7 +14,7 @@ class BCTSem3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 1 Notes',
+        heading: 'BCT Semester 3 Notes',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
