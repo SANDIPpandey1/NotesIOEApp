@@ -72,7 +72,8 @@ class BCESem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => StrengthOfMaterial()),
+                  MaterialPageRoute(
+                      builder: (context) => StrengthOfMaterials()),
                 );
               },
             ),
