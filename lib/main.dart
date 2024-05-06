@@ -9,14 +9,10 @@ import 'package:ioe/screens/Articles.dart';
 import 'package:ioe/screens/News_Results.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:ioe/LoginPages/authpage.dart';
-import 'package:ioe/screens/components/notification.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
-  //test comment
-  //test
-  //test
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await FirebaseAPI().initNotification();

@@ -4,7 +4,7 @@ import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
-class AppliedMechanics extends StatelessWidget {
+class StrengthOfMaterial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -12,7 +12,7 @@ class AppliedMechanics extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Applied Mechanics',
+            'Strength Of Material',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           centerTitle: true,

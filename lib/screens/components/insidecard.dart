@@ -450,7 +450,7 @@ class InsideCard extends StatelessWidget {
       case 'Strength of Materials':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => StrengthOfMaterials()),
+          MaterialPageRoute(builder: (context) => StrengthOfMaterial()),
         );
         break;
       case 'Surveying I':
