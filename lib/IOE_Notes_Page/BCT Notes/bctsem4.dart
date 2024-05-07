@@ -31,7 +31,9 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ElectricalMachine()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ElectricalMachine(initialTabIndex: 0)),
                 );
               },
             ),
@@ -42,7 +44,9 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InstrumentationI()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          InstrumentationI(initialTabIndex: 0)),
                 );
               },
             ),
@@ -53,7 +57,8 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DSA()),
+                  MaterialPageRoute(
+                      builder: (context) => DSA(initialTabIndex: 0)),
                 );
               },
             ),
@@ -64,7 +69,9 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AppliedMathematics()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          AppliedMathematics(initialTabIndex: 0)),
                 );
               },
             ),
@@ -75,7 +82,9 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DiscreteStructure()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          DiscreteStructure(initialTabIndex: 0)),
                 );
               },
             ),
@@ -86,7 +95,8 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Microprocessor()),
+                  MaterialPageRoute(
+                      builder: (context) => Microprocessor(initialTabIndex: 0)),
                 );
               },
             ),
@@ -97,7 +107,9 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NumericalMethod()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          NumericalMethod(initialTabIndex: 0)),
                 );
               },
             ),

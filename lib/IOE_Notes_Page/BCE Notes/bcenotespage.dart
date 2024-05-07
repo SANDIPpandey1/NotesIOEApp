@@ -3,8 +3,6 @@ import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem1.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem2.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem3.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem1.dart';
-import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem2.dart';
-import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem3.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem4.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem5.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';

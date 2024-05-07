@@ -29,7 +29,8 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Thermodynamics()),
+                  MaterialPageRoute(
+                      builder: (context) => Thermodynamics(initialTabIndex: 0)),
                 );
               },
             ),
@@ -40,7 +41,9 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BasicElectronics()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          BasicElectronics(initialTabIndex: 0)),
                 );
               },
             ),
@@ -52,7 +55,8 @@ class BCTSem2 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Engineeringchemistry()),
+                      builder: (context) =>
+                          Engineeringchemistry(initialTabIndex: 0)),
                 );
               },
             ),
@@ -63,7 +67,9 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AppliedMechanics()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          AppliedMechanics(initialTabIndex: 0)),
                 );
               },
             ),
@@ -74,7 +80,9 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath2()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          EngineeringMath2(initialTabIndex: 0)),
                 );
               },
             ),

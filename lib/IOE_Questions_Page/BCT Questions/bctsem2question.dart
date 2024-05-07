@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
-import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
-import 'package:ioe/Subject_Pages/Data%20Communication.dart';
-import 'package:ioe/Subject_Pages/InstrimentationII.dart';
-import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
-import 'package:ioe/Subject_Pages/Software%20Engineering.dart';
+import 'package:ioe/Subject_Pages/basicelectronics.dart';
+import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
+import 'package:ioe/Subject_Pages/engineeringmath2.dart';
+import 'package:ioe/Subject_Pages/thermodymanics.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
+import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCTSem5 extends StatelessWidget {
+class BCTQuestionsSem2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 5 Notes',
+        heading: 'BCT Semester 2 Questions',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -25,79 +24,65 @@ class BCTSem5 extends StatelessWidget {
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Probability and Statistics',
-              icon: Icons.arrow_forward,
+              text: 'Thermodynamics',
+              icon: Icons.sunny,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          ProbabilityAndStatistics(initialTabIndex: 0)),
+                      builder: (context) => Thermodynamics(initialTabIndex: 2)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Computer Organization Architecture',
-              icon: Icons.arrow_forward,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ComputerOrginzationAndArchitecture(
-                          initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Software Engineering',
-              icon: Icons.arrow_forward,
+              text: 'Basic Electronics Engineering',
+              icon: Icons.electrical_services,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          SoftwareEngineering(initialTabIndex: 0)),
+                          BasicElectronics(initialTabIndex: 2)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Computer Graphics',
-              icon: Icons.arrow_forward,
+              text: 'Enginering Chemistry',
+              icon: Icons.health_and_safety,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          ComputerGraphics(initialTabIndex: 0)),
+                          Engineeringchemistry(initialTabIndex: 2)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Instrumentation II',
-              icon: Icons.arrow_forward,
+              text: 'Engineering Drawing II',
+              icon: Icons.draw,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          InstrumentationII(initialTabIndex: 0)),
+                          AppliedMechanics(initialTabIndex: 2)), //needed page
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Data Communication',
-              icon: Icons.arrow_forward,
+              text: 'Engineerring Math II',
+              icon: Icons.calculate,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          DataCommunication(initialTabIndex: 0)),
+                          EngineeringMath2(initialTabIndex: 2)),
                 );
               },
             ),
