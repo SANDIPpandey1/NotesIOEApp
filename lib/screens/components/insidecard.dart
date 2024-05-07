@@ -13,6 +13,7 @@ import 'package:ioe/Subject_Pages/Embedded%20System.dart';
 import 'package:ioe/Subject_Pages/Energy%20Environment%20and%20society.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Geology%20I.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Geology%20II.dart';
+import 'package:ioe/Subject_Pages/Engineering%20Hydrology.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Professional%20Practice.dart';
 import 'package:ioe/Subject_Pages/Fluid%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Hydraulics.dart';
@@ -32,6 +33,9 @@ import 'package:ioe/Subject_Pages/Soil%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
 import 'package:ioe/Subject_Pages/Surveying%20I.dart';
 import 'package:ioe/Subject_Pages/Surveying%20II.dart';
+import 'package:ioe/Subject_Pages/Theory%20of%20Structures%20I.dart';
+import 'package:ioe/Subject_Pages/Theory%20of%20Structures%20II.dart';
+import 'package:ioe/Subject_Pages/Water%20Supply%20Engineering.dart';
 import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/Subject_Pages/appliedmath.dart';
 import 'package:ioe/Subject_Pages/basicelectrical.dart';
@@ -556,6 +560,27 @@ class InsideCard extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) => EngineeringGeologyII(initialTabIndex: 1)),
+        );
+        break;
+      case 'Theory of Structures II':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => TheoryofStructuresII(initialTabIndex: 1)),
+        );
+        break;
+      case 'Water Supply Engineering':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => WaterSupplyEngineering(initialTabIndex: 1)),
+        );
+        break;
+      case 'Engineering Hydrology':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => EngineeringHydrology(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
