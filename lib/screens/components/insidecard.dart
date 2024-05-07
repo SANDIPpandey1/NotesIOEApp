@@ -33,7 +33,6 @@ import 'package:ioe/Subject_Pages/Soil%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
 import 'package:ioe/Subject_Pages/Surveying%20I.dart';
 import 'package:ioe/Subject_Pages/Surveying%20II.dart';
-import 'package:ioe/Subject_Pages/Theory%20of%20Structures%20I.dart';
 import 'package:ioe/Subject_Pages/Theory%20of%20Structures%20II.dart';
 import 'package:ioe/Subject_Pages/Water%20Supply%20Engineering.dart';
 import 'package:ioe/Subject_Pages/applied_mechanics.dart';
