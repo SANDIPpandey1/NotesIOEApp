@@ -105,7 +105,7 @@ class PDFViewPage extends StatelessWidget {
                     await file.copy(newFile.path);
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: Text('PDF downloaded to Downloads folder.'),
+                        content: Text('PDF Downloaded to Downloads Section.'),
                       ),
                     );
                   },
