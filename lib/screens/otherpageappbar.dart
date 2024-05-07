@@ -19,7 +19,7 @@ class OtherPageAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         heading,
         style: TextStyle(
-          color: Colors.white,
+          color: Colors.black,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -31,7 +31,7 @@ class OtherPageAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Icon(
           Icons.arrow_back,
           size: 25,
-          color: Colors.white,
+          color: Colors.black,
         ),
       ),
       actions: [
@@ -42,12 +42,12 @@ class OtherPageAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Icon(
               rightIcon,
               size: 25,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
         ),
       ],
-      backgroundColor: kblue,
+      //backgroundColor: kblue,
       toolbarHeight: 65,
     );
   }

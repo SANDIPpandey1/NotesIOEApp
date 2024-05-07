@@ -19,7 +19,7 @@ class IOENotes extends StatelessWidget {
         },
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

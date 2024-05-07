@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem1.dart';
-import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem2.dart';
-import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem3.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem4.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem5.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem6.dart';
@@ -10,7 +7,6 @@ import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem8.dart';
 import 'package:ioe/IOE_Questions_Page/BCT%20Questions/bctsem1question.dart';
 import 'package:ioe/IOE_Questions_Page/BCT%20Questions/bctsem2question.dart';
 import 'package:ioe/IOE_Questions_Page/BCT%20Questions/bctsem3question.dart';
-
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
@@ -28,7 +24,7 @@ class BCTQuestions extends StatelessWidget {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+          padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
