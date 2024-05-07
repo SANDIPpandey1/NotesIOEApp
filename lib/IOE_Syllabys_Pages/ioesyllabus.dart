@@ -25,7 +25,7 @@ class IOESyllabus extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
