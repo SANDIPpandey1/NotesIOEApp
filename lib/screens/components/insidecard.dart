@@ -12,6 +12,7 @@ import 'package:ioe/Subject_Pages/Distributed%20System.dart';
 import 'package:ioe/Subject_Pages/Embedded%20System.dart';
 import 'package:ioe/Subject_Pages/Energy%20Environment%20and%20society.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Geology%20I.dart';
+import 'package:ioe/Subject_Pages/Engineering%20Geology%20II.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Professional%20Practice.dart';
 import 'package:ioe/Subject_Pages/Fluid%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Hydraulics.dart';
@@ -27,6 +28,7 @@ import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
 import 'package:ioe/Subject_Pages/Project%20Management.dart';
 import 'package:ioe/Subject_Pages/Simulation%20and%20Modeling.dart';
 import 'package:ioe/Subject_Pages/Software%20Engineering.dart';
+import 'package:ioe/Subject_Pages/Soil%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
 import 'package:ioe/Subject_Pages/Surveying%20I.dart';
 import 'package:ioe/Subject_Pages/Surveying%20II.dart';
@@ -478,6 +480,18 @@ class InsideCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => SurveyingII()),
+        );
+        break;
+      case 'Engineering Geology II':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => EngineeringGeologyII()),
+        );
+        break;
+      case 'Soil Mechanics':
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SoilMechanics()),
         );
         break;
       // Add cases for other subjects and their corresponding pages
