@@ -5,6 +5,7 @@ import 'package:ioe/Subject_Pages/Civil%20Engineering%20Materials.dart';
 import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
 import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
 import 'package:ioe/Subject_Pages/Computer%20networt%20and%20Security.dart';
+import 'package:ioe/Subject_Pages/Concrete%20Technology%20and%20Masonry%20Structure.dart';
 import 'package:ioe/Subject_Pages/Data%20Communication.dart';
 import 'package:ioe/Subject_Pages/Database%20Management%20System.dart';
 import 'package:ioe/Subject_Pages/Digital%20Signal%20Analysis%20and%20Processing.dart';
@@ -16,6 +17,7 @@ import 'package:ioe/Subject_Pages/Engineering%20Geology%20II.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Hydrology.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Professional%20Practice.dart';
 import 'package:ioe/Subject_Pages/Fluid%20Mechanics.dart';
+import 'package:ioe/Subject_Pages/Foundation%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Hydraulics.dart';
 import 'package:ioe/Subject_Pages/Information%20System.dart';
 import 'package:ioe/Subject_Pages/InstrimentationII.dart';
@@ -580,6 +582,21 @@ class InsideCard extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) => EngineeringHydrology(initialTabIndex: 1)),
+        );
+        break;
+      case 'Concrete Technology and Masonry Structure':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  ConcreteTechnologyandMasonryStructure(initialTabIndex: 1)),
+        );
+        break;
+      case 'Foundation Engineering':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => FoundationEngineering(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
