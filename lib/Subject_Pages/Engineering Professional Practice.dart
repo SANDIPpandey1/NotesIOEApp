@@ -4,11 +4,14 @@ import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
-class EngineeringProfessional  extends StatelessWidget {
+class EngineeringProfessional extends StatelessWidget {
+  final int initialTabIndex;
+  EngineeringProfessional({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -203,7 +206,7 @@ class EngineeringProfessional  extends StatelessWidget {
                     ),
                   ],
                 ),
-                                TableRow(
+                TableRow(
                   children: [
                     TableCell(
                       child: Center(child: Text('Total')),
@@ -222,59 +225,71 @@ class EngineeringProfessional  extends StatelessWidget {
           SizedBox(height: 10),
           Text('There may be minor deviation in marks distribution.'),
           SectionHeader(text: 'History of Engineering Practices[3 hours]'),
-    SubSection(text: 'Man and Society'),
-    SubSection(text: 'Technology and Society'),
-    SubSection(text: 'History of Engineering Practice in Eastern Society'),
-    SubSection(text: 'History of Engineering Practice in Western society'),
-    SubSection(text: 'Engineering Practices in Nepal'),
+          SubSection(text: 'Man and Society'),
+          SubSection(text: 'Technology and Society'),
+          SubSection(
+              text: 'History of Engineering Practice in Eastern Society'),
+          SubSection(
+              text: 'History of Engineering Practice in Western society'),
+          SubSection(text: 'Engineering Practices in Nepal'),
 
-SectionHeader(text: 'Profession and Ethics[6 hours]'),
-    SubSection(text: 'Profession: Definition and Characteristics'),
-    SubSection(text: 'Professional Institutions'),
-    SubSection(text: 'Relation of an Engineer with Client, Contractor and Fellow Engineers'),
-    SubSection(text: 'Ethics, Code of Ethics and Engineering Ethics'),
-    SubSection(text: 'Moral Dilemma and Ethical Decision Making'),
-    SubSection(text: 'Detailed Duties of an Engineer and Architect'),
-    SubSection(text: 'Liability and Negligence'),
+          SectionHeader(text: 'Profession and Ethics[6 hours]'),
+          SubSection(text: 'Profession: Definition and Characteristics'),
+          SubSection(text: 'Professional Institutions'),
+          SubSection(
+              text:
+                  'Relation of an Engineer with Client, Contractor and Fellow Engineers'),
+          SubSection(text: 'Ethics, Code of Ethics and Engineering Ethics'),
+          SubSection(text: 'Moral Dilemma and Ethical Decision Making'),
+          SubSection(text: 'Detailed Duties of an Engineer and Architect'),
+          SubSection(text: 'Liability and Negligence'),
 
-SectionHeader(text: 'Professional Practices in Nepal[3 hours]'),
-    SubSection(text: 'Public Sector practices'),
-    SubSection(text: 'Private Sector Practices'),
-    SubSection(text: 'General Job Descriptions of Fresh Graduates in both Public and Private Sector'),
+          SectionHeader(text: 'Professional Practices in Nepal[3 hours]'),
+          SubSection(text: 'Public Sector practices'),
+          SubSection(text: 'Private Sector Practices'),
+          SubSection(
+              text:
+                  'General Job Descriptions of Fresh Graduates in both Public and Private Sector'),
 
-SectionHeader(text: 'Contract Management[6 hours]'),
-    SubSection(text: 'Methods of work execution/contracting'),
-    SubSection(text: 'Types of Contracts'),
-    SubSection(text: 'Tendering Procedure'),
-    SubSection(text: 'Contract agreement'),
+          SectionHeader(text: 'Contract Management[6 hours]'),
+          SubSection(text: 'Methods of work execution/contracting'),
+          SubSection(text: 'Types of Contracts'),
+          SubSection(text: 'Tendering Procedure'),
+          SubSection(text: 'Contract agreement'),
 
-SectionHeader(text: 'Regulatory Environment[5 hours]'),
-    SubSection(text: 'Nepal Engineering Council Act'),
-    SubSection(text: 'Labor Law'),
-    SubSection(text: 'Intellectual Property Right'),
-    SubSection(text: 'Building Codes and Bylaws'),
-    SubSection(text: 'Company Registration'),
+          SectionHeader(text: 'Regulatory Environment[5 hours]'),
+          SubSection(text: 'Nepal Engineering Council Act'),
+          SubSection(text: 'Labor Law'),
+          SubSection(text: 'Intellectual Property Right'),
+          SubSection(text: 'Building Codes and Bylaws'),
+          SubSection(text: 'Company Registration'),
 
-SectionHeader(text: 'Contemporary Issues in Engineering[3 hours]'),
-    SubSection(text: 'Globalization and Cross Cultural Issues'),
-    SubSection(text: 'Public Private Partnership'),
-    SubSection(text: 'Safety, Risk and Benefit Analysis'),
-    SubSection(text: 'Development and Environment'),
-    SubSection(text: 'Conflict and Dispute Management'),
+          SectionHeader(text: 'Contemporary Issues in Engineering[3 hours]'),
+          SubSection(text: 'Globalization and Cross Cultural Issues'),
+          SubSection(text: 'Public Private Partnership'),
+          SubSection(text: 'Safety, Risk and Benefit Analysis'),
+          SubSection(text: 'Development and Environment'),
+          SubSection(text: 'Conflict and Dispute Management'),
 
-SectionHeader(text: 'Case Studies based on Engineering Practices  [4 hours]'),
-    SubSection(text: 'References:'),
-        SubSection(text: 'Carson Morrison and Philip Hughes “Professional engineering Practice – Ethical Aspects”, McGraw-Hill Ryerson Ltd.’ Toronto 1982'),
-        SubSection(text: 'DrRajendraAdhikari, “Engineering Professional Practice – Nepalese and international Perspectives” Pashupati Publishing House, Kathmandu Nepal 2010'),
-        SubSection(text: 'M. Govindarajan; S Natarajan and V.S. Senthikumar., “ Engineering Ethics” – PHI Learning Pvt. Ltd. New Delhi 2009'),
-        SubSection(text: 'Nepal Engineering Council Act'),
-        SubSection(text: 'Contract Act'),
-        SubSection(text: 'Labor Act'),
-        SubSection(text: 'Company Act'),
-        SubSection(text: 'Copyright Act'),
-        SubSection(text: 'Public Procurement Act'),
-        SubSection(text: 'Building By-Laws')
-
+          SectionHeader(
+              text: 'Case Studies based on Engineering Practices  [4 hours]'),
+          SubSection(text: 'References:'),
+          SubSection(
+              text:
+                  'Carson Morrison and Philip Hughes “Professional engineering Practice – Ethical Aspects”, McGraw-Hill Ryerson Ltd.’ Toronto 1982'),
+          SubSection(
+              text:
+                  'DrRajendraAdhikari, “Engineering Professional Practice – Nepalese and international Perspectives” Pashupati Publishing House, Kathmandu Nepal 2010'),
+          SubSection(
+              text:
+                  'M. Govindarajan; S Natarajan and V.S. Senthikumar., “ Engineering Ethics” – PHI Learning Pvt. Ltd. New Delhi 2009'),
+          SubSection(text: 'Nepal Engineering Council Act'),
+          SubSection(text: 'Contract Act'),
+          SubSection(text: 'Labor Act'),
+          SubSection(text: 'Company Act'),
+          SubSection(text: 'Copyright Act'),
+          SubSection(text: 'Public Procurement Act'),
+          SubSection(text: 'Building By-Laws')
         ],
       ),
     );

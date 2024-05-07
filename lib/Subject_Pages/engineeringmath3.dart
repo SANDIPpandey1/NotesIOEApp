@@ -6,10 +6,13 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import '../screens/components/syllabuscontent.dart';
 
 class EngineeringMath3 extends StatelessWidget {
+  final int initialTabIndex;
+  EngineeringMath3({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(

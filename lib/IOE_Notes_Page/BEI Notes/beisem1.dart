@@ -6,7 +6,6 @@ import 'package:ioe/Subject_Pages/cprogramming.dart';
 import 'package:ioe/Subject_Pages/engineeringphysics.dart';
 import 'package:ioe/Subject_Pages/engineerinmath1.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
-import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
 class BEISem1 extends StatelessWidget {

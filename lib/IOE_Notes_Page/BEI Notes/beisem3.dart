@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
 import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
-import 'package:ioe/Subject_Pages/electriccircuittheory.dart';
 import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
 import 'package:ioe/Subject_Pages/electromagnetism.dart';
 import 'package:ioe/Subject_Pages/engineeringmath3.dart';

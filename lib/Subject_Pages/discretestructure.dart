@@ -5,10 +5,13 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
 class DiscreteStructure extends StatelessWidget {
+  final int initialTabIndex;
+  DiscreteStructure({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -151,7 +154,7 @@ class DiscreteStructure extends StatelessWidget {
                     ),
                   ],
                 ),
-                                TableRow(
+                TableRow(
                   children: [
                     TableCell(
                       child: Center(child: Text('Total')),

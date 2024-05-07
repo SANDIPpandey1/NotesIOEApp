@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ioe/Subject_Pages/basicelectronics.dart';
 import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
 import 'package:ioe/Subject_Pages/engineeringmath2.dart';
 import 'package:ioe/Subject_Pages/microprocessor.dart';
 import 'package:ioe/Subject_Pages/objectorientedprogramming.dart.dart';
-import 'package:ioe/Subject_Pages/thermodymanics.dart';
 import 'package:ioe/screens/components/demo.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
-import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
 class BEISem2 extends StatelessWidget {

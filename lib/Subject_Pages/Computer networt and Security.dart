@@ -5,10 +5,13 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
 class ComputerNetworkandSecurity extends StatelessWidget {
+  final int initialTabIndex;
+  ComputerNetworkandSecurity({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -203,7 +206,6 @@ class ComputerNetworkandSecurity extends StatelessWidget {
                     ),
                   ],
                 ),
-                
                 TableRow(
                   children: [
                     TableCell(
@@ -222,93 +224,130 @@ class ComputerNetworkandSecurity extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text('There may be minor deviation in marks distribution.'),
-         SectionHeader(text: 'Introduction to Computer Network (5 hours)'),
-    SubSection(text: 'Uses of Computer Network'),
-    SubSection(text: 'Networking model client/server, p2p, active network'),
-    SubSection(text: 'Protocols and Standards'),
-    SubSection(text: 'OSI model and TCP/IP model'),
-    SubSection(text: 'Comparison of OSI and TCP/IP model'),
-    SubSection(text: 'Example network: The Internet, X.25, Frame Relay, Ethernet, VoIP, NGN and MPLS, xDSL.'),
+          SectionHeader(text: 'Introduction to Computer Network (5 hours)'),
+          SubSection(text: 'Uses of Computer Network'),
+          SubSection(
+              text: 'Networking model client/server, p2p, active network'),
+          SubSection(text: 'Protocols and Standards'),
+          SubSection(text: 'OSI model and TCP/IP model'),
+          SubSection(text: 'Comparison of OSI and TCP/IP model'),
+          SubSection(
+              text:
+                  'Example network: The Internet, X.25, Frame Relay, Ethernet, VoIP, NGN and MPLS, xDSL.'),
 
-SectionHeader(text: 'Physical Layer (5 hours)'),
-    SubSection(text: 'Network monitoring: delay, latency, throughput'),
-    SubSection(text: 'Transmission media: Twisted pair, Coaxial, Fiber optic, Line-of-site, Satellite'),
-    SubSection(text: 'Multiplexing, Circuit switching, Packet switching, VC Switching, Telecommunication switching system (Networking of Telephone exchanges)'),
-    SubSection(text: 'ISDN: Architecture, Interface, and Signaling'),
+          SectionHeader(text: 'Physical Layer (5 hours)'),
+          SubSection(text: 'Network monitoring: delay, latency, throughput'),
+          SubSection(
+              text:
+                  'Transmission media: Twisted pair, Coaxial, Fiber optic, Line-of-site, Satellite'),
+          SubSection(
+              text:
+                  'Multiplexing, Circuit switching, Packet switching, VC Switching, Telecommunication switching system (Networking of Telephone exchanges)'),
+          SubSection(text: 'ISDN: Architecture, Interface, and Signaling'),
 
-SectionHeader(text: 'Data Link Layer (5 hours)'),
-    SubSection(text: 'Functions of Data link layer'),
-    SubSection(text: 'Framing'),
-    SubSection(text: 'Error Detection and Corrections'),
-    SubSection(text: 'Flow Control'),
-    SubSection(text: 'Examples of Data Link Protocol, HDLC, PPP'),
-    SubSection(text: 'The Medium Access Sub-layer'),
-    SubSection(text: 'The channel allocation problem'),
-    SubSection(text: 'Multiple Access Protocols'),
-    SubSection(text: 'Ethernet'),
-    SubSection(text: 'Networks: FDDI, ALOHA, VLAN, CSMA/CD, IEEE 802.3(Ethernet), 802.4(Token Bus), 802.5(Token Ring), and 802.1(Wireless LAN).'),
+          SectionHeader(text: 'Data Link Layer (5 hours)'),
+          SubSection(text: 'Functions of Data link layer'),
+          SubSection(text: 'Framing'),
+          SubSection(text: 'Error Detection and Corrections'),
+          SubSection(text: 'Flow Control'),
+          SubSection(text: 'Examples of Data Link Protocol, HDLC, PPP'),
+          SubSection(text: 'The Medium Access Sub-layer'),
+          SubSection(text: 'The channel allocation problem'),
+          SubSection(text: 'Multiple Access Protocols'),
+          SubSection(text: 'Ethernet'),
+          SubSection(
+              text:
+                  'Networks: FDDI, ALOHA, VLAN, CSMA/CD, IEEE 802.3(Ethernet), 802.4(Token Bus), 802.5(Token Ring), and 802.1(Wireless LAN).'),
 
-SectionHeader(text: 'Network Layer (9 hours)'),
-    SubSection(text: 'Internetworking &devices: Repeaters, Hubs, Bridges, Switches, Router, Gateway'),
-    SubSection(text: 'Addressing: Internet address, classful address'),
-    SubSection(text: 'Subnetting'),
-    SubSection(text: 'Routing: techniques, static vs. dynamic routing , routing table for classful address'),
-    SubSection(text: 'Routing Protocols: RIP, OSPF, BGP, Unicast and multicast routing protocols'),
-    SubSection(text: 'Routing algorithms: shortest path algorithm, flooding, distance vector routing, link state routing; Protocols: ARP, RARP, IP, ICMP'),
+          SectionHeader(text: 'Network Layer (9 hours)'),
+          SubSection(
+              text:
+                  'Internetworking &devices: Repeaters, Hubs, Bridges, Switches, Router, Gateway'),
+          SubSection(text: 'Addressing: Internet address, classful address'),
+          SubSection(text: 'Subnetting'),
+          SubSection(
+              text:
+                  'Routing: techniques, static vs. dynamic routing , routing table for classful address'),
+          SubSection(
+              text:
+                  'Routing Protocols: RIP, OSPF, BGP, Unicast and multicast routing protocols'),
+          SubSection(
+              text:
+                  'Routing algorithms: shortest path algorithm, flooding, distance vector routing, link state routing; Protocols: ARP, RARP, IP, ICMP'),
 
-SectionHeader(text: 'Transport Layer (5 hours)'),
-    SubSection(text: 'The transport service: Services provided to the upper layers'),
-    SubSection(text: 'Transport protocols: UDP, TCP'),
-    SubSection(text: 'Port and Socket'),
-    SubSection(text: 'Connection establishment, Connection release'),
-    SubSection(text: 'Flow control & buffering'),
-    SubSection(text: 'Multiplexing & de-multiplexing'),
-    SubSection(text: 'Congestion control algorithm: Token Bucket and Leaky BucketTransport Layer'),
+          SectionHeader(text: 'Transport Layer (5 hours)'),
+          SubSection(
+              text:
+                  'The transport service: Services provided to the upper layers'),
+          SubSection(text: 'Transport protocols: UDP, TCP'),
+          SubSection(text: 'Port and Socket'),
+          SubSection(text: 'Connection establishment, Connection release'),
+          SubSection(text: 'Flow control & buffering'),
+          SubSection(text: 'Multiplexing & de-multiplexing'),
+          SubSection(
+              text:
+                  'Congestion control algorithm: Token Bucket and Leaky BucketTransport Layer'),
 
-SectionHeader(text: 'Application Layer (5 hours)'),
-    SubSection(text: 'Web: HTTP & HTTPS'),
-    SubSection(text: 'File Transfer: FTP, PuTTY, WinSCP'),
-    SubSection(text: 'Electronic Mail: SMTP, POP3, IMAP'),
-    SubSection(text: 'DNS'),
-    SubSection(text: 'P2PApplications'),
-    SubSection(text: 'Socket Programming'),
-    SubSection(text: 'Application server concept: proxy caching, Web/Mail/DNS server optimization'),
-    SubSection(text: 'Concept of traffic analyzer: MRTG, PRTG, SNMP, Packet tracer, Wireshark.'),
+          SectionHeader(text: 'Application Layer (5 hours)'),
+          SubSection(text: 'Web: HTTP & HTTPS'),
+          SubSection(text: 'File Transfer: FTP, PuTTY, WinSCP'),
+          SubSection(text: 'Electronic Mail: SMTP, POP3, IMAP'),
+          SubSection(text: 'DNS'),
+          SubSection(text: 'P2PApplications'),
+          SubSection(text: 'Socket Programming'),
+          SubSection(
+              text:
+                  'Application server concept: proxy caching, Web/Mail/DNS server optimization'),
+          SubSection(
+              text:
+                  'Concept of traffic analyzer: MRTG, PRTG, SNMP, Packet tracer, Wireshark.'),
 
-SectionHeader(text: 'Introduction to IPV6 (4 hours)'),
-    SubSection(text: 'IPv6- Advantages'),
-    SubSection(text: 'Packet formats'),
-    SubSection(text: 'Extension headers'),
-    SubSection(text: 'Transition from IPv4 to IPv6: Dual stack, Tunneling, Header Translation'),
-    SubSection(text: 'Multicasting'),
+          SectionHeader(text: 'Introduction to IPV6 (4 hours)'),
+          SubSection(text: 'IPv6- Advantages'),
+          SubSection(text: 'Packet formats'),
+          SubSection(text: 'Extension headers'),
+          SubSection(
+              text:
+                  'Transition from IPv4 to IPv6: Dual stack, Tunneling, Header Translation'),
+          SubSection(text: 'Multicasting'),
 
-SectionHeader(text: 'Network Security (7 hours)'),
-    SubSection(text: 'Properties of secure communication'),
-    SubSection(text: 'Principles of cryptography: Symmetric Key and Public Key'),
-    SubSection(text: 'RSA Algorithm'),
-    SubSection(text: 'Digital Signatures'),
-    SubSection(text: 'Securing e-mail (PGP)'),
-    SubSection(text: 'Securing TCP connections (SSL)'),
-    SubSection(text: 'Network layer security (IPsec, VPN)'),
-    SubSection(text: 'Securing wireless LANs (WEP)'),
-    SubSection(text: 'Firewalls: Application Gateway and Packet Filtering, and IDS'),
+          SectionHeader(text: 'Network Security (7 hours)'),
+          SubSection(text: 'Properties of secure communication'),
+          SubSection(
+              text: 'Principles of cryptography: Symmetric Key and Public Key'),
+          SubSection(text: 'RSA Algorithm'),
+          SubSection(text: 'Digital Signatures'),
+          SubSection(text: 'Securing e-mail (PGP)'),
+          SubSection(text: 'Securing TCP connections (SSL)'),
+          SubSection(text: 'Network layer security (IPsec, VPN)'),
+          SubSection(text: 'Securing wireless LANs (WEP)'),
+          SubSection(
+              text:
+                  'Firewalls: Application Gateway and Packet Filtering, and IDS'),
 
-SectionHeader(text: 'Practical:'),
-    SubSection(text: 'Network wiring and LAN setup'),
-    SubSection(text: 'Router Basic Configuration'),
-    SubSection(text: 'Static and Dynamic Routing'),
-    SubSection(text: 'Creating VLAN'),
-    SubSection(text: 'Router access-list configuration'),
-    SubSection(text: 'Basic Network setup on Linux'),
-    SubSection(text: 'Setup of Web Server, DNS Server, DHCP Server'),
-    SubSection(text: 'Virtualizations'),
+          SectionHeader(text: 'Practical:'),
+          SubSection(text: 'Network wiring and LAN setup'),
+          SubSection(text: 'Router Basic Configuration'),
+          SubSection(text: 'Static and Dynamic Routing'),
+          SubSection(text: 'Creating VLAN'),
+          SubSection(text: 'Router access-list configuration'),
+          SubSection(text: 'Basic Network setup on Linux'),
+          SubSection(text: 'Setup of Web Server, DNS Server, DHCP Server'),
+          SubSection(text: 'Virtualizations'),
 
-SectionHeader(text: 'References:'),
-    SubSection(text: 'A.S. Tanenbaum, “Computer Networks”, 3rd Edition, Prentice Hall India, 1997.'),
-    SubSection(text: 'W. Stallings, “Data and Computer Communication”, Macmillan Press, 1989.'),
-    SubSection(text: 'Kurose Ross, “Computer Networking: A top down approach”, 2nd Edition, Pearson Education'),
-    SubSection(text: 'Larry L. Peterson, Bruce S. Davie, “Computer Networks: A Systems Approach”, 3rd Edition, Morgan Kaufmann Publishers')
-
+          SectionHeader(text: 'References:'),
+          SubSection(
+              text:
+                  'A.S. Tanenbaum, “Computer Networks”, 3rd Edition, Prentice Hall India, 1997.'),
+          SubSection(
+              text:
+                  'W. Stallings, “Data and Computer Communication”, Macmillan Press, 1989.'),
+          SubSection(
+              text:
+                  'Kurose Ross, “Computer Networking: A top down approach”, 2nd Edition, Pearson Education'),
+          SubSection(
+              text:
+                  'Larry L. Peterson, Bruce S. Davie, “Computer Networks: A Systems Approach”, 3rd Edition, Morgan Kaufmann Publishers')
         ],
       ),
     );
