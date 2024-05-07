@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/news_results': (context) => NewsResults(),
         '/Articles': (context) => Articles(),
         //'/notification': (context) => NotificationPage(),
+        //test
       },
     );
   }
