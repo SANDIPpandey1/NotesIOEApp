@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ioe/Subject_Pages/Applied%20Mechanics%20Dynamics.dart';
 import 'package:ioe/Subject_Pages/Artificial%20Intelligence.dart';
+import 'package:ioe/Subject_Pages/Building%20Technology.dart';
 import 'package:ioe/Subject_Pages/Civil%20Engineering%20Materials.dart';
 import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
 import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
@@ -8,6 +9,7 @@ import 'package:ioe/Subject_Pages/Computer%20networt%20and%20Security.dart';
 import 'package:ioe/Subject_Pages/Concrete%20Technology%20and%20Masonry%20Structure.dart';
 import 'package:ioe/Subject_Pages/Data%20Communication.dart';
 import 'package:ioe/Subject_Pages/Database%20Management%20System.dart';
+import 'package:ioe/Subject_Pages/Design%20of%20Steel%20and%20Timber%20Structure.dart';
 import 'package:ioe/Subject_Pages/Digital%20Signal%20Analysis%20and%20Processing.dart';
 import 'package:ioe/Subject_Pages/Distributed%20System.dart';
 import 'package:ioe/Subject_Pages/Embedded%20System.dart';
@@ -23,6 +25,7 @@ import 'package:ioe/Subject_Pages/Information%20System.dart';
 import 'package:ioe/Subject_Pages/InstrimentationII.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
 import 'package:ioe/Subject_Pages/Internet%20and%20Intranet.dart';
+import 'package:ioe/Subject_Pages/Irrigation%20and%20Drainage%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Minor%20Project.dart';
 import 'package:ioe/Subject_Pages/Object%20Oriented%20Analysis%20and%20Design.dart';
 import 'package:ioe/Subject_Pages/Operating%20System.dart';
@@ -36,6 +39,7 @@ import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
 import 'package:ioe/Subject_Pages/Surveying%20I.dart';
 import 'package:ioe/Subject_Pages/Surveying%20II.dart';
 import 'package:ioe/Subject_Pages/Theory%20of%20Structures%20II.dart';
+import 'package:ioe/Subject_Pages/Transportation%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Water%20Supply%20Engineering.dart';
 import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/Subject_Pages/appliedmath.dart';
@@ -61,6 +65,7 @@ import 'package:ioe/Subject_Pages/objectorientedprogramming.dart.dart';
 import 'package:ioe/Subject_Pages/theoryofcomputation.dart';
 import 'package:ioe/Subject_Pages/thermodymanics.dart';
 import 'package:ioe/constants.dart';
+import 'package:ioe/screens/components/Sanitary%20Engineering.dart';
 import 'package:ioe/screens/components/demo.dart';
 
 class InsideCard extends StatelessWidget {
@@ -597,6 +602,44 @@ class InsideCard extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) => FoundationEngineering(initialTabIndex: 1)),
+        );
+        break;
+      case 'Design of Steel and Timber Structure':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  DesignofSteelandTimberStructure(initialTabIndex: 1)),
+        );
+        break;
+      case 'Building Technology':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => BuildingTechnology(initialTabIndex: 1)),
+        );
+        break;
+      case 'Sanitary Engineering':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => SanitaryEngineering(initialTabIndex: 1)),
+        );
+        break;
+      case 'Transportation Engineering':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  TransportationEngineering(initialTabIndex: 1)),
+        );
+        break;
+      case 'Irrigation and Drainage Engineering':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  IrrigationandDrainageEngineering(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
