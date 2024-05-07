@@ -5,10 +5,13 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
 class Toc extends StatelessWidget {
+  final int initialTabIndex;
+  Toc({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -177,7 +180,6 @@ class Toc extends StatelessWidget {
                     ),
                   ],
                 ),
-               
                 TableRow(
                   children: [
                     TableCell(
@@ -203,23 +205,30 @@ class Toc extends StatelessWidget {
           SectionHeader(text: 'Finite Automata (12 hours)'),
           SubSection(text: 'Deterministic Finite Automata.'),
           SubSection(text: 'Non-Deterministic Finite Automata.'),
-          SubSection(text: 'Equivalence of regular language and finite automata.'),
+          SubSection(
+              text: 'Equivalence of regular language and finite automata.'),
           SubSection(text: 'Regular language, properties of regular language.'),
           SubSection(text: 'Pumping lemma for regular language.'),
           SubSection(text: 'Decision algorithms for regular languages.'),
 
           SectionHeader(text: 'Context free language (12 hours)'),
           SubSection(text: 'Context free grammar.'),
-          SubSection(text: 'Derivative trees, simplification of context free grammar.'),
+          SubSection(
+              text:
+                  'Derivative trees, simplification of context free grammar.'),
           SubSection(text: 'Chomsky normal form.'),
           SubSection(text: 'Push down automata.'),
-          SubSection(text: 'Equivalence of context free language and push down automata.'),
+          SubSection(
+              text:
+                  'Equivalence of context free language and push down automata.'),
           SubSection(text: 'Pumping lemma for context free language.'),
           SubSection(text: 'Properties of context free language.'),
           SubSection(text: 'Decision algorithms for context free language.'),
 
           SectionHeader(text: 'Turing machine (10 hours)'),
-          SubSection(text: 'Definition of Turing machine, notation for Turing machine.'),
+          SubSection(
+              text:
+                  'Definition of Turing machine, notation for Turing machine.'),
           SubSection(text: 'Computing with Turing machine.'),
           SubSection(text: 'Extensions of Turing machine.'),
           SubSection(text: 'Unrestricted grammar.'),
@@ -228,16 +237,22 @@ class Toc extends StatelessWidget {
           SectionHeader(text: 'Undecidability (5 hours)'),
           SubSection(text: 'The Church-Turing thesis.'),
           SubSection(text: 'Halting Problem, Universal Turing machine.'),
-          SubSection(text: 'Undecidable problems about Turing machines, grammars.'),
-          SubSection(text: 'Properties of Recursive, Recursively enumerable languages.'),
+          SubSection(
+              text: 'Undecidable problems about Turing machines, grammars.'),
+          SubSection(
+              text:
+                  'Properties of Recursive, Recursively enumerable languages.'),
 
           SectionHeader(text: 'Computational Complexity (2 hours)'),
           SubSection(text: 'Class P, Class NP, NP-complete problems.'),
 
           SectionHeader(text: 'References'),
-          SubSection(text: 'H. R. Lewis, C. H. Papadimitriou, “Elements of theory of computation”, Pearson Education.'),
-          SubSection(text: 'Michael Sipser, “Introduction to the Theory of Computation”, Thomson Course Technology.')
-
+          SubSection(
+              text:
+                  'H. R. Lewis, C. H. Papadimitriou, “Elements of theory of computation”, Pearson Education.'),
+          SubSection(
+              text:
+                  'Michael Sipser, “Introduction to the Theory of Computation”, Thomson Course Technology.')
         ],
       ),
     );

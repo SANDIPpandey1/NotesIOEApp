@@ -5,10 +5,13 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
 class Electromagnetics extends StatelessWidget {
+  final int initialTabIndex;
+  Electromagnetics({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -164,7 +167,6 @@ class Electromagnetics extends StatelessWidget {
                     ),
                   ],
                 ),
-                
                 TableRow(
                   children: [
                     TableCell(
@@ -184,71 +186,108 @@ class Electromagnetics extends StatelessWidget {
           SizedBox(height: 10),
           Text('There may be minor deviation in marks distribution.'),
           SectionHeader(text: 'Introduction (3 hours)'),
-    SubSection(text: 'Co-ordinate system'),
-    SubSection(text: 'Scalar and vector fields'),
-    SubSection(text: 'Operations on scalar and vector fields'),
+          SubSection(text: 'Co-ordinate system'),
+          SubSection(text: 'Scalar and vector fields'),
+          SubSection(text: 'Operations on scalar and vector fields'),
 
-SectionHeader(text: 'Electric field(11 hours)'),
-    SubSection(text: 'Coulomb’s law'),
-    SubSection(text: 'Electric field intensity'),
-    SubSection(text: 'Electric flux density'),
-    SubSection(text: 'Gauss’s law and applications'),
-    SubSection(text: 'Physical significance of divergence; Divergence theorem.'),
-    SubSection(text: 'Electric potential, Potential gradient'),
-    SubSection(text: 'Energy density in electrostatic field'),
-    SubSection(text: 'Electric properties of material medium'),
-    SubSection(text: 'Free and bound Charges, Polarization, Relative permittivity, Electric dipole'),
-    SubSection(text: 'Electric Boundary conditions'),
-    SubSection(text: 'Current, Current density, Conservation of charge, Continuity equation, Relaxation time'),
-    SubSection(text: 'Boundary value problems, Laplace and Poisson equations and their solutions, Uniqueness theorem.'),
-    SubSection(text: 'Graphical field plotting, Numerical integration.'),
+          SectionHeader(text: 'Electric field(11 hours)'),
+          SubSection(text: 'Coulomb’s law'),
+          SubSection(text: 'Electric field intensity'),
+          SubSection(text: 'Electric flux density'),
+          SubSection(text: 'Gauss’s law and applications'),
+          SubSection(
+              text: 'Physical significance of divergence; Divergence theorem.'),
+          SubSection(text: 'Electric potential, Potential gradient'),
+          SubSection(text: 'Energy density in electrostatic field'),
+          SubSection(text: 'Electric properties of material medium'),
+          SubSection(
+              text:
+                  'Free and bound Charges, Polarization, Relative permittivity, Electric dipole'),
+          SubSection(text: 'Electric Boundary conditions'),
+          SubSection(
+              text:
+                  'Current, Current density, Conservation of charge, Continuity equation, Relaxation time'),
+          SubSection(
+              text:
+                  'Boundary value problems, Laplace and Poisson equations and their solutions, Uniqueness theorem.'),
+          SubSection(text: 'Graphical field plotting, Numerical integration.'),
 
-SectionHeader(text: 'Magnetic field(9 hours)'),
-    SubSection(text: 'Biot-Savart’s law'),
-    SubSection(text: 'Magnetic field intensity'),
-    SubSection(text: 'Ampere’s circuital law and its application'),
-    SubSection(text: 'Magnetic flux density'),
-    SubSection(text: 'Physical significance of curl, Stoke’s theorem'),
-    SubSection(text: 'Scalar and Magnetic vector potential'),
-    SubSection(text: 'Magnetic properties of material medium'),
-    SubSection(text: 'Magnetic force, Magnetic torque, Magnetic moment, Magnetic dipole, Magnetization'),
-    SubSection(text: 'Magnetic boundary condition'),
+          SectionHeader(text: 'Magnetic field(9 hours)'),
+          SubSection(text: 'Biot-Savart’s law'),
+          SubSection(text: 'Magnetic field intensity'),
+          SubSection(text: 'Ampere’s circuital law and its application'),
+          SubSection(text: 'Magnetic flux density'),
+          SubSection(text: 'Physical significance of curl, Stoke’s theorem'),
+          SubSection(text: 'Scalar and Magnetic vector potential'),
+          SubSection(text: 'Magnetic properties of material medium'),
+          SubSection(
+              text:
+                  'Magnetic force, Magnetic torque, Magnetic moment, Magnetic dipole, Magnetization'),
+          SubSection(text: 'Magnetic boundary condition'),
 
-SectionHeader(text: 'Wave equation and Wave propagation(12 hours)'),
-    SubSection(text: 'Faraday’s law, Transformer emf, Motional emf'),
-    SubSection(text: 'Displacement current'),
-    SubSection(text: 'Maxwell’s equations in integral and point forms'),
-    SubSection(text: 'Wave propagation in lossless and lossy dielectric'),
-    SubSection(text: 'Plane waves in free space, lossless dielectric, good conductor'),
-    SubSection(text: 'Power and pointing vector'),
-    SubSection(text: 'Reflection of plane wave at normal and oblique incidence'),
+          SectionHeader(text: 'Wave equation and Wave propagation(12 hours)'),
+          SubSection(text: 'Faraday’s law, Transformer emf, Motional emf'),
+          SubSection(text: 'Displacement current'),
+          SubSection(text: 'Maxwell’s equations in integral and point forms'),
+          SubSection(text: 'Wave propagation in lossless and lossy dielectric'),
+          SubSection(
+              text:
+                  'Plane waves in free space, lossless dielectric, good conductor'),
+          SubSection(text: 'Power and pointing vector'),
+          SubSection(
+              text: 'Reflection of plane wave at normal and oblique incidence'),
 
-SectionHeader(text: 'Transmission lines(5 hours)'),
-    SubSection(text: 'Transmission line equations'),
-    SubSection(text: 'Input impedance, Reflection coefficient, Standing wave ratio'),
-    SubSection(text: 'Impedance matching, Quarter wave transformer, Single stub matching, Double stub matching'),
+          SectionHeader(text: 'Transmission lines(5 hours)'),
+          SubSection(text: 'Transmission line equations'),
+          SubSection(
+              text:
+                  'Input impedance, Reflection coefficient, Standing wave ratio'),
+          SubSection(
+              text:
+                  'Impedance matching, Quarter wave transformer, Single stub matching, Double stub matching'),
 
-SectionHeader(text: 'Wave guides(4 hours)'),
-    SubSection(text: 'Rectangular wave guide'),
-    SubSection(text: 'Transverse electric mode, transverse magnetic mode'),
+          SectionHeader(text: 'Wave guides(4 hours)'),
+          SubSection(text: 'Rectangular wave guide'),
+          SubSection(
+              text: 'Transverse electric mode, transverse magnetic mode'),
 
-SectionHeader(text: 'Antennas(1 hour)'),
-    SubSection(text: 'Introduction to antenna, antenna types and properties'),
-    SubSection(text: 'Practical:'),
-    SubSection(text: 'Teledeltos (electro-conductive) paper mapping of electrostatic fields.'),
-    SubSection(text: 'Determination of dielectric constant, display of a magnetic Hysteresis loop'),
-    SubSection(text: 'Studies of wave propagation on a lumped parameter transmission line'),
-    SubSection(text: 'Microwave sources, detectors, transmission lines'),
-    SubSection(text: 'Standing wave patterns on transmission lines, reflections, power patterns on transmission lines, reflections, power measurement.'),
-    SubSection(text: 'Magnetic field measurements in a static magnetic circuit, inductance, leakage flux.'),
+          SectionHeader(text: 'Antennas(1 hour)'),
+          SubSection(
+              text: 'Introduction to antenna, antenna types and properties'),
+          SubSection(text: 'Practical:'),
+          SubSection(
+              text:
+                  'Teledeltos (electro-conductive) paper mapping of electrostatic fields.'),
+          SubSection(
+              text:
+                  'Determination of dielectric constant, display of a magnetic Hysteresis loop'),
+          SubSection(
+              text:
+                  'Studies of wave propagation on a lumped parameter transmission line'),
+          SubSection(text: 'Microwave sources, detectors, transmission lines'),
+          SubSection(
+              text:
+                  'Standing wave patterns on transmission lines, reflections, power patterns on transmission lines, reflections, power measurement.'),
+          SubSection(
+              text:
+                  'Magnetic field measurements in a static magnetic circuit, inductance, leakage flux.'),
 
-SectionHeader(text: 'References:'),
-    SubSection(text: 'W. H. Hayt, “Engineering Electromagnetics”, McGraw-Hill Book Company.'),
-    SubSection(text: 'J. D. Kraus, “Electromagnetics”, McGraw-Hill Book Company.'),
-    SubSection(text: 'N. N. Rao, “Elements of Engineering Electromagnetics”, Prentice Hall.'),
-    SubSection(text: 'Devid K. Cheng, “Field and Wave Electromagnetics”, Addison-Wesley.'),
-    SubSection(text: 'M. N. O. Sadiku, “Elements of Electromagnetics”, Oxford University Press.')
-
+          SectionHeader(text: 'References:'),
+          SubSection(
+              text:
+                  'W. H. Hayt, “Engineering Electromagnetics”, McGraw-Hill Book Company.'),
+          SubSection(
+              text:
+                  'J. D. Kraus, “Electromagnetics”, McGraw-Hill Book Company.'),
+          SubSection(
+              text:
+                  'N. N. Rao, “Elements of Engineering Electromagnetics”, Prentice Hall.'),
+          SubSection(
+              text:
+                  'Devid K. Cheng, “Field and Wave Electromagnetics”, Addison-Wesley.'),
+          SubSection(
+              text:
+                  'M. N. O. Sadiku, “Elements of Electromagnetics”, Oxford University Press.')
         ],
       ),
     );

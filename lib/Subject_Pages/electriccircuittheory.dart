@@ -5,10 +5,13 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
 class ElectricCircuitTheory extends StatelessWidget {
+  final int initialTabIndex;
+  ElectricCircuitTheory({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -203,7 +206,7 @@ class ElectricCircuitTheory extends StatelessWidget {
                     ),
                   ],
                 ),
-                                TableRow(
+                TableRow(
                   children: [
                     TableCell(
                       child: Center(child: Text('Total')),
@@ -221,11 +224,14 @@ class ElectricCircuitTheory extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text('There may be minor deviation in marks distribution.'),
-          SectionHeader(text: 'Network Analysis of AC circuit & Dependent Sources(8 hours)'),
+          SectionHeader(
+              text:
+                  'Network Analysis of AC circuit & Dependent Sources(8 hours)'),
           SubSection(text: 'Mesh Analysis'),
           SubSection(text: 'Nodal Analysis'),
           SubSection(text: 'Series & parallel resonance in RLC circuits'),
-          SubSection(text: 'Impedance and phase angle of series Resonant Circuit'),
+          SubSection(
+              text: 'Impedance and phase angle of series Resonant Circuit'),
           SubSection(text: 'Voltage and current in series resonant circuit'),
           SubSection(text: 'Band width of the RLC circuit.'),
           SubSection(text: 'High-Q and Low-Q circuits'),
@@ -236,11 +242,17 @@ class ElectricCircuitTheory extends StatelessWidget {
           SubSection(text: 'Procedure for evaluating initial conditions'),
           SubSection(text: 'Initial condition in the case of RLC network'),
 
-          SectionHeader(text: 'Transient analysis in RLC circuit by direct solution(10 hours)'),
+          SectionHeader(
+              text:
+                  'Transient analysis in RLC circuit by direct solution(10 hours)'),
           SubSection(text: 'Introduction'),
           SubSection(text: 'First order Differential equation'),
-          SubSection(text: 'Higher order homogeneous and non-homogeneous differential equations'),
-          SubSection(text: 'Particular integral by method of undetermined coefficients'),
+          SubSection(
+              text:
+                  'Higher order homogeneous and non-homogeneous differential equations'),
+          SubSection(
+              text:
+                  'Particular integral by method of undetermined coefficients'),
           SubSection(text: 'Response of R-L circuit with'),
           SubSection(text: 'DC excitation'),
           SubSection(text: 'Exponential excitation'),
@@ -253,13 +265,18 @@ class ElectricCircuitTheory extends StatelessWidget {
           SubSection(text: 'DC excitation'),
           SubSection(text: 'Exponential excitation'),
           SubSection(text: 'Sinusoidal excitation'),
-          SubSection(text: 'Response of parallel RLC circuit with DC excitation'),
+          SubSection(
+              text: 'Response of parallel RLC circuit with DC excitation'),
 
-          SectionHeader(text: 'Transient analysis in RLC circuit by Laplace Transform(8 hours)'),
+          SectionHeader(
+              text:
+                  'Transient analysis in RLC circuit by Laplace Transform(8 hours)'),
           SubSection(text: 'Introduction'),
           SubSection(text: 'The Laplace Transformation'),
           SubSection(text: 'Important properties of Laplace transformation'),
-          SubSection(text: 'Use of Partial Fraction expansion in analysis using Laplace Transformations'),
+          SubSection(
+              text:
+                  'Use of Partial Fraction expansion in analysis using Laplace Transformations'),
           SubSection(text: "Heaviside's partial fraction expansion theorem"),
           SubSection(text: 'Response RL circuit with'),
           SubSection(text: 'DC excitation'),
@@ -273,7 +290,9 @@ class ElectricCircuitTheory extends StatelessWidget {
           SubSection(text: 'DC excitation'),
           SubSection(text: 'Exponential excitation'),
           SubSection(text: 'Sinusoidal excitation'),
-          SubSection(text: 'Response of parallel RLC circuit with exponential excitation'),
+          SubSection(
+              text:
+                  'Response of parallel RLC circuit with exponential excitation'),
           SubSection(text: 'Transfer functions Poles and Zeros of Networks'),
 
           SectionHeader(text: 'Frequency Response of Network(6 hours)'),
@@ -281,11 +300,15 @@ class ElectricCircuitTheory extends StatelessWidget {
           SubSection(text: 'Magnitude and Phase response'),
           SubSection(text: 'Bode Diagrams'),
           SubSection(text: 'Bandwidth of Series & parallel Resonance circuits'),
-          SubSection(text: 'Basic concept of filters, high pass, low pass, band pass and band stop filters'),
+          SubSection(
+              text:
+                  'Basic concept of filters, high pass, low pass, band pass and band stop filters'),
 
           SectionHeader(text: 'Fourier Series and transform(5 hours)'),
           SubSection(text: 'Basic concept of Fourier series and analysis'),
-          SubSection(text: 'Evaluation of Fourier coefficients for periodic non-sinusoidal waveforms in electric networks'),
+          SubSection(
+              text:
+                  'Evaluation of Fourier coefficients for periodic non-sinusoidal waveforms in electric networks'),
           SubSection(text: 'Introduction of Fourier transforms'),
 
           SectionHeader(text: 'Two-port Parameter of Networks(6 hours)'),
@@ -294,31 +317,64 @@ class ElectricCircuitTheory extends StatelessWidget {
           SubSection(text: 'Open Circuits impedance parameters'),
           SubSection(text: 'Transmission Short Circuit admittance parameters'),
           SubSection(text: 'Hybrid Parameters'),
-          SubSection(text: 'Relationship and Transformations between sets of parameters'),
+          SubSection(
+              text:
+                  'Relationship and Transformations between sets of parameters'),
           SubSection(text: 'Application to Filters'),
           SubSection(text: 'Applications to Transmission Lines'),
-          SubSection(text: 'Interconnection of two-port network(Cascade, series, parallel)'),
+          SubSection(
+              text:
+                  'Interconnection of two-port network(Cascade, series, parallel)'),
 
           SectionHeader(text: 'Practical:'),
-          SubSection(text: 'Resonance in RLC series circuit: measurement of resonant frequency'),
-          SubSection(text: 'Transient Response in first Order System passive circuits:'),
-          SubSection(text: 'measure step and impulse response of RL and RC circuit using oscilloscope'),
-          SubSection(text: 'relate time response to analytical transfer functions calculations'),
-          SubSection(text: 'Transient Response in Second Order System passive circuits:'),
-          SubSection(text: 'measure step and impulse response of RLC series and parallel circuits using oscilloscope'),
-          SubSection(text: 'relate time response to transfer functions and pole-zero configuration'),
-          SubSection(text: 'Frequency Response of first  order passive circuits:'),
-          SubSection(text: 'measure amplitude and phase response and plot bode diagrams for RL, RC and RLC circuits'),
-          SubSection(text: 'relate Bode diagrams to transfer functions and pole zero configuration circuit'),
-          SubSection(text: 'Frequency Response of second order passive circuits:'),
-          SubSection(text: 'measure amplitude and phase response and plot bode diagrams for RL, RC and RLC circuits'),
-          SubSection(text: 'relate Bode diagrams to transfer functions and pole zero configuration circuit'),
+          SubSection(
+              text:
+                  'Resonance in RLC series circuit: measurement of resonant frequency'),
+          SubSection(
+              text:
+                  'Transient Response in first Order System passive circuits:'),
+          SubSection(
+              text:
+                  'measure step and impulse response of RL and RC circuit using oscilloscope'),
+          SubSection(
+              text:
+                  'relate time response to analytical transfer functions calculations'),
+          SubSection(
+              text:
+                  'Transient Response in Second Order System passive circuits:'),
+          SubSection(
+              text:
+                  'measure step and impulse response of RLC series and parallel circuits using oscilloscope'),
+          SubSection(
+              text:
+                  'relate time response to transfer functions and pole-zero configuration'),
+          SubSection(
+              text: 'Frequency Response of first  order passive circuits:'),
+          SubSection(
+              text:
+                  'measure amplitude and phase response and plot bode diagrams for RL, RC and RLC circuits'),
+          SubSection(
+              text:
+                  'relate Bode diagrams to transfer functions and pole zero configuration circuit'),
+          SubSection(
+              text: 'Frequency Response of second order passive circuits:'),
+          SubSection(
+              text:
+                  'measure amplitude and phase response and plot bode diagrams for RL, RC and RLC circuits'),
+          SubSection(
+              text:
+                  'relate Bode diagrams to transfer functions and pole zero configuration circuit'),
 
           SectionHeader(text: 'References:'),
-          SubSection(text: 'M. E. Van Valkenburg, "Network Analysis", third edition Prentice Hall, 2010.'),
-          SubSection(text: 'William H. Hyat. Jr. & Jack E. Kemmerly, "Engineering Circuits Analysis", Fourth edition, McGraw Hill International Editions, Electrical Engineering Series, 1987.'),
-          SubSection(text: 'Michel D. Cilletti, "Introduction to Circuit Analysis and Design", Holt, Hot Rinehart and Winston International Edition, New York, 1988.')
-
+          SubSection(
+              text:
+                  'M. E. Van Valkenburg, "Network Analysis", third edition Prentice Hall, 2010.'),
+          SubSection(
+              text:
+                  'William H. Hyat. Jr. & Jack E. Kemmerly, "Engineering Circuits Analysis", Fourth edition, McGraw Hill International Editions, Electrical Engineering Series, 1987.'),
+          SubSection(
+              text:
+                  'Michel D. Cilletti, "Introduction to Circuit Analysis and Design", Holt, Hot Rinehart and Winston International Edition, New York, 1988.')
         ],
       ),
     );

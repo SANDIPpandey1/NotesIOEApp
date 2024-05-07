@@ -5,10 +5,13 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
 class DistributedSystem extends StatelessWidget {
+  final int initialTabIndex;
+  DistributedSystem({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -203,7 +206,6 @@ class DistributedSystem extends StatelessWidget {
                     ),
                   ],
                 ),
-                
                 TableRow(
                   children: [
                     TableCell(
@@ -222,109 +224,122 @@ class DistributedSystem extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text('There may be minor deviation in marks distribution.'),
-         SectionHeader(text: 'Introduction (4 hours)'),
-    SubSection(text: 'Introduction to Distributed Systems'),
-    SubSection(text: 'Examples of Distributed Systems'),
-    SubSection(text: 'Main Characteristics'),
-    SubSection(text: 'Advantages and Disadvantages of Distributed System'),
-    SubSection(text: 'Design Goals'),
-    SubSection(text: 'Main Problems'),
-    SubSection(text: 'Models of Distributed System'),
-    SubSection(text: 'Resource Sharing and the Web Challenges'),
-    SubSection(text: 'Types of Distributed System: Grid, Cluster, Cloud'),
+          SectionHeader(text: 'Introduction (4 hours)'),
+          SubSection(text: 'Introduction to Distributed Systems'),
+          SubSection(text: 'Examples of Distributed Systems'),
+          SubSection(text: 'Main Characteristics'),
+          SubSection(
+              text: 'Advantages and Disadvantages of Distributed System'),
+          SubSection(text: 'Design Goals'),
+          SubSection(text: 'Main Problems'),
+          SubSection(text: 'Models of Distributed System'),
+          SubSection(text: 'Resource Sharing and the Web Challenges'),
+          SubSection(text: 'Types of Distributed System: Grid, Cluster, Cloud'),
 
-SectionHeader(text: 'Distributed Objects and File System (7 hours)'),
-    SubSection(text: 'Introduction'),
-    SubSection(text: 'Communication between distributed objects'),
-    SubSection(text: 'Remote Procedure Call'),
-    SubSection(text: 'Events And Notifications'),
-    SubSection(text: 'Java RMI Case Study'),
-    SubSection(text: 'Introduction to DFS'),
-    SubSection(text: 'File Service Architecture'),
-    SubSection(text: 'Sun Network File System'),
-    SubSection(text: 'Introduction to Name Services'),
-    SubSection(text: 'Name Services and DNS'),
-    SubSection(text: 'Directory and Discovery Services'),
-    SubSection(text: 'Comparison of Different Distributed File Systems'),
+          SectionHeader(text: 'Distributed Objects and File System (7 hours)'),
+          SubSection(text: 'Introduction'),
+          SubSection(text: 'Communication between distributed objects'),
+          SubSection(text: 'Remote Procedure Call'),
+          SubSection(text: 'Events And Notifications'),
+          SubSection(text: 'Java RMI Case Study'),
+          SubSection(text: 'Introduction to DFS'),
+          SubSection(text: 'File Service Architecture'),
+          SubSection(text: 'Sun Network File System'),
+          SubSection(text: 'Introduction to Name Services'),
+          SubSection(text: 'Name Services and DNS'),
+          SubSection(text: 'Directory and Discovery Services'),
+          SubSection(text: 'Comparison of Different Distributed File Systems'),
 
-SectionHeader(text: 'Operating System Support (3 hours)'),
-    SubSection(text: 'The operating system layer'),
-    SubSection(text: 'Protection'),
-    SubSection(text: 'Process and threads'),
-    SubSection(text: 'Communication and invocation'),
-    SubSection(text: 'Operating system architecture'),
+          SectionHeader(text: 'Operating System Support (3 hours)'),
+          SubSection(text: 'The operating system layer'),
+          SubSection(text: 'Protection'),
+          SubSection(text: 'Process and threads'),
+          SubSection(text: 'Communication and invocation'),
+          SubSection(text: 'Operating system architecture'),
 
-SectionHeader(text: 'Distributed Heterogeneous Applications and CORBA (3 hours)'),
-    SubSection(text: 'Heterogeneity in Distributed Systems'),
-    SubSection(text: 'Middleware'),
-    SubSection(text: 'Objects in Distributed Systems'),
-    SubSection(text: 'The CORBA approach'),
-    SubSection(text: 'CORBA services'),
+          SectionHeader(
+              text:
+                  'Distributed Heterogeneous Applications and CORBA (3 hours)'),
+          SubSection(text: 'Heterogeneity in Distributed Systems'),
+          SubSection(text: 'Middleware'),
+          SubSection(text: 'Objects in Distributed Systems'),
+          SubSection(text: 'The CORBA approach'),
+          SubSection(text: 'CORBA services'),
 
-SectionHeader(text: 'Time and State in Distributed Systems (5 hours)'),
-    SubSection(text: 'Time in Distributed Systems'),
-    SubSection(text: 'Physical Clocks'),
-    SubSection(text: 'Logical Clocks'),
-    SubSection(text: 'Vector Clocks'),
-    SubSection(text: 'Clock Synchronization'),
-    SubSection(text: 'Causal Ordering of Messages'),
-    SubSection(text: 'Global State and State Recording'),
-    SubSection(text: 'Distributed debugging'),
+          SectionHeader(
+              text: 'Time and State in Distributed Systems (5 hours)'),
+          SubSection(text: 'Time in Distributed Systems'),
+          SubSection(text: 'Physical Clocks'),
+          SubSection(text: 'Logical Clocks'),
+          SubSection(text: 'Vector Clocks'),
+          SubSection(text: 'Clock Synchronization'),
+          SubSection(text: 'Causal Ordering of Messages'),
+          SubSection(text: 'Global State and State Recording'),
+          SubSection(text: 'Distributed debugging'),
 
-SectionHeader(text: 'Coordination and Agreement (4 hours)'),
-    SubSection(text: 'Mutual Exclusion in Distributed Systems'),
-    SubSection(text: 'Algorithms for Mutual Exclusion'),
-    SubSection(text: 'Distributed Elections'),
-    SubSection(text: 'Multicast communication'),
-    SubSection(text: 'Consensus'),
+          SectionHeader(text: 'Coordination and Agreement (4 hours)'),
+          SubSection(text: 'Mutual Exclusion in Distributed Systems'),
+          SubSection(text: 'Algorithms for Mutual Exclusion'),
+          SubSection(text: 'Distributed Elections'),
+          SubSection(text: 'Multicast communication'),
+          SubSection(text: 'Consensus'),
 
-SectionHeader(text: 'Replication (4 hours)'),
-    SubSection(text: 'Reasons for Replication'),
-    SubSection(text: 'Object Replication'),
-    SubSection(text: 'Replication as Scaling Technique'),
-    SubSection(text: 'Fault Tolerant Services'),
-    SubSection(text: 'High Available Services'),
-    SubSection(text: 'Transaction with Replicated Data'),
+          SectionHeader(text: 'Replication (4 hours)'),
+          SubSection(text: 'Reasons for Replication'),
+          SubSection(text: 'Object Replication'),
+          SubSection(text: 'Replication as Scaling Technique'),
+          SubSection(text: 'Fault Tolerant Services'),
+          SubSection(text: 'High Available Services'),
+          SubSection(text: 'Transaction with Replicated Data'),
 
-SectionHeader(text: 'Transaction and Concurrency Control (6 hours)'),
-    SubSection(text: 'Transactions'),
-    SubSection(text: 'Nested Transaction'),
-    SubSection(text: 'Locks'),
-    SubSection(text: 'Optimistic Concurrency Control'),
-    SubSection(text: 'Timestamp Ordering'),
-    SubSection(text: 'Comparison of Methods For Concurrency Control'),
-    SubSection(text: 'Introduction to Distributed Transactions'),
-    SubSection(text: 'Flat and Nested Distributed Transactions'),
-    SubSection(text: 'Atomic Commit Protocols'),
-    SubSection(text: 'Concurrency Control in Distributed Transactions'),
-    SubSection(text: 'Distributed Deadlocks'),
-    SubSection(text: 'Transaction Recovery'),
+          SectionHeader(text: 'Transaction and Concurrency Control (6 hours)'),
+          SubSection(text: 'Transactions'),
+          SubSection(text: 'Nested Transaction'),
+          SubSection(text: 'Locks'),
+          SubSection(text: 'Optimistic Concurrency Control'),
+          SubSection(text: 'Timestamp Ordering'),
+          SubSection(text: 'Comparison of Methods For Concurrency Control'),
+          SubSection(text: 'Introduction to Distributed Transactions'),
+          SubSection(text: 'Flat and Nested Distributed Transactions'),
+          SubSection(text: 'Atomic Commit Protocols'),
+          SubSection(text: 'Concurrency Control in Distributed Transactions'),
+          SubSection(text: 'Distributed Deadlocks'),
+          SubSection(text: 'Transaction Recovery'),
 
-SectionHeader(text: 'Fault Tolerance (4 hours)'),
-    SubSection(text: 'Introduction to Fault Tolerance'),
-    SubSection(text: 'Process Resilience'),
-    SubSection(text: 'Reliable Client Server Communication'),
-    SubSection(text: 'Distributed Commit'),
-    SubSection(text: 'Recovery'),
+          SectionHeader(text: 'Fault Tolerance (4 hours)'),
+          SubSection(text: 'Introduction to Fault Tolerance'),
+          SubSection(text: 'Process Resilience'),
+          SubSection(text: 'Reliable Client Server Communication'),
+          SubSection(text: 'Distributed Commit'),
+          SubSection(text: 'Recovery'),
 
-SectionHeader(text: 'Case Studies (5 hours)'),
-    SubSection(text: 'CORBA'),
-    SubSection(text: 'Mach'),
-    SubSection(text: 'JINI'),
-    SubSection(text: 'TIB/Rendezvous'),
+          SectionHeader(text: 'Case Studies (5 hours)'),
+          SubSection(text: 'CORBA'),
+          SubSection(text: 'Mach'),
+          SubSection(text: 'JINI'),
+          SubSection(text: 'TIB/Rendezvous'),
 
-SectionHeader(text: 'Practical:'),
-    SubSection(text: 'Implementation of Election Algorithm.'),
-    SubSection(text: 'Simulation for Clock Synchronization in Distributed System using Lamport’s Algorithm.'),
-    SubSection(text: 'Implementation of Banker’s Algorithm for avoiding Deadlock'),
-    SubSection(text: 'Experiment on DFS'),
-    SubSection(text: 'Case Study – CORBA,JINI, Mach, TIB/Rendezvous'),
+          SectionHeader(text: 'Practical:'),
+          SubSection(text: 'Implementation of Election Algorithm.'),
+          SubSection(
+              text:
+                  'Simulation for Clock Synchronization in Distributed System using Lamport’s Algorithm.'),
+          SubSection(
+              text:
+                  'Implementation of Banker’s Algorithm for avoiding Deadlock'),
+          SubSection(text: 'Experiment on DFS'),
+          SubSection(text: 'Case Study – CORBA,JINI, Mach, TIB/Rendezvous'),
 
-SectionHeader(text: 'Reference:'),
-    SubSection(text: 'George Coulouris, Jean Dollimore, Tim Kindberg, “Distributed Systems Concepts and Design”, Third Edition, Pearson Education.'),
-    SubSection(text: 'A.S. Tanenbaum, M. VanSteen, “Distributed Systems”, Pearson Education.'),
-    SubSection(text: 'Mukesh Singhal, “Advanced Concepts in Operating Systems”, McGraw-Hill Series in Computer Science.')
-
+          SectionHeader(text: 'Reference:'),
+          SubSection(
+              text:
+                  'George Coulouris, Jean Dollimore, Tim Kindberg, “Distributed Systems Concepts and Design”, Third Edition, Pearson Education.'),
+          SubSection(
+              text:
+                  'A.S. Tanenbaum, M. VanSteen, “Distributed Systems”, Pearson Education.'),
+          SubSection(
+              text:
+                  'Mukesh Singhal, “Advanced Concepts in Operating Systems”, McGraw-Hill Series in Computer Science.')
         ],
       ),
     );

@@ -5,14 +5,17 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
 class Thermodynamics extends StatelessWidget {
+  final int initialTabIndex;
+  Thermodynamics({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: initialTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Thermodynamics and Heat Transfer',
+            'Thermodynamics',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
