@@ -5,9 +5,9 @@ import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
 class Microprocessor extends StatelessWidget {
-  @override
   final int initialTabIndex;
   Microprocessor({this.initialTabIndex = 0});
+  @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
