@@ -5,13 +5,8 @@ import 'package:ioe/Subject_Pages/Engineering%20Geology%20I.dart';
 import 'package:ioe/Subject_Pages/Fluid%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
 import 'package:ioe/Subject_Pages/Surveying%20I.dart';
-import 'package:ioe/Subject_Pages/basicelectrical.dart';
-import 'package:ioe/Subject_Pages/basicelectronics.dart';
-import 'package:ioe/Subject_Pages/engineeringmath2.dart';
 import 'package:ioe/Subject_Pages/engineeringmath3.dart';
-import 'package:ioe/Subject_Pages/engineeringphysics.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
-import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
 class BCESem3 extends StatelessWidget {

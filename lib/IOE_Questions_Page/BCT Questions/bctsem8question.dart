@@ -6,12 +6,12 @@ import 'package:ioe/Subject_Pages/Simulation%20and%20Modeling.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCTSem8 extends StatelessWidget {
+class BCTQuestionsSem8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 8 Notes',
+        heading: 'BCT Semester 8 Questions',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -29,8 +29,7 @@ class BCTSem8 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          EngineeringProfessional(initialTabIndex: 0)),
+                      builder: (context) => EngineeringProfessional()),
                 );
               },
             ),
@@ -41,9 +40,7 @@ class BCTSem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          InformationSystem(initialTabIndex: 0)),
+                  MaterialPageRoute(builder: (context) => InformationSystem()),
                 );
               },
             ),
@@ -55,8 +52,7 @@ class BCTSem8 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          InternetAndIntranet(initialTabIndex: 0)),
+                      builder: (context) => InternetAndIntranet()),
                 );
               },
             ),
@@ -68,8 +64,7 @@ class BCTSem8 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          SimulationandModeling(initialTabIndex: 0)),
+                      builder: (context) => SimulationandModeling()),
                 );
               },
             ),

@@ -35,7 +35,9 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ProjectManagement()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ProjectManagement(initialTabIndex: 0)),
                 );
               },
             ),
@@ -47,7 +49,8 @@ class BCTSem7 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => OrganizationandManagement()),
+                      builder: (context) =>
+                          OrganizationandManagement(initialTabIndex: 0)),
                 );
               },
             ),
@@ -58,7 +61,9 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EnergyEnvironment()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          EnergyEnvironment(initialTabIndex: 0)),
                 );
               },
             ),
@@ -69,7 +74,9 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DistributedSystem()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          DistributedSystem(initialTabIndex: 0)),
                 );
               },
             ),
@@ -81,7 +88,8 @@ class BCTSem7 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ComputerNetworkandSecurity()),
+                      builder: (context) =>
+                          ComputerNetworkandSecurity(initialTabIndex: 0)),
                 );
               },
             ),
@@ -93,7 +101,8 @@ class BCTSem7 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => DigitalSignalAnalysis()),
+                      builder: (context) =>
+                          DigitalSignalAnalysis(initialTabIndex: 0)),
                 );
               },
             ),

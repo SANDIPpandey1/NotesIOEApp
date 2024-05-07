@@ -30,7 +30,8 @@ class BCTSem6 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => EngineeringEconomics()),
+                      builder: (context) =>
+                          EngineeringEconomics(initialTabIndex: 0)),
                 );
               },
             ),
@@ -42,7 +43,8 @@ class BCTSem6 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ObjectOrientedAnalysis()),
+                      builder: (context) =>
+                          ObjectOrientedAnalysis(initialTabIndex: 0)),
                 );
               },
             ),
@@ -54,7 +56,8 @@ class BCTSem6 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ArtificialIntelligence()),
+                      builder: (context) =>
+                          ArtificialIntelligence(initialTabIndex: 0)),
                 );
               },
             ),
@@ -65,7 +68,9 @@ class BCTSem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => OperatingSystem()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          OperatingSystem(initialTabIndex: 0)),
                 );
               },
             ),
@@ -76,7 +81,9 @@ class BCTSem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InstrumentationII()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          InstrumentationII(initialTabIndex: 0)),
                 );
               },
             ),

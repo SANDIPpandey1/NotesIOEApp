@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/ioe_notes': (context) => IOENotes(),
         '/ioe_syllabus': (context) => IOESyllabus(),
-        '/ioe_questions': (context) => IOE_Questions(),
+        '/ioe_questions': (context) => IOEQuestions(),
         '/college_notes': (context) => CollegeNotes(),
         '/news_results': (context) => NewsResults(),
         '/Articles': (context) => Articles(),

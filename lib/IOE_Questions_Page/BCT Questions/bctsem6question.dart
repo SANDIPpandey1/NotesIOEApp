@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
-import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
-import 'package:ioe/Subject_Pages/Data%20Communication.dart';
+import 'package:ioe/Subject_Pages/Artificial%20Intelligence.dart';
+import 'package:ioe/Subject_Pages/EngineeringEconomics.dart';
 import 'package:ioe/Subject_Pages/InstrimentationII.dart';
-import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
-import 'package:ioe/Subject_Pages/Software%20Engineering.dart';
+import 'package:ioe/Subject_Pages/Object%20Oriented%20Analysis%20and%20Design.dart';
+import 'package:ioe/Subject_Pages/Operating%20System.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCTSem5 extends StatelessWidget {
+class BCTQuestionsSem6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 5 Notes',
+        heading: 'BCT Semester 6 Questions',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -25,82 +24,73 @@ class BCTSem5 extends StatelessWidget {
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Probability and Statistics',
+              text: 'Engineering Economics',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          ProbabilityAndStatistics(initialTabIndex: 0)),
+                      builder: (context) => EngineeringEconomics()),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Computer Organization Architecture',
+              text: 'Object Oriented Analysis and Design',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ComputerOrginzationAndArchitecture(
-                          initialTabIndex: 0)),
+                      builder: (context) => ObjectOrientedAnalysis()),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Software Engineering',
+              text: 'Artifical Intelligence',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          SoftwareEngineering(initialTabIndex: 0)),
+                      builder: (context) => ArtificialIntelligence()),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Computer Graphics',
+              text: 'Operating System',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          ComputerGraphics(initialTabIndex: 0)),
+                  MaterialPageRoute(builder: (context) => OperatingSystem()),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Instrumentation II',
+              text: 'Database Management System',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          InstrumentationII(initialTabIndex: 0)),
+                  MaterialPageRoute(builder: (context) => InstrumentationII()),
                 );
               },
             ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Data Communication',
-              icon: Icons.arrow_forward,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          DataCommunication(initialTabIndex: 0)),
-                );
-              },
-            ),
+            // SizedBox(height: 10.0),
+            // InsideButtons(
+            //   text: 'Data Communication',
+            //   icon: Icons.arrow_forward,
+            //   onTap: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => DataCommunication()),
+            //     );
+            //   },
+            // ),
             // Add other notes options here
           ],
         ),

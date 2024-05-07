@@ -8,12 +8,12 @@ import 'package:ioe/Subject_Pages/Software%20Engineering.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCTSem5 extends StatelessWidget {
+class BCTQuestionsSem5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 5 Notes',
+        heading: 'BCT Semester 5 Questions',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -31,8 +31,7 @@ class BCTSem5 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          ProbabilityAndStatistics(initialTabIndex: 0)),
+                      builder: (context) => ProbabilityAndStatistics()),
                 );
               },
             ),
@@ -44,8 +43,8 @@ class BCTSem5 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ComputerOrginzationAndArchitecture(
-                          initialTabIndex: 0)),
+                      builder: (context) =>
+                          ComputerOrginzationAndArchitecture()),
                 );
               },
             ),
@@ -57,8 +56,7 @@ class BCTSem5 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          SoftwareEngineering(initialTabIndex: 0)),
+                      builder: (context) => SoftwareEngineering()),
                 );
               },
             ),
@@ -69,9 +67,7 @@ class BCTSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          ComputerGraphics(initialTabIndex: 0)),
+                  MaterialPageRoute(builder: (context) => ComputerGraphics()),
                 );
               },
             ),
@@ -82,9 +78,7 @@ class BCTSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          InstrumentationII(initialTabIndex: 0)),
+                  MaterialPageRoute(builder: (context) => InstrumentationII()),
                 );
               },
             ),
@@ -95,9 +89,7 @@ class BCTSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          DataCommunication(initialTabIndex: 0)),
+                  MaterialPageRoute(builder: (context) => DataCommunication()),
                 );
               },
             ),
