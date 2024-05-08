@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
-import 'package:ioe/navpages/downloads.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 

@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:ioe/LoginPages/forgotpasswordpage.dart';
+import 'package:ioe/LoginPages/googlesignin.dart';
 
 import 'package:ioe/constants.dart';
 import 'package:ioe/screens/components/buttons.dart';
@@ -154,7 +156,9 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 SizedBox(height: 25),
-                SquareTile(imagePath: 'assets/images/google.jpg'),
+                GestureDetector(
+                    onTap: () => AuthService().signInWithGoogle(context),
+                    child: SquareTile(imagePath: 'assets/images/google.jpg')),
                 SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
