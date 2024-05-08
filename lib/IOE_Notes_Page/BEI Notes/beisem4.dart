@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
-import 'package:ioe/Subject_Pages/InstrumentationI.dart';
 import 'package:ioe/Subject_Pages/appliedmath.dart';
 import 'package:ioe/Subject_Pages/datastructureandalgorithm.dart';
 import 'package:ioe/Subject_Pages/discretestructure.dart';
-import 'package:ioe/Subject_Pages/electricmachine.dart';
-import 'package:ioe/Subject_Pages/microprocessor.dart';
 import 'package:ioe/Subject_Pages/numericalmethod.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';

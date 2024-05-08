@@ -15,6 +15,9 @@ class HomeContent extends StatelessWidget {
         children: [
           AppBarTop(
             pageTitle: 'Notes IOE',
+            onDrawerIconPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
             // Pass the page title here
           ),
           const SizedBox(
