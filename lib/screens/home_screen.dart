@@ -72,12 +72,14 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class AppBarTop extends StatelessWidget {
-  final String pageTitle; // Parameter to receive the page title
+class AppBarTop extends StatelessWidget implements PreferredSizeWidget {
+  final String pageTitle;
+  final VoidCallback onDrawerIconPressed; // Parameter to receive the page title
 
   const AppBarTop({
     required this.pageTitle, // Require page title when creating the widget
     Key? key,
+    required this.onDrawerIconPressed,
   }) : super(key: key);
 
   @override
@@ -104,12 +106,10 @@ class AppBarTop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
+            onPressed: onDrawerIconPressed, // Use the callback function
             icon: Icon(
               Icons.dashboard_rounded,
-              color: Colors.white, // Adjust icon color
+              color: Colors.white,
             ),
           ),
           Text(
@@ -134,4 +134,8 @@ class AppBarTop extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  Size get preferredSize =>
+      Size.fromHeight(64); // Adjust the preferred height of the app bar
 }

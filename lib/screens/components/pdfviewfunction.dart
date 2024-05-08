@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:ioe/navpages/downloads.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -93,25 +94,42 @@ class PDFViewPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("$name"),
         // Conditionally show download button based on showDownloadButton property
-        actions: showDownloadButton
-            ? [
-                IconButton(
-                  icon: Icon(Icons.download),
-                  onPressed: () async {
-                    final appDir = await getApplicationDocumentsDirectory();
-                    final filename = basename(file.path);
-                    final newFile = File('${appDir.path}/Downloads/$filename');
-                    await newFile.create(recursive: true);
-                    await file.copy(newFile.path);
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text('PDF Downloaded to Downloads Section.'),
-                      ),
+        actions: [
+          if (showDownloadButton)
+            IconButton(
+              icon: Icon(Icons.download),
+              onPressed: () async {
+                final appDir = await getApplicationDocumentsDirectory();
+                final filename = basename(file.path);
+                final newFile = File('${appDir.path}/Downloads/$filename');
+                await newFile.create(recursive: true);
+                await file.copy(newFile.path);
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Text("Download Successful!"),
+                      content: Text("PDF Downloaded to Downloads Section."),
+                      actions: <Widget>[
+                        TextButton(
+                          child: Text("OK"),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
                     );
                   },
-                ),
-              ]
-            : [],
+                );
+              },
+            ),
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {
+              Navigator.popUntil(context, ModalRoute.withName('/'));
+            },
+          ),
+        ],
       ),
       body: PDFView(filePath: file.path),
     );

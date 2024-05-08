@@ -65,7 +65,7 @@ import 'package:ioe/Subject_Pages/objectorientedprogramming.dart.dart';
 import 'package:ioe/Subject_Pages/theoryofcomputation.dart';
 import 'package:ioe/Subject_Pages/thermodymanics.dart';
 import 'package:ioe/constants.dart';
-import 'package:ioe/screens/components/Sanitary%20Engineering.dart';
+import 'package:ioe/Subject_Pages/Sanitary%20Engineering.dart';
 import 'package:ioe/screens/components/demo.dart';
 
 class InsideCard extends StatelessWidget {

@@ -10,8 +10,11 @@ class Demo extends StatelessWidget {
       child: ListView(
         children: [
           AppBarTop(
-            pageTitle: 'Demo Page', // Pass the page title here
-          ),
+              pageTitle: 'Demo Page',
+              onDrawerIconPressed: () {
+                Scaffold.of(context).openDrawer();
+              } // Pass the page title here
+              ),
         ],
       ),
     );
