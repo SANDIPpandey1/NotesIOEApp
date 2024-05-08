@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:ioe/Subject_Pages/InstrumentationI.dart';
-import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
-import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
-import 'package:ioe/Subject_Pages/electromagnetism.dart';
-import 'package:ioe/Subject_Pages/engineeringmath3.dart';
-import 'package:ioe/screens/components/demo.dart';
+import 'package:ioe/Subject_Pages/Concrete%20Technology%20and%20Masonry%20Structure.dart';
+import 'package:ioe/Subject_Pages/Engineering%20Hydrology.dart';
+import 'package:ioe/Subject_Pages/Foundation%20Engineering.dart';
+import 'package:ioe/Subject_Pages/Theory%20of%20Structures%20II.dart';
+import 'package:ioe/Subject_Pages/Water%20Supply%20Engineering.dart';
+import 'package:ioe/Subject_Pages/numericalmethod.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BEISem3 extends StatelessWidget {
+class BCESem5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BEI Semester 3 Notes',
+        heading: 'BCE Semester 5 Notes',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -25,73 +25,84 @@ class BEISem3 extends StatelessWidget {
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Probability and Statistics',
+              text: 'Engineering Hydrology',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ProbabilityAndStatistics()),
+                      builder: (context) =>
+                          EngineeringHydrology(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electromagnetism',
+              text: 'Numerical Methods',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Electromagnetics()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          NumericalMethod(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electric Device And Circuit',
+              text: 'Theory Of Structure II',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Edc()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          TheoryofStructuresII(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Instrumentation I',
+              text: 'Water Supply Engineering',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InstrumentationI()),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-
-            InsideButtons(
-              text: 'Control System',
-              icon: Icons.arrow_forward,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Demo()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          WaterSupplyEngineering(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Engineering Math III',
+              text: 'Concrete Technology',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath3()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ConcreteTechnologyandMasonryStructure(
+                              initialTabIndex: 0)),
                 );
               },
             ),
-            // Add other notes options here
+            //building drawing needed!!
+            SizedBox(height: 10.0),
+            InsideButtons(
+              text: 'Foundation Engineering',
+              icon: Icons.arrow_forward,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          FoundationEngineering(initialTabIndex: 0)),
+                );
+              },
+            )
           ],
         ),
       ),
