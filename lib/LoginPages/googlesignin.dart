@@ -3,7 +3,16 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/material.dart';
 
 class AuthService {
+  final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+  late String? _previousRoute;
+
   Future<void> signInWithGoogle(BuildContext context) async {
+    // Sign out the user from Google to reset the authentication flow
+    await _googleSignIn.signOut();
+
+    // Store the current route
+    _previousRoute = ModalRoute.of(context)!.settings.name;
+
     // Show circular loading indicator
     showDialog(
       context: context,
@@ -16,14 +25,16 @@ class AuthService {
     );
 
     try {
-      final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
+      final GoogleSignInAccount? googleSignInAccount =
+          await _googleSignIn.signIn();
 
-      if (gUser != null) {
-        final GoogleSignInAuthentication gAuth = await gUser.authentication;
+      if (googleSignInAccount != null) {
+        final GoogleSignInAuthentication googleSignInAuthentication =
+            await googleSignInAccount.authentication;
 
-        final credential = GoogleAuthProvider.credential(
-          accessToken: gAuth.accessToken,
-          idToken: gAuth.idToken,
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleSignInAuthentication.accessToken,
+          idToken: googleSignInAuthentication.idToken,
         );
 
         await FirebaseAuth.instance.signInWithCredential(credential);
@@ -31,34 +42,26 @@ class AuthService {
         // Close the loading dialog after sign-in is complete
         Navigator.of(context).pop();
       } else {
-        // Handle null GoogleSignInAccount (user cancelled sign-in)
         // Close the loading dialog
         Navigator.of(context).pop();
-        // Show any error message or perform any other action
-        throw FirebaseAuthException(
-          code: 'user-cancelled',
-          message: 'User cancelled the sign-in process.',
-        );
+        // Navigate back to the previous route
+        Navigator.popAndPushNamed(context, _previousRoute!);
       }
     } catch (error) {
-      // Handle sign-in errors
       // Close the loading dialog
       Navigator.of(context).pop();
       // Show error message or perform any other action
-      String errorMessage = 'An error occurred during sign-in.';
-      if (error is FirebaseAuthException) {
-        errorMessage = error.message ?? errorMessage;
-      }
       showDialog(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Sign-in Error'),
-            content: Text(errorMessage),
+            content: Text('An error occurred during sign-in.'),
             actions: [
               TextButton(
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  // Navigate back to the previous route
+                  Navigator.popAndPushNamed(context, _previousRoute!);
                 },
                 child: Text('OK'),
               ),
