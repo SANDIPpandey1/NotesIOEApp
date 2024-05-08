@@ -24,8 +24,9 @@ class BEISem2 extends StatelessWidget {
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
+              //needed
               text: 'Electric Circuit and Machines',
-              icon: Icons.sunny,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -36,7 +37,7 @@ class BEISem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Engineering Chemistry',
-              icon: Icons.electrical_services,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -48,7 +49,7 @@ class BEISem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Microprocessor',
-              icon: Icons.health_and_safety,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -59,7 +60,7 @@ class BEISem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Object Oriented Programming',
-              icon: Icons.draw,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -70,7 +71,7 @@ class BEISem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Engineerring Math II',
-              icon: Icons.calculate,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,

@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
-import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
-import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
-import 'package:ioe/Subject_Pages/electromagnetism.dart';
-import 'package:ioe/Subject_Pages/engineeringmath3.dart';
-import 'package:ioe/screens/components/demo.dart';
+import 'package:ioe/Subject_Pages/appliedmath.dart';
+import 'package:ioe/Subject_Pages/datastructureandalgorithm.dart';
+import 'package:ioe/Subject_Pages/discretestructure.dart';
+import 'package:ioe/Subject_Pages/electricmachine.dart';
+import 'package:ioe/Subject_Pages/microprocessor.dart';
+import 'package:ioe/Subject_Pages/numericalmethod.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BEISem3 extends StatelessWidget {
+class BEISem4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BEI Semester 3 Notes',
+        heading: 'BEI Semester 4 Notes',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -25,69 +27,65 @@ class BEISem3 extends StatelessWidget {
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Probability and Statistics',
+              text: 'Data Structure and Algorithm',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ProbabilityAndStatistics()),
+                      builder: (context) => DSA(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electromagnetism',
+              text: 'Applied Math',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Electromagnetics()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          AppliedMathematics(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electric Device And Circuit',
+              text: 'Discrete Structure',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Edc()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          DiscreteStructure(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Instrumentation I',
+              text: 'Computer Graphics',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InstrumentationI()),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-
-            InsideButtons(
-              text: 'Control System',
-              icon: Icons.arrow_forward,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Demo()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ComputerGraphics(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Engineering Math III',
+              text: 'Numerical Method',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath3()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          NumericalMethod(initialTabIndex: 0)),
                 );
               },
             ),
