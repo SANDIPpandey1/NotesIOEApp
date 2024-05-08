@@ -9,6 +9,7 @@ import 'package:ioe/Subject_Pages/Computer%20networt%20and%20Security.dart';
 import 'package:ioe/Subject_Pages/Concrete%20Technology%20and%20Masonry%20Structure.dart';
 import 'package:ioe/Subject_Pages/Data%20Communication.dart';
 import 'package:ioe/Subject_Pages/Database%20Management%20System.dart';
+import 'package:ioe/Subject_Pages/Design%20of%20RCC%20Structure.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20Steel%20and%20Timber%20Structure.dart';
 import 'package:ioe/Subject_Pages/Digital%20Signal%20Analysis%20and%20Processing.dart';
 import 'package:ioe/Subject_Pages/Distributed%20System.dart';
@@ -18,9 +19,11 @@ import 'package:ioe/Subject_Pages/Engineering%20Geology%20I.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Geology%20II.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Hydrology.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Professional%20Practice.dart';
+import 'package:ioe/Subject_Pages/Estimating%20and%20Costing.dart';
 import 'package:ioe/Subject_Pages/Fluid%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Foundation%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Hydraulics.dart';
+import 'package:ioe/Subject_Pages/Hydropower%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Information%20System.dart';
 import 'package:ioe/Subject_Pages/InstrimentationII.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
@@ -31,6 +34,7 @@ import 'package:ioe/Subject_Pages/Object%20Oriented%20Analysis%20and%20Design.da
 import 'package:ioe/Subject_Pages/Operating%20System.dart';
 import 'package:ioe/Subject_Pages/Orginization%20and%20Management.dart';
 import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
+import 'package:ioe/Subject_Pages/Project%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Project%20Management.dart';
 import 'package:ioe/Subject_Pages/Simulation%20and%20Modeling.dart';
 import 'package:ioe/Subject_Pages/Software%20Engineering.dart';
@@ -39,6 +43,7 @@ import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
 import 'package:ioe/Subject_Pages/Surveying%20I.dart';
 import 'package:ioe/Subject_Pages/Surveying%20II.dart';
 import 'package:ioe/Subject_Pages/Theory%20of%20Structures%20II.dart';
+import 'package:ioe/Subject_Pages/Transportation%20Engineering%20II.dart';
 import 'package:ioe/Subject_Pages/Transportation%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Water%20Supply%20Engineering.dart';
 import 'package:ioe/Subject_Pages/applied_mechanics.dart';
@@ -640,6 +645,42 @@ class InsideCard extends StatelessWidget {
           MaterialPageRoute(
               builder: (context) =>
                   IrrigationandDrainageEngineering(initialTabIndex: 1)),
+        );
+        break;
+      case 'Hydropower Engineering':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => HydropowerEngineering(initialTabIndex: 1)),
+        );
+        break;
+      case 'Project Engineering':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ProjectEngineering(initialTabIndex: 1)),
+        );
+        break;
+      case 'Transportation Engineering II':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  TransportationEngineeringII(initialTabIndex: 1)),
+        );
+        break;
+      case 'Estimating and Costing':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => EstimatingandCosting(initialTabIndex: 1)),
+        );
+        break;
+      case 'Design of RCC Structure':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => DesignofRCCStructure(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
