@@ -7,6 +7,7 @@ import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
 import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
 import 'package:ioe/Subject_Pages/Computer%20networt%20and%20Security.dart';
 import 'package:ioe/Subject_Pages/Concrete%20Technology%20and%20Masonry%20Structure.dart';
+import 'package:ioe/Subject_Pages/Construction%20Management.dart';
 import 'package:ioe/Subject_Pages/Data%20Communication.dart';
 import 'package:ioe/Subject_Pages/Database%20Management%20System.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20RCC%20Structure.dart';
@@ -690,6 +691,13 @@ class InsideCard extends StatelessWidget {
           MaterialPageRoute(
               builder: (context) =>
                   TechnologyEnvironmentandSociety(initialTabIndex: 1)),
+        );
+        break;
+      case 'Construction Management':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ConstructionManagement(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
