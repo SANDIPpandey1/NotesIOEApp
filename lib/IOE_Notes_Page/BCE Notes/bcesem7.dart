@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:ioe/Subject_Pages/Building%20Technology.dart';
-import 'package:ioe/Subject_Pages/Design%20of%20Steel%20and%20Timber%20Structure.dart';
-import 'package:ioe/Subject_Pages/EngineeringEconomics.dart';
-import 'package:ioe/Subject_Pages/Irrigation%20and%20Drainage%20Engineering.dart';
-import 'package:ioe/Subject_Pages/Sanitary%20Engineering.dart';
-import 'package:ioe/Subject_Pages/Transportation%20Engineering.dart';
-import 'package:ioe/Subject_Pages/numericalmethod.dart';
+import 'package:ioe/Subject_Pages/Design%20of%20RCC%20Structure.dart';
+import 'package:ioe/Subject_Pages/Estimating%20and%20Costing.dart';
+import 'package:ioe/Subject_Pages/Hydropower%20Engineering.dart';
+import 'package:ioe/Subject_Pages/Project%20Engineering.dart';
+import 'package:ioe/Subject_Pages/Transportation%20Engineering%20II.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCESem6 extends StatelessWidget {
+class BCESem7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCE Semester 6 Notes',
+        heading: 'BCE Semester 7 Notes',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -26,92 +24,66 @@ class BCESem6 extends StatelessWidget {
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Design of Steel And Tember',
+              text: 'Hydropower Engineering',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          DesignofSteelandTimberStructure(initialTabIndex: 0)),
+                          HydropowerEngineering(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Communication English',
+              text: 'Project Engineering',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          NumericalMethod(initialTabIndex: 0)),
+                          ProjectEngineering(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Engineering Econimics',
+              text: 'Transportation Engineering II',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          EngineeringEconomics(initialTabIndex: 0)),
+                          TransportationEngineeringII(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Building Technology',
+              text: 'Estimation and Costing',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          BuildingTechnology(initialTabIndex: 0)),
+                          EstimatingandCosting(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Sanitary Engineering',
+              text: 'Design of RCC Structure',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          SanitaryEngineering(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Transportation Engineering',
-              icon: Icons.arrow_forward,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          TransportationEngineering(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Irrigation and Drainage',
-              icon: Icons.arrow_forward,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          IrrigationandDrainageEngineering(initialTabIndex: 0)),
+                          DesignofRCCStructure(initialTabIndex: 0)),
                 );
               },
             ),
