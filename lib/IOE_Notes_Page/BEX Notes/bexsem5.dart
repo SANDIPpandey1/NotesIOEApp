@@ -101,7 +101,7 @@ class BEXSem5 extends StatelessWidget {
                 );
               },
             ),
-            // Add other notes options here
+            // Add other notes options heree
           ],
         ),
       ),
