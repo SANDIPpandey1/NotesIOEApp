@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem1.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem2.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem3.dart';
-import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem1.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem4.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem5.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem6.dart';

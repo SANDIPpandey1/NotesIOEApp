@@ -27,7 +27,7 @@ class BCESem3 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Civil Engineering Materials',
-              icon: Icons.sunny,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -39,7 +39,7 @@ class BCESem3 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Applied Mechanics Dymanics',
-              icon: Icons.electrical_services,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -51,7 +51,7 @@ class BCESem3 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Enginering Geology I',
-              icon: Icons.health_and_safety,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -75,7 +75,7 @@ class BCESem3 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Engineerring Math III',
-              icon: Icons.calculate,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -86,7 +86,7 @@ class BCESem3 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Surveing I',
-              icon: Icons.calculate,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -97,7 +97,7 @@ class BCESem3 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Fluid Mechanics',
-              icon: Icons.calculate,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
