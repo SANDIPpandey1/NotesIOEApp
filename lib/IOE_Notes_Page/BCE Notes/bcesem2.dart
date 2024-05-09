@@ -25,7 +25,7 @@ class BCESem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Applied Mechanics',
-              icon: Icons.sunny,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -47,7 +47,7 @@ class BCESem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Enginering Physics',
-              icon: Icons.health_and_safety,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -58,7 +58,7 @@ class BCESem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Engineering Drawing II',
-              icon: Icons.draw,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -69,7 +69,7 @@ class BCESem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Engineerring Math II',
-              icon: Icons.calculate,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -80,7 +80,7 @@ class BCESem2 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Basic Electrical Engineering',
-              icon: Icons.calculate,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
