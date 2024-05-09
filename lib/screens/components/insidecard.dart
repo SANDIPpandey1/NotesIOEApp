@@ -42,6 +42,7 @@ import 'package:ioe/Subject_Pages/Soil%20Mechanics.dart';
 import 'package:ioe/Subject_Pages/Strength%20of%20Materials.dart';
 import 'package:ioe/Subject_Pages/Surveying%20I.dart';
 import 'package:ioe/Subject_Pages/Surveying%20II.dart';
+import 'package:ioe/Subject_Pages/Technology%20Environment%20and%20Society.dart';
 import 'package:ioe/Subject_Pages/Theory%20of%20Structures%20II.dart';
 import 'package:ioe/Subject_Pages/Transportation%20Engineering%20II.dart';
 import 'package:ioe/Subject_Pages/Transportation%20Engineering.dart';
@@ -681,6 +682,14 @@ class InsideCard extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) => DesignofRCCStructure(initialTabIndex: 1)),
+        );
+        break;
+      case 'Technology Environment and Society':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  TechnologyEnvironmentandSociety(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
