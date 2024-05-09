@@ -319,7 +319,7 @@ class ConstructionManagement extends StatelessWidget {
                       child: Center(child: Text('Total')),
                     ),
                     TableCell(
-                      child: Center(child: Text('45')),
+                      child: Center(child: Text('60')),
                     ),
                     TableCell(
                       child: Center(child: Text('80')),

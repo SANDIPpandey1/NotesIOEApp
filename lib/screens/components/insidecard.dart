@@ -3,6 +3,7 @@ import 'package:ioe/Subject_Pages/Applied%20Mechanics%20Dynamics.dart';
 import 'package:ioe/Subject_Pages/Artificial%20Intelligence.dart';
 import 'package:ioe/Subject_Pages/Building%20Technology.dart';
 import 'package:ioe/Subject_Pages/Civil%20Engineering%20Materials.dart';
+import 'package:ioe/Subject_Pages/Computational%20Techniques%20in%20Civil%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
 import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
 import 'package:ioe/Subject_Pages/Computer%20networt%20and%20Security.dart';
@@ -698,6 +699,14 @@ class InsideCard extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) => ConstructionManagement(initialTabIndex: 1)),
+        );
+        break;
+      case 'Computational Techniques in Civil Engineering':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ComputationalTechniquesinCivilEngineering(
+                  initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
