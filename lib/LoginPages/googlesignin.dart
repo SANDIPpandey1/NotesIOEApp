@@ -4,14 +4,20 @@ import 'package:flutter/material.dart';
 
 class AuthService {
   final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
-  late String? _previousRoute;
+  late String _previousRoute;
+
+  AuthService() {
+    // Initialize _previousRoute with the initial route
+    _previousRoute = '/';
+  }
 
   Future<void> signInWithGoogle(BuildContext context) async {
     // Sign out the user from Google to reset the authentication flow
     await _googleSignIn.signOut();
 
     // Store the current route
-    _previousRoute = ModalRoute.of(context)!.settings.name;
+    final String currentRoute = ModalRoute.of(context)?.settings.name ?? '/';
+    _updatePreviousRoute(currentRoute);
 
     // Show circular loading indicator
     showDialog(
@@ -45,11 +51,12 @@ class AuthService {
         // Close the loading dialog
         Navigator.of(context).pop();
         // Navigate back to the previous route
-        Navigator.popAndPushNamed(context, _previousRoute!);
+        Navigator.popAndPushNamed(context, _previousRoute);
       }
     } catch (error) {
       // Close the loading dialog
       Navigator.of(context).pop();
+
       // Show error message or perform any other action
       showDialog(
         context: context,
@@ -61,7 +68,7 @@ class AuthService {
               TextButton(
                 onPressed: () {
                   // Navigate back to the previous route
-                  Navigator.popAndPushNamed(context, _previousRoute!);
+                  Navigator.popAndPushNamed(context, _previousRoute);
                 },
                 child: Text('OK'),
               ),
@@ -70,5 +77,9 @@ class AuthService {
         },
       );
     }
+  }
+
+  void _updatePreviousRoute(String route) {
+    _previousRoute = route;
   }
 }
