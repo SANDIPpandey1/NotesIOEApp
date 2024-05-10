@@ -122,11 +122,9 @@ class AppBarTop extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           IconButton(
-            onPressed: () {
-              // Add onPressed action for search button if needed
-            },
+            onPressed: () {},
             icon: Icon(
-              Icons.search_rounded,
+              Icons.person,
               color: Colors.white, // Adjust icon color
             ),
           ),

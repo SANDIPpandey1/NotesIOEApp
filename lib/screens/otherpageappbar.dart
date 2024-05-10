@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ioe/constants.dart';
 
 class OtherPageAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String heading;
@@ -14,44 +15,50 @@ class OtherPageAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: Text(
-        heading,
-        style: TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      centerTitle: true,
-      leading: GestureDetector(
-        onTap: () {
-          Navigator.pop(context); // Use a callback function for onTap
-        },
-        child: Icon(
-          Icons.arrow_back,
-          size: 25,
-          color: Colors.black,
-        ),
-      ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.only(right: 15),
-          child: GestureDetector(
-            onTap: onRightIconTap,
-            child: Icon(
-              rightIcon,
-              size: 25,
-              color: Colors.black,
-            ),
+    return SafeArea(
+      child: AppBar(
+        title: Text(
+          heading,
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 20, // Adjust font size as needed
           ),
         ),
-      ],
-      //backgroundColor: kblue,
-      toolbarHeight: 65,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              rightIcon,
+              color: Colors.white,
+            ),
+            onPressed: onRightIconTap,
+          ),
+        ],
+        backgroundColor: kblue, // Change to your preferred color
+        toolbarHeight: 80, // Adjust toolbar height as needed
+        elevation: 0, // Remove elevation to avoid shadow under app bar
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(10), // Adjust the border radius
+            bottomRight: Radius.circular(10), // Adjust the border radius
+          ),
+        ),
+        // Adjust the shadow blur radius
+      ),
     );
   }
 
   @override
   Size get preferredSize =>
-      Size.fromHeight(65); // Specify the preferred size of the app bar
+      Size.fromHeight(64); // Specify the preferred size of the app bar
 }
