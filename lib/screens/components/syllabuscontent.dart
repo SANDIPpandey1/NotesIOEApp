@@ -44,7 +44,7 @@ class SubSection extends StatelessWidget {
             child: Text(
               text,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 15,
                 color: Colors.black87,
               ),
             ),

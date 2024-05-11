@@ -60,17 +60,16 @@ class AuthService {
       // Show error message or perform any other action
       showDialog(
         context: context,
-        builder: (BuildContext context) {
+        builder: (context) {
           return AlertDialog(
-            title: Text('Sign-in Error'),
-            content: Text('An error occurred during sign-in.'),
+            title: Text('Error'),
+            content: Text('An error occurred while signing in.'),
             actions: [
               TextButton(
-                onPressed: () {
-                  // Navigate back to the previous route
-                  Navigator.popAndPushNamed(context, _previousRoute);
-                },
                 child: Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
               ),
             ],
           );
