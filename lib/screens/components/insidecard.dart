@@ -91,7 +91,7 @@ class InsideCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),
+      margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 18.0),
       elevation: 1,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
