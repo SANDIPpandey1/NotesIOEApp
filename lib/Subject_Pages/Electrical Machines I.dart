@@ -215,7 +215,7 @@ class ElectricalMachinesI extends StatelessWidget {
                       child: Center(child: Text('Total')),
                     ),
                     TableCell(
-                      child: Center(child: Text('45')),
+                      child: Center(child: Text('42')),
                     ),
                     TableCell(
                       child: Center(child: Text('80')),
