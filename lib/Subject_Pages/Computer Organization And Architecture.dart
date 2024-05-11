@@ -68,7 +68,37 @@ class ComputerOrginzationAndArchitecture extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.0),
       children: [
         SizedBox(height: 20),
-        InsideButtons(text: 'Overview', icon: Icons.read_more, onTap: () {})
+        InsideButtons(
+            text: 'Compiled Note',
+            icon: Icons.arrow_forward,
+            onTap: () {
+              openPDF(context,
+                  'https://notesioe.com/wp-content/uploads/2024/05/COA-notes.pdf');
+            }),
+        SizedBox(height: 10),
+        InsideButtons(
+            text: 'Chapter 2 - CPU',
+            icon: Icons.arrow_forward,
+            onTap: () {
+              openPDF(context,
+                  'https://notesioe.com/wp-content/uploads/2024/05/Chapter_2-Central-Processing-Unit.pdf');
+            }),
+        SizedBox(height: 10),
+        InsideButtons(
+            text: 'Chapter 4 - Pipeline and Vector',
+            icon: Icons.arrow_forward,
+            onTap: () {
+              openPDF(context,
+                  'https://notesioe.com/wp-content/uploads/2024/05/Chapter-4-Pipeline-and-Vector-Processing.pdf');
+            }),
+        SizedBox(height: 10),
+        InsideButtons(
+            text: 'Chapter 5 - Computer Arhiteture',
+            icon: Icons.arrow_forward,
+            onTap: () {
+              openPDF(context,
+                  'https://notesioe.com/wp-content/uploads/2024/05/Chapter-5-Computer-Arithmatic.pdf');
+            })
 
         // Add more InsideButtons as needed
       ],

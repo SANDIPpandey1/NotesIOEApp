@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:ioe/constants.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -76,33 +77,55 @@ void openPDF(BuildContext context, String url) async {
   }
 }
 
-class PDFViewPage extends StatelessWidget {
+class PDFViewPage extends StatefulWidget {
   final File file;
-  final bool
-      showDownloadButton; // New property to control download button visibility
+  final bool showDownloadButton;
 
-  // Constructor with an optional parameter to control download button visibility
   const PDFViewPage(
       {Key? key, required this.file, this.showDownloadButton = true})
       : super(key: key);
 
   @override
+  _PDFViewPageState createState() => _PDFViewPageState();
+}
+
+class _PDFViewPageState extends State<PDFViewPage> {
+  PDFViewController? _pdfViewController;
+  int _totalPages = 0;
+  int _currentPage = 1; // Start with page 1
+  final _pageController = TextEditingController(text: '1');
+  final _focusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  void _jumpToPage(String page) {
+    final int? pageNumber = int.tryParse(page);
+    if (pageNumber != null && pageNumber > 0 && pageNumber <= _totalPages) {
+      _pdfViewController?.setPage(pageNumber - 1);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final name = basename(file.path);
+    final name = basename(widget.file.path);
     return Scaffold(
       appBar: AppBar(
-        title: Text("$name"),
-        // Conditionally show download button based on showDownloadButton property
-        actions: [
-          if (showDownloadButton)
+        title: Text(name),
+        actions: <Widget>[
+          if (widget.showDownloadButton)
             IconButton(
-              icon: Icon(Icons.download),
+              icon: Icon(Icons.download, color: Colors.black),
               onPressed: () async {
                 final appDir = await getApplicationDocumentsDirectory();
-                final filename = basename(file.path);
+                final filename = basename(widget.file.path);
                 final newFile = File('${appDir.path}/Downloads/$filename');
                 await newFile.create(recursive: true);
-                await file.copy(newFile.path);
+                await widget.file.copy(newFile.path);
                 showDialog(
                   context: context,
                   builder: (BuildContext context) {
@@ -123,14 +146,102 @@ class PDFViewPage extends StatelessWidget {
               },
             ),
           IconButton(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home, color: Colors.black),
             onPressed: () {
               Navigator.popUntil(context, ModalRoute.withName('/'));
             },
           ),
         ],
       ),
-      body: PDFView(filePath: file.path),
+      body: Column(
+        children: [
+          Expanded(
+            child: PDFView(
+              filePath: widget.file.path,
+              swipeHorizontal: false, // Set to false for vertical scrolling
+              pageSnap: true,
+              autoSpacing: true,
+              onRender: (_pages) {
+                setState(() {
+                  _totalPages = _pages!;
+                  _currentPage =
+                      1; // Reset to first page when document is loaded
+                  _pageController.text = '1'; // Update the controller text
+                });
+              },
+              onViewCreated: (PDFViewController pdfViewController) {
+                setState(() {
+                  _pdfViewController = pdfViewController;
+                });
+              },
+              onPageChanged: (int? page, int? total) {
+                setState(() {
+                  _currentPage = page! + 1; // Adjust for 0-indexing
+                  _pageController.text =
+                      _currentPage.toString(); // Update the controller text
+                });
+              },
+            ),
+          ),
+          if (_totalPages > 1) ...[
+            Container(
+              color: kblue,
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.first_page, color: Colors.white),
+                    onPressed: () {
+                      _pdfViewController?.setPage(0);
+                    },
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.chevron_left, color: Colors.white),
+                    onPressed: () {
+                      _currentPage > 1
+                          ? _pdfViewController?.setPage(_currentPage - 2)
+                          : null;
+                    },
+                  ),
+                  Expanded(
+                    child: TextField(
+                      controller: _pageController,
+                      focusNode: _focusNode,
+                      decoration: InputDecoration(
+                        hintText: 'Page',
+                        hintStyle: TextStyle(color: Colors.white),
+                        border: InputBorder.none,
+                      ),
+                      style: TextStyle(color: Colors.white),
+                      textAlign: TextAlign.center,
+                      keyboardType: TextInputType.number,
+                      onSubmitted: _jumpToPage,
+                    ),
+                  ),
+                  Text(' / $_totalPages',
+                      style: TextStyle(color: Colors.white)),
+                  IconButton(
+                    icon: Icon(Icons.chevron_right, color: Colors.white),
+                    onPressed: () {
+                      _currentPage < _totalPages
+                          ? _pdfViewController?.setPage(_currentPage)
+                          : null;
+                    },
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.last_page, color: Colors.white),
+                    onPressed: () {
+                      _pdfViewController?.setPage(_totalPages - 1);
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ],
+      ),
     );
   }
 }
