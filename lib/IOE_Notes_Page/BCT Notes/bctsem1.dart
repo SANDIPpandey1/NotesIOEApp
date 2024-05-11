@@ -26,7 +26,7 @@ class BCTSem1 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Applied Mechanics',
-              icon: Icons.house,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -39,7 +39,7 @@ class BCTSem1 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Computer Programming (C)',
-              icon: Icons.code,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -51,7 +51,7 @@ class BCTSem1 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Engineering Dawing I',
-              icon: Icons.draw,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -64,7 +64,7 @@ class BCTSem1 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Engineering Physics',
-              icon: Icons.balance,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -77,7 +77,7 @@ class BCTSem1 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Basic Electrical Engineering',
-              icon: Icons.wind_power,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
@@ -90,7 +90,7 @@ class BCTSem1 extends StatelessWidget {
             SizedBox(height: 10.0),
             InsideButtons(
               text: 'Engineering Math I',
-              icon: Icons.calculate,
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,

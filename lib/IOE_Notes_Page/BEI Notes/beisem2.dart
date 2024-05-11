@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ioe/Subject_Pages/electricCircuitandmachines.dart';
 import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
 import 'package:ioe/Subject_Pages/engineeringmath2.dart';
 import 'package:ioe/Subject_Pages/microprocessor.dart';
 import 'package:ioe/Subject_Pages/objectorientedprogramming.dart.dart';
-import 'package:ioe/screens/components/demo.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
@@ -19,18 +19,19 @@ class BEISem2 extends StatelessWidget {
         },
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30.0),
         child: Column(
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
               //needed
-              text: 'Electric Circuit and Machines',
+              text: 'Electric Circuits and Machines',
               icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Demo()),
+                  MaterialPageRoute(
+                      builder: (context) => ElectricCircuitAndMachines()),
                 );
               },
             ),

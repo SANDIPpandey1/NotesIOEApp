@@ -25,7 +25,7 @@ class BCTQuestionsSem7 extends StatelessWidget {
         },
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 30),
         child: Column(
           children: [
             SizedBox(height: 10.0),
