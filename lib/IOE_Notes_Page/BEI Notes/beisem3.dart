@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ioe/Subject_Pages/Control%20System.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
 import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
 import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
 import 'package:ioe/Subject_Pages/electromagnetism.dart';
 import 'package:ioe/Subject_Pages/engineeringmath3.dart';
-import 'package:ioe/screens/components/demo.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
@@ -20,7 +20,7 @@ class BEISem3 extends StatelessWidget {
         },
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30.0),
         child: Column(
           children: [
             SizedBox(height: 10.0),
@@ -76,7 +76,7 @@ class BEISem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Demo()),
+                  MaterialPageRoute(builder: (context) => ControlSystem()),
                 );
               },
             ),

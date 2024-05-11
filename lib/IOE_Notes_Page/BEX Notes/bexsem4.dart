@@ -21,7 +21,7 @@ class BEXSem4 extends StatelessWidget {
         },
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30.0),
         child: Column(
           children: [
             SizedBox(height: 10.0),
