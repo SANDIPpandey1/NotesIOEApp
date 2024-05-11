@@ -10,7 +10,7 @@ class LoginOrRegisterPage extends StatefulWidget {
 }
 
 class _LoginOrRegisterPageState extends State<LoginOrRegisterPage> {
-  bool showLoginPage = false;
+  bool showLoginPage = true;
 
   void toggelPages() {
     setState(() {
