@@ -16,6 +16,7 @@ import 'package:ioe/Subject_Pages/Design%20of%20RCC%20Structure.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20Steel%20and%20Timber%20Structure.dart';
 import 'package:ioe/Subject_Pages/Digital%20Signal%20Analysis%20and%20Processing.dart';
 import 'package:ioe/Subject_Pages/Distributed%20System.dart';
+import 'package:ioe/Subject_Pages/Electric%20Machines%20II.dart';
 import 'package:ioe/Subject_Pages/Electrical%20Machines%20I.dart';
 import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20I.dart';
 import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20II.dart';
@@ -748,6 +749,13 @@ class InsideCard extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) => ElectricalMachinesI(initialTabIndex: 1)),
+        );
+        break;
+      case 'Electric Machines II':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ElectricMachinesII(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
