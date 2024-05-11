@@ -4,9 +4,9 @@ import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/components/syllabuscontent.dart';
 
-class ELECTRICCIRCUITSANDMACHINES extends StatelessWidget {
+class ElectricCircuitAndMachines extends StatelessWidget {
   final int initialTabIndex;
-  ELECTRICCIRCUITSANDMACHINES({this.initialTabIndex = 0});
+  ElectricCircuitAndMachines({this.initialTabIndex = 0});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

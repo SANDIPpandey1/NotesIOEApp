@@ -3,10 +3,11 @@ import 'package:ioe/IOE_Syllabys_Pages/archsyllabys.dart';
 import 'package:ioe/IOE_Syllabys_Pages/bctsyllabus.dart';
 import 'package:ioe/IOE_Syllabys_Pages/bcesyllabys.dart';
 import 'package:ioe/IOE_Syllabys_Pages/belsyllabus.dart';
-import 'package:ioe/IOE_Syllabys_Pages/bexsyllabus.dart';
+import 'package:ioe/IOE_Syllabys_Pages/beisyllabus.dart';
 import 'package:ioe/IOE_Syllabys_Pages/bmesyllabys.dart';
 import 'package:ioe/IOE_Syllabys_Pages/geomatics.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
+import 'package:ioe/screens/otherpageappbar.dart';
 
 class IOESyllabus extends StatelessWidget {
   const IOESyllabus({Key? key}) : super(key: key);
@@ -14,15 +15,12 @@ class IOESyllabus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'IOE Syllabus',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
+      appBar: OtherPageAppBar(
+        heading: 'IOE Syllabus',
+        rightIcon: Icons.home,
+        onRightIconTap: () {
+          Navigator.popUntil(context, ModalRoute.withName('/'));
+        },
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30.0),
@@ -52,12 +50,12 @@ class IOESyllabus extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electronics Engineering (BEX)',
+              text: 'Electronics and Information (BEI)',
               icon: Icons.signal_cellular_connected_no_internet_4_bar_outlined,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BEXSyllabus()),
+                  MaterialPageRoute(builder: (context) => BEISyllabus()),
                 );
               },
             ),
