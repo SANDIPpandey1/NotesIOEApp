@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:ioe/Subject_Pages/digitallogic.dart';
-import 'package:ioe/Subject_Pages/electriccircuittheory.dart';
-import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
-import 'package:ioe/Subject_Pages/electromagnetism.dart';
-import 'package:ioe/Subject_Pages/engineeringmath3.dart';
-import 'package:ioe/Subject_Pages/objectorientedprogramming.dart.dart';
-import 'package:ioe/Subject_Pages/theoryofcomputation.dart';
+import 'package:ioe/Subject_Pages/engineeringdrawing1.dart';
+import 'package:ioe/Subject_Pages/basicelectrical.dart';
+import 'package:ioe/Subject_Pages/cprogramming.dart';
+import 'package:ioe/Subject_Pages/engineeringphysics.dart';
+import 'package:ioe/Subject_Pages/engineerinmath1.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
+import 'package:ioe/Subject_Pages/applied_mechanics.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCTSem3 extends StatelessWidget {
+class BELSem1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 3 Notes',
+        heading: 'BEL Semester 1 Notes',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -27,88 +26,78 @@ class BCTSem3 extends StatelessWidget {
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electric Circuit Theory',
-              icon: Icons.loop,
+              text: 'Applied Mechanics',
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
                       builder: (context) =>
-                          ElectricCircuitTheory(initialTabIndex: 0)),
+                          AppliedMechanics(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electromagnetism',
-              icon: Icons.wifi,
+              text: 'Computer Programming (C)',
+              icon: Icons.arrow_forward,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                      builder: (context) => CProgramming(initialTabIndex: 0)),
+                );
+              },
+            ),
+            SizedBox(height: 10.0),
+            InsideButtons(
+              text: 'Engineering Dawing I',
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
                       builder: (context) =>
-                          Electromagnetics(initialTabIndex: 0)),
+                          EngineerinGDrawingI(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electric Device And Circuit',
-              icon: Icons.device_hub,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => Edc(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Digital Logic',
-              icon: Icons.storage,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => DigitalLogic(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Theory Of Computation',
-              icon: Icons.stacked_bar_chart,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => Toc(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Object Oriented Programming',
-              icon: Icons.code,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => Oop(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Engineering Math III',
-              icon: Icons.calculate,
+              text: 'Engineering Physics',
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
                       builder: (context) =>
-                          EngineeringMath3(initialTabIndex: 0)),
+                          EngineeringPhysics(initialTabIndex: 0)),
+                );
+              },
+            ),
+            SizedBox(height: 10.0),
+            InsideButtons(
+              text: 'Basic Electrical Engineering',
+              icon: Icons.arrow_forward,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                      builder: (context) =>
+                          BasicElectricalEngineering(initialTabIndex: 0)),
+                );
+              },
+            ),
+            SizedBox(height: 10.0),
+            InsideButtons(
+              text: 'Engineering Math I',
+              icon: Icons.arrow_forward,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                      builder: (context) =>
+                          EngineeringMath1(initialTabIndex: 0)),
                 );
               },
             ),

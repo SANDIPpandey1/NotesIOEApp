@@ -1,11 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
-
 import 'package:ioe/LoginPages/forgotpasswordpage.dart';
 import 'package:ioe/LoginPages/googlesignin.dart';
-
 import 'package:ioe/constants.dart';
 import 'package:ioe/screens/components/buttons.dart';
 import 'package:ioe/screens/components/squaretile.dart';
