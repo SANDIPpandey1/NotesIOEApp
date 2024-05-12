@@ -15,12 +15,14 @@ import 'package:ioe/Subject_Pages/Data%20Communication.dart';
 import 'package:ioe/Subject_Pages/Database%20Management%20System.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20RCC%20Structure.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20Steel%20and%20Timber%20Structure.dart';
+import 'package:ioe/Subject_Pages/Digital%20Control%20System.dart';
 import 'package:ioe/Subject_Pages/Digital%20Signal%20Analysis%20and%20Processing.dart';
 import 'package:ioe/Subject_Pages/Distributed%20System.dart';
 import 'package:ioe/Subject_Pages/Electric%20Machines%20II.dart';
 import 'package:ioe/Subject_Pages/Electrical%20Machines%20I.dart';
 import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20I.dart';
 import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20II.dart';
+import 'package:ioe/Subject_Pages/Switchgear%20and%20Protection.dart';
 import 'package:ioe/Subject_Pages/electricCircuitandmachines.dart';
 import 'package:ioe/Subject_Pages/Embedded%20System.dart';
 import 'package:ioe/Subject_Pages/Energy%20Environment%20and%20society.dart';
@@ -734,14 +736,14 @@ class InsideCard extends StatelessWidget {
       case 'Power System Analysis I':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => PowerSystemAnalysisI(initialTabIndex: 1)),
         );
         break;
       case 'Power System Analysis II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => PowerSystemAnalysisII(initialTabIndex: 1)),
         );
         break;
@@ -755,8 +757,23 @@ class InsideCard extends StatelessWidget {
       case 'Electric Machines II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ElectricMachinesII(initialTabIndex: 1)),
+        );
+        break;
+      case 'Switchgear and Protection':
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+              builder: (context) =>
+                  SwitchgearandProtection(initialTabIndex: 1)),
+        );
+        break;
+      case 'Digital Control System':
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+              builder: (context) => DigitalControlSystem(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
