@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:ioe/Subject_Pages/digitallogic.dart';
-import 'package:ioe/Subject_Pages/electriccircuittheory.dart';
-import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
-import 'package:ioe/Subject_Pages/electromagnetism.dart';
-import 'package:ioe/Subject_Pages/engineeringmath3.dart';
-import 'package:ioe/Subject_Pages/objectorientedprogramming.dart.dart';
-import 'package:ioe/Subject_Pages/theoryofcomputation.dart';
+import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
+import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
+import 'package:ioe/Subject_Pages/Control%20System.dart';
+import 'package:ioe/Subject_Pages/Data%20Communication.dart';
+import 'package:ioe/Subject_Pages/Electric%20Machines%20II.dart';
+import 'package:ioe/Subject_Pages/InstrimentationII.dart';
+import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20II.dart';
+import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
+import 'package:ioe/Subject_Pages/Software%20Engineering.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCTSem3 extends StatelessWidget {
+class BELSem5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 3 Notes',
+        heading: 'BEL Semester 5 Notes',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -27,88 +29,78 @@ class BCTSem3 extends StatelessWidget {
           children: [
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electric Circuit Theory',
-              icon: Icons.loop,
+              text: 'Probability and Statistics',
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
                       builder: (context) =>
-                          ElectricCircuitTheory(initialTabIndex: 0)),
+                          ProbabilityAndStatistics(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electromagnetism',
-              icon: Icons.wifi,
+              text: 'Electric Machines II',
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
                       builder: (context) =>
-                          Electromagnetics(initialTabIndex: 0)),
+                          ElectricMachinesII(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Electric Device And Circuit',
-              icon: Icons.device_hub,
+              text: 'Control System',
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
-                      builder: (context) => Edc(initialTabIndex: 0)),
+                      builder: (context) => ControlSystem(initialTabIndex: 0)),
                 );
               },
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Digital Logic',
-              icon: Icons.storage,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => DigitalLogic(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Theory Of Computation',
-              icon: Icons.stacked_bar_chart,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => Toc(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Object Oriented Programming',
-              icon: Icons.code,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                      builder: (context) => Oop(initialTabIndex: 0)),
-                );
-              },
-            ),
-            SizedBox(height: 10.0),
-            InsideButtons(
-              text: 'Engineering Math III',
-              icon: Icons.calculate,
+              text: 'Power System Analysis II',
+              icon: Icons.arrow_forward,
               onTap: () {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
                       builder: (context) =>
-                          EngineeringMath3(initialTabIndex: 0)),
+                          PowerSystemAnalysisII(initialTabIndex: 0)),
+                );
+              },
+            ),
+            SizedBox(height: 10.0),
+            InsideButtons(
+              text: 'Instrumentation II',
+              icon: Icons.arrow_forward,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                      builder: (context) =>
+                          InstrumentationII(initialTabIndex: 0)),
+                );
+              },
+            ),
+            SizedBox(height: 10.0),
+            InsideButtons(
+              text: 'Electric Machine Design',
+              icon: Icons.arrow_forward,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                      builder: (context) =>
+                          ElectricMachinesII(initialTabIndex: 0)),
                 );
               },
             ),

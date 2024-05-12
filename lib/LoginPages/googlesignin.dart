@@ -47,39 +47,44 @@ class AuthService {
         await FirebaseAuth.instance.signInWithCredential(credential);
 
         // Close the loading dialog after sign-in is complete
-        Navigator.of(context).pop();
+        Navigator.pop(context);
       } else {
         // Close the loading dialog
-        Navigator.of(context).pop();
+        Navigator.pop(context);
+
         // Navigate back to the previous route
         Navigator.popAndPushNamed(context, _previousRoute);
       }
     } catch (error) {
       // Close the loading dialog
-      Navigator.of(context).pop();
+      Navigator.pop(context);
 
-      // Show error message or perform any other action
-      showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            title: Text('Error'),
-            content: Text('An error occurred while signing in.'),
-            actions: [
-              TextButton(
-                child: Text('OK'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-            ],
-          );
-        },
-      );
+      // Show error message
+      _showErrorDialog(context);
     }
   }
 
   void _updatePreviousRoute(String route) {
     _previousRoute = route;
+  }
+
+  void _showErrorDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Error'),
+          content: Text('An error occurred while signing in.'),
+          actions: [
+            TextButton(
+              child: Text('OK'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 }
