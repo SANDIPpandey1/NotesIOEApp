@@ -15,6 +15,7 @@ import 'package:ioe/Subject_Pages/Data%20Communication.dart';
 import 'package:ioe/Subject_Pages/Database%20Management%20System.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20RCC%20Structure.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20Steel%20and%20Timber%20Structure.dart';
+import 'package:ioe/Subject_Pages/Digital%20Control%20System.dart';
 import 'package:ioe/Subject_Pages/Digital%20Signal%20Analysis%20and%20Processing.dart';
 import 'package:ioe/Subject_Pages/Distributed%20System.dart';
 import 'package:ioe/Subject_Pages/Electric%20Machines%20II.dart';
@@ -766,6 +767,13 @@ class InsideCard extends StatelessWidget {
           MaterialPageRoute(
               builder: (context) =>
                   SwitchgearandProtection(initialTabIndex: 1)),
+        );
+        break;
+      case 'Digital Control System':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => DigitalControlSystem(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
