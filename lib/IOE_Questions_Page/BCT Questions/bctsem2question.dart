@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/basicelectronics.dart';
 import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
 import 'package:ioe/Subject_Pages/engineeringmath2.dart';
@@ -29,7 +30,7 @@ class BCTQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Thermodynamics(initialTabIndex: 2)),
                 );
               },
@@ -41,7 +42,7 @@ class BCTQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           BasicElectronics(initialTabIndex: 2)),
                 );
@@ -54,7 +55,7 @@ class BCTQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           Engineeringchemistry(initialTabIndex: 2)),
                 );
@@ -67,7 +68,7 @@ class BCTQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           AppliedMechanics(initialTabIndex: 2)), //needed page
                 );
@@ -80,7 +81,7 @@ class BCTQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringMath2(initialTabIndex: 2)),
                 );

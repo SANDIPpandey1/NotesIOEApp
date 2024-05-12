@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Building%20Technology.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20Steel%20and%20Timber%20Structure.dart';
 import 'package:ioe/Subject_Pages/EngineeringEconomics.dart';
@@ -31,7 +32,7 @@ class BCESem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           DesignofSteelandTimberStructure(initialTabIndex: 0)),
                 );
@@ -44,7 +45,7 @@ class BCESem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           NumericalMethod(initialTabIndex: 0)),
                 );
@@ -57,7 +58,7 @@ class BCESem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringEconomics(initialTabIndex: 0)),
                 );
@@ -70,7 +71,7 @@ class BCESem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           BuildingTechnology(initialTabIndex: 0)),
                 );
@@ -83,7 +84,7 @@ class BCESem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           SanitaryEngineering(initialTabIndex: 0)),
                 );
@@ -96,7 +97,7 @@ class BCESem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           TransportationEngineering(initialTabIndex: 0)),
                 );
@@ -109,7 +110,7 @@ class BCESem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           IrrigationandDrainageEngineering(initialTabIndex: 0)),
                 );

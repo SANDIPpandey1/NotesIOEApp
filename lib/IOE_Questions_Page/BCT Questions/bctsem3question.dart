@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/digitallogic.dart';
 import 'package:ioe/Subject_Pages/electriccircuittheory.dart';
 import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
@@ -31,7 +32,7 @@ class BCTQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ElectricCircuitTheory(initialTabIndex: 2)),
                 );
@@ -44,7 +45,7 @@ class BCTQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           Electromagnetics(initialTabIndex: 2)),
                 );
@@ -57,7 +58,7 @@ class BCTQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Edc(initialTabIndex: 2)),
                 );
               },
@@ -69,7 +70,7 @@ class BCTQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => DigitalLogic(initialTabIndex: 2)),
                 );
               },
@@ -81,7 +82,7 @@ class BCTQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Toc(initialTabIndex: 2)),
                 );
               },
@@ -93,7 +94,7 @@ class BCTQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Oop(initialTabIndex: 2)),
                 );
               },
@@ -105,7 +106,7 @@ class BCTQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringMath3(initialTabIndex: 2)),
                 );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Control%20System.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
 import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
@@ -30,7 +31,7 @@ class BEISem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => ProbabilityAndStatistics()),
                 );
               },
@@ -42,7 +43,7 @@ class BEISem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Electromagnetics()),
+                  CupertinoPageRoute(builder: (context) => Electromagnetics()),
                 );
               },
             ),
@@ -53,7 +54,7 @@ class BEISem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Edc()),
+                  CupertinoPageRoute(builder: (context) => Edc()),
                 );
               },
             ),
@@ -64,7 +65,7 @@ class BEISem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InstrumentationI()),
+                  CupertinoPageRoute(builder: (context) => InstrumentationI()),
                 );
               },
             ),
@@ -76,7 +77,7 @@ class BEISem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ControlSystem()),
+                  CupertinoPageRoute(builder: (context) => ControlSystem()),
                 );
               },
             ),
@@ -87,7 +88,7 @@ class BEISem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath3()),
+                  CupertinoPageRoute(builder: (context) => EngineeringMath3()),
                 );
               },
             ),

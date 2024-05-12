@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/electricCircuitandmachines.dart';
 import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
 import 'package:ioe/Subject_Pages/engineeringmath2.dart';
@@ -30,7 +31,7 @@ class BEISem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => ElectricCircuitAndMachines()),
                 );
               },
@@ -42,7 +43,7 @@ class BEISem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Engineeringchemistry()),
                 );
               },
@@ -54,7 +55,7 @@ class BEISem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Microprocessor()),
+                  CupertinoPageRoute(builder: (context) => Microprocessor()),
                 );
               },
             ),
@@ -65,7 +66,7 @@ class BEISem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Oop()),
+                  CupertinoPageRoute(builder: (context) => Oop()),
                 );
               },
             ),
@@ -76,7 +77,7 @@ class BEISem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath2()),
+                  CupertinoPageRoute(builder: (context) => EngineeringMath2()),
                 );
               },
             ),

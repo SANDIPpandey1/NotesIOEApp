@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
 import 'package:ioe/Subject_Pages/appliedmath.dart';
 import 'package:ioe/Subject_Pages/datastructureandalgorithm.dart';
@@ -31,7 +32,7 @@ class BEXSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ElectricalMachine()),
+                  CupertinoPageRoute(builder: (context) => ElectricalMachine()),
                 );
               },
             ),
@@ -42,7 +43,7 @@ class BEXSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InstrumentationI()),
+                  CupertinoPageRoute(builder: (context) => InstrumentationI()),
                 );
               },
             ),
@@ -53,7 +54,7 @@ class BEXSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DSA()),
+                  CupertinoPageRoute(builder: (context) => DSA()),
                 );
               },
             ),
@@ -64,7 +65,8 @@ class BEXSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AppliedMathematics()),
+                  CupertinoPageRoute(
+                      builder: (context) => AppliedMathematics()),
                 );
               },
             ),
@@ -75,7 +77,7 @@ class BEXSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DiscreteStructure()),
+                  CupertinoPageRoute(builder: (context) => DiscreteStructure()),
                 );
               },
             ),
@@ -86,7 +88,7 @@ class BEXSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Microprocessor()),
+                  CupertinoPageRoute(builder: (context) => Microprocessor()),
                 );
               },
             ),
@@ -97,7 +99,7 @@ class BEXSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NumericalMethod()),
+                  CupertinoPageRoute(builder: (context) => NumericalMethod()),
                 );
               },
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Artificial%20Intelligence.dart';
 import 'package:ioe/Subject_Pages/EngineeringEconomics.dart';
 import 'package:ioe/Subject_Pages/InstrimentationII.dart';
@@ -29,7 +30,7 @@ class BCTSem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringEconomics(initialTabIndex: 0)),
                 );
@@ -42,7 +43,7 @@ class BCTSem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ObjectOrientedAnalysis(initialTabIndex: 0)),
                 );
@@ -55,7 +56,7 @@ class BCTSem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ArtificialIntelligence(initialTabIndex: 0)),
                 );
@@ -68,7 +69,7 @@ class BCTSem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           OperatingSystem(initialTabIndex: 0)),
                 );
@@ -81,7 +82,7 @@ class BCTSem6 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           InstrumentationII(initialTabIndex: 0)),
                 );
@@ -94,7 +95,7 @@ class BCTSem6 extends StatelessWidget {
             //   onTap: () {
             //     Navigator.push(
             //       context,
-            //       MaterialPageRoute(builder: (context) => DataCommunication()),
+            //       CupertinoPageRoute(builder: (context) => DataCommunication()),
             //     );
             //   },
             // ),

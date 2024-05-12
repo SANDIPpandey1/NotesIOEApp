@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:ioe/constants.dart';
 import 'package:path/path.dart';
@@ -40,7 +41,7 @@ void openPDF(BuildContext context, String url) async {
     final file = await PDFDisplay.loadNetwork(url);
     Navigator.pop(context); // Close the loading dialog
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => PDFViewPage(file: file)),
+      CupertinoPageRoute(builder: (context) => PDFViewPage(file: file)),
     );
   } on SocketException catch (_) {
     // Handle SocketException: Device not connected to the internet

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Computational%20Techniques%20in%20Civil%20Engineering.dart';
 import 'package:ioe/Subject_Pages/Construction%20Management.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Professional%20Practice.dart';
@@ -28,7 +29,7 @@ class BCESem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           TechnologyEnvironmentandSociety(initialTabIndex: 0)),
                 );
@@ -41,7 +42,7 @@ class BCESem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ConstructionManagement(initialTabIndex: 0)),
                 );
@@ -54,7 +55,7 @@ class BCESem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringProfessional(initialTabIndex: 0)),
                 );
@@ -67,7 +68,7 @@ class BCESem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ComputationalTechniquesinCivilEngineering(
                               initialTabIndex: 0)),

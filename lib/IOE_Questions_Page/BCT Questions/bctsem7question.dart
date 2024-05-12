@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import 'package:ioe/Subject_Pages/Computer%20networt%20and%20Security.dart';
 
@@ -35,7 +36,7 @@ class BCTQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ProjectManagement()),
+                  CupertinoPageRoute(builder: (context) => ProjectManagement()),
                 );
               },
             ),
@@ -46,7 +47,7 @@ class BCTQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => OrganizationandManagement()),
                 );
               },
@@ -58,7 +59,7 @@ class BCTQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EnergyEnvironment()),
+                  CupertinoPageRoute(builder: (context) => EnergyEnvironment()),
                 );
               },
             ),
@@ -69,7 +70,7 @@ class BCTQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DistributedSystem()),
+                  CupertinoPageRoute(builder: (context) => DistributedSystem()),
                 );
               },
             ),
@@ -80,7 +81,7 @@ class BCTQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => ComputerNetworkandSecurity()),
                 );
               },
@@ -92,7 +93,7 @@ class BCTQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => DigitalSignalAnalysis()),
                 );
               },

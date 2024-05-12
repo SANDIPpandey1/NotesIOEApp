@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Design%20of%20RCC%20Structure.dart';
 import 'package:ioe/Subject_Pages/Estimating%20and%20Costing.dart';
 import 'package:ioe/Subject_Pages/Hydropower%20Engineering.dart';
@@ -29,7 +30,7 @@ class BCEQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           HydropowerEngineering(initialTabIndex: 2)),
                 );
@@ -42,7 +43,7 @@ class BCEQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ProjectEngineering(initialTabIndex: 2)),
                 );
@@ -55,7 +56,7 @@ class BCEQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           TransportationEngineeringII(initialTabIndex: 2)),
                 );
@@ -68,7 +69,7 @@ class BCEQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EstimatingandCosting(initialTabIndex: 2)),
                 );
@@ -81,7 +82,7 @@ class BCEQuestionsSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           DesignofRCCStructure(initialTabIndex: 2)),
                 );

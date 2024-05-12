@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/InstrumentationI.dart';
 import 'package:ioe/Subject_Pages/appliedmath.dart';
 import 'package:ioe/Subject_Pages/datastructureandalgorithm.dart';
@@ -31,7 +32,7 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ElectricalMachine(initialTabIndex: 0)),
                 );
@@ -44,7 +45,7 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           InstrumentationI(initialTabIndex: 0)),
                 );
@@ -57,7 +58,7 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => DSA(initialTabIndex: 0)),
                 );
               },
@@ -69,7 +70,7 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           AppliedMathematics(initialTabIndex: 0)),
                 );
@@ -82,7 +83,7 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           DiscreteStructure(initialTabIndex: 0)),
                 );
@@ -95,7 +96,7 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Microprocessor(initialTabIndex: 0)),
                 );
               },
@@ -107,7 +108,7 @@ class BCTSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           NumericalMethod(initialTabIndex: 0)),
                 );

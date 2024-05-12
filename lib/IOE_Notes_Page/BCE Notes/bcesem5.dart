@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Concrete%20Technology%20and%20Masonry%20Structure.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Hydrology.dart';
 import 'package:ioe/Subject_Pages/Foundation%20Engineering.dart';
@@ -30,7 +31,7 @@ class BCESem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringHydrology(initialTabIndex: 0)),
                 );
@@ -43,7 +44,7 @@ class BCESem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           NumericalMethod(initialTabIndex: 0)),
                 );
@@ -56,7 +57,7 @@ class BCESem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           TheoryofStructuresII(initialTabIndex: 0)),
                 );
@@ -69,7 +70,7 @@ class BCESem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           WaterSupplyEngineering(initialTabIndex: 0)),
                 );
@@ -82,7 +83,7 @@ class BCESem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ConcreteTechnologyandMasonryStructure(
                               initialTabIndex: 0)),
@@ -98,7 +99,7 @@ class BCESem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           FoundationEngineering(initialTabIndex: 0)),
                 );

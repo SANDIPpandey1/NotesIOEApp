@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/IOE_Questions_Page/BCT%20Questions/bctquestionspage.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
@@ -27,7 +28,7 @@ class IOEQuestions extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTQuestions()),
+                  CupertinoPageRoute(builder: (context) => BCTQuestions()),
                 );
               },
             ),
@@ -38,7 +39,7 @@ class IOEQuestions extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTQuestions()),
+                  CupertinoPageRoute(builder: (context) => BCTQuestions()),
                 );
               },
             ),
@@ -49,7 +50,7 @@ class IOEQuestions extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTQuestions()),
+                  CupertinoPageRoute(builder: (context) => BCTQuestions()),
                 );
               },
             ),
@@ -60,7 +61,7 @@ class IOEQuestions extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTQuestions()),
+                  CupertinoPageRoute(builder: (context) => BCTQuestions()),
                 );
               },
             ),

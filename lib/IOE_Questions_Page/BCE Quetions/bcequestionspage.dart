@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem4.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem5.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctsem6.dart';
@@ -34,7 +35,7 @@ class BCEQuestions extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCTQuestionSem1()),
+                    CupertinoPageRoute(builder: (context) => BCTQuestionSem1()),
                   );
                 },
               ),
@@ -45,7 +46,8 @@ class BCEQuestions extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCTQuestionsSem2()),
+                    CupertinoPageRoute(
+                        builder: (context) => BCTQuestionsSem2()),
                   );
                 },
               ),
@@ -56,7 +58,8 @@ class BCEQuestions extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCTQuestionsSem3()),
+                    CupertinoPageRoute(
+                        builder: (context) => BCTQuestionsSem3()),
                   );
                 },
               ),
@@ -67,7 +70,7 @@ class BCEQuestions extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCTSem4()),
+                    CupertinoPageRoute(builder: (context) => BCTSem4()),
                   );
                 },
               ),
@@ -78,7 +81,7 @@ class BCEQuestions extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCTSem5()),
+                    CupertinoPageRoute(builder: (context) => BCTSem5()),
                   );
                 },
               ),
@@ -89,7 +92,7 @@ class BCEQuestions extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCTSem6()),
+                    CupertinoPageRoute(builder: (context) => BCTSem6()),
                   );
                 },
               ),
@@ -100,7 +103,7 @@ class BCEQuestions extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCTSem7()),
+                    CupertinoPageRoute(builder: (context) => BCTSem7()),
                   );
                 },
               ),
@@ -111,7 +114,7 @@ class BCEQuestions extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCTSem8()),
+                    CupertinoPageRoute(builder: (context) => BCTSem8()),
                   );
                 },
               ),

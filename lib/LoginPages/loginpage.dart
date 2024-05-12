@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:ioe/LoginPages/forgotpasswordpage.dart';
@@ -108,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
+                        CupertinoPageRoute(builder: (context) {
                       return ForgotPasswordPage();
                     }));
                   },
