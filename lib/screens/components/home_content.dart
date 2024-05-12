@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ioe/constants.dart';
 import 'package:ioe/main.dart';
-import 'package:ioe/model/product_model.dart';
+import 'package:ioe/screens/components/product_model.dart';
 import 'package:ioe/screens/home_screen.dart';
 
 class HomeContent extends StatelessWidget {
@@ -60,13 +60,10 @@ class HomeContent extends StatelessWidget {
                           height: 70,
                           width: 70,
                           decoration: BoxDecoration(
-                            //color: Colors.white,
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          child: Image.asset(
-                            "assets/images/logo.png",
-                          ),
-                        ),
+                          child: Image.asset("assets/images/logo.png"),
+                        )
                       ],
                     ),
                   ],
