@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem1.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem2.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcesem3.dart';
@@ -34,7 +35,7 @@ class BCENotes extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCESem1()),
+                    CupertinoPageRoute(builder: (context) => BCESem1()),
                   );
                 },
               ),
@@ -45,7 +46,7 @@ class BCENotes extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCESem2()),
+                    CupertinoPageRoute(builder: (context) => BCESem2()),
                   );
                 },
               ),
@@ -56,7 +57,7 @@ class BCENotes extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCESem3()),
+                    CupertinoPageRoute(builder: (context) => BCESem3()),
                   );
                 },
               ),
@@ -67,7 +68,7 @@ class BCENotes extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCESem4()),
+                    CupertinoPageRoute(builder: (context) => BCESem4()),
                   );
                 },
               ),
@@ -78,7 +79,7 @@ class BCENotes extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCESem5()),
+                    CupertinoPageRoute(builder: (context) => BCESem5()),
                   );
                 },
               ),
@@ -89,7 +90,7 @@ class BCENotes extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCESem6()),
+                    CupertinoPageRoute(builder: (context) => BCESem6()),
                   );
                 },
               ),
@@ -100,7 +101,7 @@ class BCENotes extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCESem7()),
+                    CupertinoPageRoute(builder: (context) => BCESem7()),
                   );
                 },
               ),
@@ -111,7 +112,7 @@ class BCENotes extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BCESem8()),
+                    CupertinoPageRoute(builder: (context) => BCESem8()),
                   );
                 },
               ),

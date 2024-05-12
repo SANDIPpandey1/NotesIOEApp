@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/basicelectrical.dart';
 import 'package:ioe/Subject_Pages/basicelectronics.dart';
 import 'package:ioe/Subject_Pages/engineeringmath2.dart';
@@ -29,7 +30,7 @@ class BCESem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AppliedMechanics()),
+                  CupertinoPageRoute(builder: (context) => AppliedMechanics()),
                 );
               },
             ),
@@ -40,7 +41,7 @@ class BCESem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BasicElectronics()),
+                  CupertinoPageRoute(builder: (context) => BasicElectronics()),
                 );
               },
             ),
@@ -51,7 +52,8 @@ class BCESem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringPhysics()),
+                  CupertinoPageRoute(
+                      builder: (context) => EngineeringPhysics()),
                 );
               },
             ),
@@ -62,7 +64,7 @@ class BCESem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AppliedMechanics()),
+                  CupertinoPageRoute(builder: (context) => AppliedMechanics()),
                 );
               },
             ),
@@ -73,7 +75,7 @@ class BCESem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath2()),
+                  CupertinoPageRoute(builder: (context) => EngineeringMath2()),
                 );
               },
             ),
@@ -84,7 +86,7 @@ class BCESem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => BasicElectricalEngineering()),
                 );
               },

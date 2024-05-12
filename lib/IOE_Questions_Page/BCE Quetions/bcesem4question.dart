@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Geology%20II.dart';
 import 'package:ioe/Subject_Pages/Hydraulics.dart';
 import 'package:ioe/Subject_Pages/Probability%20And%20Statistics.dart';
@@ -30,7 +31,7 @@ class BCEQuestionsSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Hydraulics(initialTabIndex: 2)),
                 );
               },
@@ -42,7 +43,7 @@ class BCEQuestionsSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => SurveyingII(initialTabIndex: 2)),
                 );
               },
@@ -54,7 +55,7 @@ class BCEQuestionsSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           TheoryofStructuresI(initialTabIndex: 2)),
                 );
@@ -67,7 +68,7 @@ class BCEQuestionsSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ProbabilityAndStatistics(initialTabIndex: 2)),
                 );
@@ -80,7 +81,7 @@ class BCEQuestionsSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringGeologyII(initialTabIndex: 2)),
                 );
@@ -94,7 +95,7 @@ class BCEQuestionsSem4 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => SoilMechanics(initialTabIndex: 2)),
                 );
               },

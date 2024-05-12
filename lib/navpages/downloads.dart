@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/screens/components/pdfviewfunction.dart';
 import 'package:ioe/screens/home_screen.dart';
 import 'package:path/path.dart';
@@ -108,7 +109,7 @@ class _DownloadPageState extends State<DownloadPage> {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
             builder: (context) =>
                 PDFViewPage(file: file, showDownloadButton: false),
           ),

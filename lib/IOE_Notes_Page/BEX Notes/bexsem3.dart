@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/digitallogic.dart';
 import 'package:ioe/Subject_Pages/electriccircuittheory.dart';
 import 'package:ioe/Subject_Pages/electricdeviceandcircuit.dart';
@@ -31,7 +32,7 @@ class BEXSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => ElectricCircuitTheory()),
                 );
               },
@@ -43,7 +44,7 @@ class BEXSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Electromagnetics()),
+                  CupertinoPageRoute(builder: (context) => Electromagnetics()),
                 );
               },
             ),
@@ -54,7 +55,7 @@ class BEXSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Edc()),
+                  CupertinoPageRoute(builder: (context) => Edc()),
                 );
               },
             ),
@@ -65,7 +66,7 @@ class BEXSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DigitalLogic()),
+                  CupertinoPageRoute(builder: (context) => DigitalLogic()),
                 );
               },
             ),
@@ -76,7 +77,7 @@ class BEXSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Demo()),
+                  CupertinoPageRoute(builder: (context) => Demo()),
                 );
               },
             ),
@@ -87,7 +88,7 @@ class BEXSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Oop()),
+                  CupertinoPageRoute(builder: (context) => Oop()),
                 );
               },
             ),
@@ -98,7 +99,7 @@ class BEXSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath3()),
+                  CupertinoPageRoute(builder: (context) => EngineeringMath3()),
                 );
               },
             ),

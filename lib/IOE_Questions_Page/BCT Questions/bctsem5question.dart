@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Computer%20Graphics.dart';
 import 'package:ioe/Subject_Pages/Computer%20Organization%20And%20Architecture.dart';
 import 'package:ioe/Subject_Pages/Data%20Communication.dart';
@@ -30,7 +31,7 @@ class BCTQuestionsSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => ProbabilityAndStatistics()),
                 );
               },
@@ -42,7 +43,7 @@ class BCTQuestionsSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ComputerOrginzationAndArchitecture()),
                 );
@@ -55,7 +56,7 @@ class BCTQuestionsSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => SoftwareEngineering()),
                 );
               },
@@ -67,7 +68,7 @@ class BCTQuestionsSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ComputerGraphics()),
+                  CupertinoPageRoute(builder: (context) => ComputerGraphics()),
                 );
               },
             ),
@@ -78,7 +79,7 @@ class BCTQuestionsSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InstrumentationII()),
+                  CupertinoPageRoute(builder: (context) => InstrumentationII()),
                 );
               },
             ),
@@ -89,7 +90,7 @@ class BCTQuestionsSem5 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DataCommunication()),
+                  CupertinoPageRoute(builder: (context) => DataCommunication()),
                 );
               },
             ),

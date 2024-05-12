@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Professional%20Practice.dart';
 import 'package:ioe/Subject_Pages/Information%20System.dart';
 import 'package:ioe/Subject_Pages/Internet%20and%20Intranet.dart';
@@ -28,7 +29,7 @@ class BCTSem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringProfessional(initialTabIndex: 0)),
                 );
@@ -41,7 +42,7 @@ class BCTSem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           InformationSystem(initialTabIndex: 0)),
                 );
@@ -54,7 +55,7 @@ class BCTSem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           InternetAndIntranet(initialTabIndex: 0)),
                 );
@@ -67,7 +68,7 @@ class BCTSem8 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           SimulationandModeling(initialTabIndex: 0)),
                 );

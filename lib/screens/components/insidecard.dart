@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Applied%20Mechanics%20Dynamics.dart';
 import 'package:ioe/Subject_Pages/Artificial%20Intelligence.dart';
 import 'package:ioe/Subject_Pages/Building%20Technology.dart';
@@ -155,7 +156,7 @@ class InsideCard extends StatelessWidget {
       case 'Applied Mechanics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
             builder: (context) => AppliedMechanics(
               initialTabIndex: 1, // Set initialTabIndex to 1 for syllabus tab
             ),
@@ -166,7 +167,7 @@ class InsideCard extends StatelessWidget {
       case 'Basic Electrical Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   BasicElectricalEngineering(initialTabIndex: 1)),
         );
@@ -174,175 +175,175 @@ class InsideCard extends StatelessWidget {
       case 'Engineering Physics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EngineeringPhysics(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Drawing I':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EngineerinGDrawingI(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Mathematics I':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EngineeringMath1(initialTabIndex: 1)),
         );
         break;
       case 'Computer Programming':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => CProgramming(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Mathematics II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EngineeringMath2(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Drawing II':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Demo()),
+          CupertinoPageRoute(builder: (context) => Demo()),
         );
         break;
       case 'Basic Electronics Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => BasicElectronics(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Chemistry':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => Engineeringchemistry(initialTabIndex: 1)),
         );
         break;
       case 'Fundamental of Thermodynamics & Heat Transfer':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => Thermodynamics(initialTabIndex: 1)),
         );
         break;
       case 'Workshop Technology':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Demo()),
+          CupertinoPageRoute(builder: (context) => Demo()),
         );
         break;
       case 'Engineering Mathematics III':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EngineeringMath3(initialTabIndex: 1)),
         );
         break;
       case 'Object Oriented Programming':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Oop(initialTabIndex: 1)),
+          CupertinoPageRoute(builder: (context) => Oop(initialTabIndex: 1)),
         );
         break;
       case 'Electric Circuit Theory':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ElectricCircuitTheory(initialTabIndex: 1)),
         );
         break;
       case 'Theory of Computation':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Toc(initialTabIndex: 1)),
+          CupertinoPageRoute(builder: (context) => Toc(initialTabIndex: 1)),
         );
         break;
       case 'Electronics Devices and Circuit':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Edc(initialTabIndex: 1)),
+          CupertinoPageRoute(builder: (context) => Edc(initialTabIndex: 1)),
         );
         break;
       case 'Digital Logic':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => DigitalLogic(initialTabIndex: 1)),
         );
         break;
       case 'Electromagnetics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => Electromagnetics(initialTabIndex: 1)),
         );
         break;
       case 'Numerical Method':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => NumericalMethod(initialTabIndex: 1)),
         );
         break;
       case 'Applied Mathematics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => AppliedMathematics(initialTabIndex: 1)),
         );
         break;
       case 'Instrumentation I':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => InstrumentationI(initialTabIndex: 1)),
         );
         break;
       case 'Data Structure and Algorithm':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DSA(initialTabIndex: 1)),
+          CupertinoPageRoute(builder: (context) => DSA(initialTabIndex: 1)),
         );
         break;
       case 'Microprocessor':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => Microprocessor(initialTabIndex: 1)),
         );
         break;
       case 'Discrete Structure':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => DiscreteStructure(initialTabIndex: 1)),
         );
         break;
       case 'Electrical Machine':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ElectricalMachine(initialTabIndex: 1)),
         );
         break;
       case 'Communication English':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Demo()),
+          CupertinoPageRoute(builder: (context) => Demo()),
         );
         break;
       case 'Probability and Statistics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   ProbabilityAndStatistics(initialTabIndex: 1)),
         );
@@ -350,7 +351,7 @@ class InsideCard extends StatelessWidget {
       case 'Computer organization and Architecture':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   ComputerOrginzationAndArchitecture(initialTabIndex: 1)),
         );
@@ -358,69 +359,69 @@ class InsideCard extends StatelessWidget {
       case 'Software Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => SoftwareEngineering(initialTabIndex: 1)),
         );
         break;
       case 'Computer Graphics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ComputerGraphics(initialTabIndex: 1)),
         );
         break;
       case 'Instrumentation II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => InstrumentationII(initialTabIndex: 1)),
         );
         break;
       case 'Data Communication':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => DataCommunication(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Economics':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Demo()),
+          CupertinoPageRoute(builder: (context) => Demo()),
         );
         break;
       case 'Object Oriented Analysis and Design':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ObjectOrientedAnalysis(initialTabIndex: 1)),
         );
         break;
       case 'Artificial Intelligence':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ArtificialIntelligence(initialTabIndex: 1)),
         );
         break;
       case 'Operating System':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => OperatingSystem(initialTabIndex: 1)),
         );
         break;
       case 'Embedded System':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EmbeddedSystem(initialTabIndex: 1)),
         );
         break;
       case 'Database Management System':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   DatabaseManagementSystem(initialTabIndex: 1)),
         );
@@ -428,21 +429,21 @@ class InsideCard extends StatelessWidget {
       case 'Minor Project':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => MinorProject(initialTabIndex: 1)),
         );
         break;
       case 'ICT Project Management':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ProjectManagement(initialTabIndex: 1)),
         );
         break;
       case 'Organization and Management':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   OrganizationandManagement(initialTabIndex: 1)),
         );
@@ -450,21 +451,21 @@ class InsideCard extends StatelessWidget {
       case 'Energy Environment and Society':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EnergyEnvironment(initialTabIndex: 1)),
         );
         break;
       case 'Distributed System':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => DistributedSystem(initialTabIndex: 1)),
         );
         break;
       case 'Computer Networks and Security':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   ComputerNetworkandSecurity(initialTabIndex: 1)),
         );
@@ -472,14 +473,14 @@ class InsideCard extends StatelessWidget {
       case 'Digital Signal Analysis':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => DigitalSignalAnalysis(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Professional Practice':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   EngineeringProfessional(initialTabIndex: 1)),
         );
@@ -487,28 +488,28 @@ class InsideCard extends StatelessWidget {
       case 'Inforamtion Systems':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => InformationSystem(initialTabIndex: 1)),
         );
         break;
       case 'Internet and Intranet':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => InternetAndIntranet(initialTabIndex: 1)),
         );
         break;
       case 'Simulation and Modeling':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => SimulationandModeling(initialTabIndex: 1)),
         );
         break;
       case 'Civil Engineering Materials':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   CivilEngineeringMaterial(initialTabIndex: 1)),
         );
@@ -516,7 +517,7 @@ class InsideCard extends StatelessWidget {
       case 'Applied Mechanics Dynamics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   AppliedMechanicsDynamics(initialTabIndex: 1)),
         );
@@ -524,14 +525,14 @@ class InsideCard extends StatelessWidget {
       case 'Engineering Geology I':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EngineeringGeologyI(initialTabIndex: 1)),
         );
         break;
       case 'Strength of Materials':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => StrengthOfMaterials(initialTabIndex: 1)),
           //test comment
         );
@@ -539,70 +540,70 @@ class InsideCard extends StatelessWidget {
       case 'Surveying I':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => SurveyingI(initialTabIndex: 1)),
         );
         break;
       case 'Fluid Mechanics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => FluidMechanics(initialTabIndex: 1)),
         );
         break;
       case 'Hydraulics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => Hydraulics(initialTabIndex: 1)),
         );
         break;
       case 'Surveying II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => SurveyingII(initialTabIndex: 1)),
         );
         break;
       case 'Soil Mechanics':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => SoilMechanics(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Geology II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EngineeringGeologyII(initialTabIndex: 1)),
         );
         break;
       case 'Theory of Structures II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => TheoryofStructuresII(initialTabIndex: 1)),
         );
         break;
       case 'Water Supply Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => WaterSupplyEngineering(initialTabIndex: 1)),
         );
         break;
       case 'Engineering Hydrology':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EngineeringHydrology(initialTabIndex: 1)),
         );
         break;
       case 'Concrete Technology and Masonry Structure':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   ConcreteTechnologyandMasonryStructure(initialTabIndex: 1)),
         );
@@ -610,14 +611,14 @@ class InsideCard extends StatelessWidget {
       case 'Foundation Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => FoundationEngineering(initialTabIndex: 1)),
         );
         break;
       case 'Design of Steel and Timber Structure':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   DesignofSteelandTimberStructure(initialTabIndex: 1)),
         );
@@ -625,21 +626,21 @@ class InsideCard extends StatelessWidget {
       case 'Building Technology':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => BuildingTechnology(initialTabIndex: 1)),
         );
         break;
       case 'Sanitary Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => SanitaryEngineering(initialTabIndex: 1)),
         );
         break;
       case 'Transportation Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   TransportationEngineering(initialTabIndex: 1)),
         );
@@ -647,7 +648,7 @@ class InsideCard extends StatelessWidget {
       case 'Irrigation and Drainage Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   IrrigationandDrainageEngineering(initialTabIndex: 1)),
         );
@@ -655,21 +656,21 @@ class InsideCard extends StatelessWidget {
       case 'Hydropower Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => HydropowerEngineering(initialTabIndex: 1)),
         );
         break;
       case 'Project Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ProjectEngineering(initialTabIndex: 1)),
         );
         break;
       case 'Transportation Engineering II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   TransportationEngineeringII(initialTabIndex: 1)),
         );
@@ -677,21 +678,21 @@ class InsideCard extends StatelessWidget {
       case 'Estimating and Costing':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => EstimatingandCosting(initialTabIndex: 1)),
         );
         break;
       case 'Design of RCC Structure':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => DesignofRCCStructure(initialTabIndex: 1)),
         );
         break;
       case 'Technology Environment and Society':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   TechnologyEnvironmentandSociety(initialTabIndex: 1)),
         );
@@ -699,14 +700,14 @@ class InsideCard extends StatelessWidget {
       case 'Construction Management':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ConstructionManagement(initialTabIndex: 1)),
         );
         break;
       case 'Computational Techniques in Civil Engineering':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ComputationalTechniquesinCivilEngineering(
                   initialTabIndex: 1)),
         );
@@ -714,7 +715,7 @@ class InsideCard extends StatelessWidget {
       case 'Electric Circuits and Machines':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   ElectricCircuitAndMachines(initialTabIndex: 1)),
         );
@@ -722,7 +723,7 @@ class InsideCard extends StatelessWidget {
       case 'Control System':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ControlSystem(initialTabIndex: 1)),
         );
         break;

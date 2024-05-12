@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Applied%20Mechanics%20Dynamics.dart';
 import 'package:ioe/Subject_Pages/Civil%20Engineering%20Materials.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Geology%20I.dart';
@@ -31,7 +32,7 @@ class BCESem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => CivilEngineeringMaterial()),
                 );
               },
@@ -43,7 +44,7 @@ class BCESem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => AppliedMechanicsDynamics()),
                 );
               },
@@ -55,7 +56,7 @@ class BCESem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => EngineeringGeologyI()),
                 );
               },
@@ -67,7 +68,7 @@ class BCESem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => StrengthOfMaterials()),
                 );
               },
@@ -79,7 +80,7 @@ class BCESem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath3()),
+                  CupertinoPageRoute(builder: (context) => EngineeringMath3()),
                 );
               },
             ),
@@ -90,7 +91,7 @@ class BCESem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SurveyingI()),
+                  CupertinoPageRoute(builder: (context) => SurveyingI()),
                 );
               },
             ),
@@ -101,7 +102,7 @@ class BCESem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FluidMechanics()),
+                  CupertinoPageRoute(builder: (context) => FluidMechanics()),
                 );
               },
             )

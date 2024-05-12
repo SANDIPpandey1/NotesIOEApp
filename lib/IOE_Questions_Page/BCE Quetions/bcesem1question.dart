@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
 import 'package:ioe/Subject_Pages/engineeringdrawing1.dart';
 
@@ -32,7 +33,7 @@ class BCEQuestionsSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Thermodynamics(initialTabIndex: 2)),
                 );
               },
@@ -44,7 +45,7 @@ class BCEQuestionsSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => CProgramming(initialTabIndex: 2)),
                 );
               },
@@ -56,7 +57,7 @@ class BCEQuestionsSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineerinGDrawingI(initialTabIndex: 2)),
                 );
@@ -69,7 +70,7 @@ class BCEQuestionsSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           Engineeringchemistry(initialTabIndex: 2)),
                 );
@@ -83,7 +84,7 @@ class BCEQuestionsSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringMath1(initialTabIndex: 2)),
                 );

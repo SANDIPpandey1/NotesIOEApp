@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/basicelectrical.dart';
 import 'package:ioe/Subject_Pages/basicelectronics.dart';
 import 'package:ioe/Subject_Pages/engineeringmath2.dart';
@@ -29,7 +30,7 @@ class BCEQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           AppliedMechanics(initialTabIndex: 2)),
                 );
@@ -42,7 +43,7 @@ class BCEQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           BasicElectronics(initialTabIndex: 2)),
                 );
@@ -55,7 +56,7 @@ class BCEQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringPhysics(initialTabIndex: 2)),
                 );
@@ -68,7 +69,7 @@ class BCEQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           AppliedMechanics(initialTabIndex: 2)),
                 );
@@ -81,7 +82,7 @@ class BCEQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringMath2(initialTabIndex: 2)),
                 );
@@ -94,7 +95,7 @@ class BCEQuestionsSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           BasicElectricalEngineering(initialTabIndex: 2)),
                 );

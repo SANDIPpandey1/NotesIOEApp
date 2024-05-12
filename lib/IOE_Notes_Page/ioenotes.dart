@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/IOE_Notes_Page/BCE%20Notes/bcenotespage.dart';
 import 'package:ioe/IOE_Notes_Page/BCT%20Notes/bctnotespage.dart';
 
@@ -29,7 +30,9 @@ class IOENotes extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTNotes()),
+                  CupertinoPageRoute(
+                    builder: (context) => BCTNotes(),
+                  ),
                 );
               },
             ),
@@ -40,18 +43,22 @@ class IOENotes extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCENotes()),
+                  CupertinoPageRoute(
+                    builder: (context) => BCENotes(),
+                  ),
                 );
               },
             ),
             SizedBox(height: 15.0),
             InsideButtons(
-              text: 'Electonics Engineering (BEX)',
+              text: 'Electronics Engineering (BEX)',
               icon: Icons.signal_cellular_connected_no_internet_4_bar_outlined,
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTNotes()),
+                  CupertinoPageRoute(
+                    builder: (context) => BCTNotes(),
+                  ),
                 );
               },
             ),
@@ -62,7 +69,9 @@ class IOENotes extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BCTNotes()),
+                  CupertinoPageRoute(
+                    builder: (context) => BCTNotes(),
+                  ),
                 );
               },
             ),

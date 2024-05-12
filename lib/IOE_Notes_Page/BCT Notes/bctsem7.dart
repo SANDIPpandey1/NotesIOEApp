@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import 'package:ioe/Subject_Pages/Computer%20networt%20and%20Security.dart';
 
@@ -35,7 +36,7 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ProjectManagement(initialTabIndex: 0)),
                 );
@@ -48,7 +49,7 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           OrganizationandManagement(initialTabIndex: 0)),
                 );
@@ -61,7 +62,7 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EnergyEnvironment(initialTabIndex: 0)),
                 );
@@ -74,7 +75,7 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           DistributedSystem(initialTabIndex: 0)),
                 );
@@ -87,7 +88,7 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           ComputerNetworkandSecurity(initialTabIndex: 0)),
                 );
@@ -100,7 +101,7 @@ class BCTSem7 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           DigitalSignalAnalysis(initialTabIndex: 0)),
                 );

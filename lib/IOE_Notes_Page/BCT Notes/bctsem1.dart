@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/engineeringdrawing1.dart';
 import 'package:ioe/Subject_Pages/basicelectrical.dart';
 import 'package:ioe/Subject_Pages/cprogramming.dart';
@@ -30,7 +31,7 @@ class BCTSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           AppliedMechanics(initialTabIndex: 0)),
                 );
@@ -43,7 +44,7 @@ class BCTSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => CProgramming(initialTabIndex: 0)),
                 );
               },
@@ -55,7 +56,7 @@ class BCTSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineerinGDrawingI(initialTabIndex: 0)),
                 );
@@ -68,7 +69,7 @@ class BCTSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringPhysics(initialTabIndex: 0)),
                 );
@@ -81,7 +82,7 @@ class BCTSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           BasicElectricalEngineering(initialTabIndex: 0)),
                 );
@@ -94,7 +95,7 @@ class BCTSem1 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringMath1(initialTabIndex: 0)),
                 );

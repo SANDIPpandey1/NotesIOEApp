@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/basicelectronics.dart';
 import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
 import 'package:ioe/Subject_Pages/engineeringmath2.dart';
@@ -29,7 +30,7 @@ class BEXSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Thermodynamics()),
+                  CupertinoPageRoute(builder: (context) => Thermodynamics()),
                 );
               },
             ),
@@ -40,7 +41,7 @@ class BEXSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BasicElectronics()),
+                  CupertinoPageRoute(builder: (context) => BasicElectronics()),
                 );
               },
             ),
@@ -51,7 +52,7 @@ class BEXSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Engineeringchemistry()),
                 );
               },
@@ -63,7 +64,7 @@ class BEXSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AppliedMechanics()),
+                  CupertinoPageRoute(builder: (context) => AppliedMechanics()),
                 );
               },
             ),
@@ -74,7 +75,7 @@ class BEXSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => EngineeringMath2()),
+                  CupertinoPageRoute(builder: (context) => EngineeringMath2()),
                 );
               },
             ),

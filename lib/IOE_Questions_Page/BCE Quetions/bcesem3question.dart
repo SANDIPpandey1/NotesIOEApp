@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:ioe/Subject_Pages/Applied%20Mechanics%20Dynamics.dart';
 import 'package:ioe/Subject_Pages/Civil%20Engineering%20Materials.dart';
 import 'package:ioe/Subject_Pages/Engineering%20Geology%20I.dart';
@@ -31,7 +32,7 @@ class BCEQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           CivilEngineeringMaterial(initialTabIndex: 2)),
                 );
@@ -44,7 +45,7 @@ class BCEQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           AppliedMechanicsDynamics(initialTabIndex: 2)),
                 );
@@ -57,7 +58,7 @@ class BCEQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringGeologyI(initialTabIndex: 2)),
                 );
@@ -70,7 +71,7 @@ class BCEQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           StrengthOfMaterials(initialTabIndex: 2)),
                 );
@@ -83,7 +84,7 @@ class BCEQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringMath3(initialTabIndex: 2)),
                 );
@@ -96,7 +97,7 @@ class BCEQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => SurveyingI(initialTabIndex: 2)),
                 );
               },
@@ -108,7 +109,7 @@ class BCEQuestionsSem3 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => FluidMechanics(initialTabIndex: 2)),
                 );
               },

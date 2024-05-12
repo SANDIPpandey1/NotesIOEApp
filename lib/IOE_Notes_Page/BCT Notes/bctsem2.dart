@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:ioe/Subject_Pages/basicelectronics.dart';
 import 'package:ioe/Subject_Pages/engineeringchemistry.dart';
 import 'package:ioe/Subject_Pages/engineeringmath2.dart';
@@ -29,7 +31,7 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) => Thermodynamics(initialTabIndex: 0)),
                 );
               },
@@ -41,7 +43,7 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           BasicElectronics(initialTabIndex: 0)),
                 );
@@ -54,7 +56,7 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           Engineeringchemistry(initialTabIndex: 0)),
                 );
@@ -67,7 +69,7 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           AppliedMechanics(initialTabIndex: 0)),
                 );
@@ -80,7 +82,7 @@ class BCTSem2 extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
+                  CupertinoPageRoute(
                       builder: (context) =>
                           EngineeringMath2(initialTabIndex: 0)),
                 );
