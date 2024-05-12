@@ -737,14 +737,14 @@ class InsideCard extends StatelessWidget {
       case 'Power System Analysis I':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => PowerSystemAnalysisI(initialTabIndex: 1)),
         );
         break;
       case 'Power System Analysis II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => PowerSystemAnalysisII(initialTabIndex: 1)),
         );
         break;
@@ -758,14 +758,14 @@ class InsideCard extends StatelessWidget {
       case 'Electric Machines II':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => ElectricMachinesII(initialTabIndex: 1)),
         );
         break;
       case 'Switchgear and Protection':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) =>
                   SwitchgearandProtection(initialTabIndex: 1)),
         );
@@ -773,7 +773,7 @@ class InsideCard extends StatelessWidget {
       case 'Digital Control System':
         Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
               builder: (context) => DigitalControlSystem(initialTabIndex: 1)),
         );
         break;
