@@ -21,10 +21,12 @@ import 'package:ioe/Subject_Pages/Distributed%20System.dart';
 import 'package:ioe/Subject_Pages/Electric%20Machines%20II.dart';
 import 'package:ioe/Subject_Pages/Electrical%20Machines%20I.dart';
 import 'package:ioe/Subject_Pages/Industrial%20Power%20Distribution%20and%20Illumination.dart';
+import 'package:ioe/Subject_Pages/Power%20Electronics.dart';
 import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20I.dart';
 import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20II.dart';
 import 'package:ioe/Subject_Pages/Signal%20Analysis.dart';
 import 'package:ioe/Subject_Pages/Switchgear%20and%20Protection.dart';
+import 'package:ioe/Subject_Pages/Utilization%20of%20Electrical%20Energy.dart';
 import 'package:ioe/Subject_Pages/electricCircuitandmachines.dart';
 import 'package:ioe/Subject_Pages/Embedded%20System.dart';
 import 'package:ioe/Subject_Pages/Energy%20Environment%20and%20society.dart';
@@ -791,6 +793,21 @@ class InsideCard extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) => SignalAnalysis(initialTabIndex: 1)),
+        );
+        break;
+      case 'Power Electronics':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => PowerElectronics(initialTabIndex: 1)),
+        );
+        break;
+      case 'Utilization of Electrical Energy':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  UtilizationofElectricalEnergy(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
