@@ -23,6 +23,7 @@ import 'package:ioe/Subject_Pages/Electrical%20Machines%20I.dart';
 import 'package:ioe/Subject_Pages/Industrial%20Power%20Distribution%20and%20Illumination.dart';
 import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20I.dart';
 import 'package:ioe/Subject_Pages/Power%20System%20Analysis%20II.dart';
+import 'package:ioe/Subject_Pages/Signal%20Analysis.dart';
 import 'package:ioe/Subject_Pages/Switchgear%20and%20Protection.dart';
 import 'package:ioe/Subject_Pages/electricCircuitandmachines.dart';
 import 'package:ioe/Subject_Pages/Embedded%20System.dart';
@@ -783,6 +784,13 @@ class InsideCard extends StatelessWidget {
           MaterialPageRoute(
               builder: (context) => IndustrialPowerDistributionandIllumination(
                   initialTabIndex: 1)),
+        );
+        break;
+      case 'Signal Analysis':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => SignalAnalysis(initialTabIndex: 1)),
         );
         break;
       // Add cases for other subjects and their corresponding pages
