@@ -10,12 +10,12 @@ import 'package:ioe/Subject_Pages/theoryofcomputation.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 
-class BCTSem3 extends StatelessWidget {
+class BELSem3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OtherPageAppBar(
-        heading: 'BCT Semester 3 Notes',
+        heading: 'BEL Semester 3 Notes',
         rightIcon: Icons.home,
         onRightIconTap: () {
           Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -77,12 +77,13 @@ class BCTSem3 extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             InsideButtons(
-              text: 'Theory Of Computation',
+              text: 'Electrical Engineering Material',
               icon: Icons.stacked_bar_chart,
               onTap: () {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
+                      //electrical engg material syllabys needed
                       builder: (context) => Toc(initialTabIndex: 0)),
                 );
               },
