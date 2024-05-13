@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:ioe/constants.dart';
 import 'package:ioe/screens/components/downloads.dart';
 import 'package:ioe/screens/components/demo.dart';
 import 'package:ioe/screens/components/home_content.dart';
+import 'package:ioe/screens/components/notification.dart';
 import 'package:ioe/screens/components/sidebarnav.dart';
 
 void main() {
@@ -22,12 +22,20 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  final List<Widget> _pages = [
-    HomeContent(),
-    Demo(),
-    Demo(),
-    DownloadPage(),
-  ];
+  List<String> notifications = []; // Instance member
+  late List<Widget> _pages; // Declare _pages here without initializing
+
+  @override
+  void initState() {
+    super.initState();
+    // Initialize _pages here
+    _pages = [
+      HomeContent(),
+      Demo(),
+      NotificationPage(notifications: notifications),
+      DownloadPage(),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {

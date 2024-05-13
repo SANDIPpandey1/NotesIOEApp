@@ -11,15 +11,15 @@ import 'package:ioe/screens/Articles.dart';
 import 'package:ioe/screens/News_Results.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:ioe/LoginPages/authpage.dart';
+import 'package:ioe/screens/components/notification.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  await FirebaseAPI().initNotification();
 
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -32,15 +32,19 @@ class MyApp extends StatelessWidget {
       title: 'Notes IOE',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        // Use CupertinoThemeData to ensure Cupertino widgets have a consistent theme
         cupertinoOverrideTheme: CupertinoThemeData(
           primaryColor: kblue,
         ),
       ),
-      home: AuthPage(),
       navigatorKey: navigatorKey,
+      home: Builder(
+        builder: (context) {
+          // Initialize FirebaseAPI with the context
+          FirebaseAPI().initNotification(context);
+          return AuthPage();
+        },
+      ),
       onGenerateRoute: (RouteSettings settings) {
-        // Use CupertinoPageRoute for transitions
         switch (settings.name) {
           case '/ioe_notes':
             return CupertinoPageRoute(
@@ -60,7 +64,11 @@ class MyApp extends StatelessWidget {
           case '/Articles':
             return CupertinoPageRoute(
                 builder: (_) => Articles(), settings: settings);
-          // Add more CupertinoPageRoute transitions as needed
+          case '/notification':
+            // Ensure that the NotificationPage is expecting a list of notifications
+            return CupertinoPageRoute(
+                builder: (_) => NotificationPage(notifications: []),
+                settings: settings);
           default:
             return CupertinoPageRoute(
                 builder: (_) => AuthPage(), settings: settings);
