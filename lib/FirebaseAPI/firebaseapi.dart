@@ -2,6 +2,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:ioe/main.dart';
 import 'package:ioe/screens/components/notification.dart';
+// Import the NotificationPage
 
 class FirebaseAPI {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
@@ -19,13 +20,12 @@ class FirebaseAPI {
     }
 
     await _firebaseMessaging.setForegroundNotificationPresentationOptions(
-      alert: true, // Required to display a heads up notification
+      alert: true,
       badge: true,
       sound: true,
     );
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      // Handle foreground messages
       RemoteNotification? notification = message.notification;
       AndroidNotification? android = message.notification?.android;
       if (notification != null && android != null) {
@@ -47,7 +47,6 @@ class FirebaseAPI {
     });
 
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-      // Handle notification tap when the app is in background but opened and running
       navigatorKey.currentState!.push(MaterialPageRoute(
           builder: (context) => NotificationPage(
               notifications: [message.notification?.body ?? 'No Body'])));
@@ -58,7 +57,6 @@ class FirebaseAPI {
 
   static Future<void> _firebaseMessagingBackgroundHandler(
       RemoteMessage message) async {
-    // Handle background messages
     print("Handling a background message: ${message.messageId}");
   }
 }

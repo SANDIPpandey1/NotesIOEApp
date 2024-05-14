@@ -1,37 +1,23 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class AuthService {
   final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
-  late String _previousRoute;
-
-  AuthService() {
-    // Initialize _previousRoute with the initial route
-    _previousRoute = '/';
-  }
+  String?
+      _previousRoute; // Made nullable to handle cases where it might not be set
 
   Future<void> signInWithGoogle(BuildContext context) async {
-    // Sign out the user from Google to reset the authentication flow
-    await _googleSignIn.signOut();
-
-    // Store the current route
-    final String currentRoute = ModalRoute.of(context)?.settings.name ?? '/';
-    _updatePreviousRoute(currentRoute);
-
-    // Show circular loading indicator
-    showDialog(
-      context: context,
-      barrierDismissible: false, // Prevent user from dismissing dialog
-      builder: (BuildContext context) {
-        return Center(
-          child: CircularProgressIndicator(), // Circular loading indicator
-        );
-      },
-    );
-
     try {
+      // Attempt to sign out before starting a new sign-in process
+      await _googleSignIn.signOut();
+
+      // Store the current route
+      _updatePreviousRoute(context);
+
+      // Show circular loading indicator
+      _showLoadingIndicator(context);
+
       final GoogleSignInAccount? googleSignInAccount =
           await _googleSignIn.signIn();
 
@@ -44,47 +30,58 @@ class AuthService {
           idToken: googleSignInAuthentication.idToken,
         );
 
+        // Sign in to Firebase with the Google credentials
         await FirebaseAuth.instance.signInWithCredential(credential);
-
-        // Close the loading dialog after sign-in is complete
-        Navigator.pop(context);
-      } else {
-        // Close the loading dialog
-        Navigator.pop(context);
-
-        // Navigate back to the previous route
-        Navigator.popAndPushNamed(context, _previousRoute);
       }
     } catch (error) {
-      // Close the loading dialog
-      Navigator.pop(context);
-
-      // Show error message
-      _showErrorDialog(context);
+      // Handle the error gracefully
+      _handleSignInError(context, error);
+    } finally {
+      // Always close the loading indicator
+      if (Navigator.canPop(context)) {
+        Navigator.of(context, rootNavigator: true).pop();
+      }
     }
   }
 
-  void _updatePreviousRoute(String route) {
-    _previousRoute = route;
+  void _updatePreviousRoute(BuildContext context) {
+    _previousRoute = ModalRoute.of(context)?.settings.name;
   }
 
-  void _showErrorDialog(BuildContext context) {
+  void _showLoadingIndicator(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Center(child: CircularProgressIndicator());
+      },
+    );
+  }
+
+  void _handleSignInError(BuildContext context, dynamic error) {
+    // Log the error or send it to an error tracking service
+    print('Sign-in error: $error');
+
+    // Show an error dialog
     showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Error'),
-          content: Text('An error occurred while signing in.'),
+          title: Text('Sign-In Error'),
+          content: Text('Failed to sign in. Please try again.'),
           actions: [
             TextButton(
               child: Text('OK'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
+              onPressed: () => Navigator.of(context).pop(),
             ),
           ],
         );
       },
     );
+
+    // Optionally, navigate back to the previous route if it's not null
+    if (_previousRoute != null) {
+      Navigator.of(context).popAndPushNamed(_previousRoute!);
+    }
   }
 }
