@@ -67,15 +67,108 @@ class _DownloadPageState extends State<DownloadPage> {
   Widget _buildDownloadList() {
     return downloadedFiles.isEmpty
         ? _buildNoDownloadsText()
-        : ListView.separated(
-            padding: const EdgeInsets.symmetric(vertical: 8),
+        : ListView.builder(
             itemCount: downloadedFiles.length,
-            separatorBuilder: (context, index) =>
-                Divider(), // Add divider between list items
             itemBuilder: (context, index) {
               final file = downloadedFiles[index];
               final fileName = basename(file.path);
-              return _buildDownloadedFileItem(context, fileName, file);
+              return Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (context) =>
+                            PDFViewPage(file: file, showDownloadButton: false),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 6,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.blue.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Icon(Icons.file_download,
+                              color: Colors.blue, size: 28),
+                        ),
+                        SizedBox(width: 16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                fileName,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                'File Size: ' +
+                                    (file.lengthSync() / (1024 * 1024))
+                                        .toStringAsFixed(2) +
+                                    ' MB', // Display file size
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.delete, color: Colors.red),
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                title: Text('Confirm Deletion'),
+                                content: Text(
+                                    'Are you sure you want to delete $fileName?'),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: Text('Cancel'),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      deleteFile(file);
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text('Delete'),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
             },
           );
   }
@@ -92,53 +185,6 @@ class _DownloadPageState extends State<DownloadPage> {
             fontStyle: FontStyle.italic,
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _buildDownloadedFileItem(
-      BuildContext context, String fileName, File file) {
-    return ListTile(
-      leading: Icon(Icons.file_download),
-      title: Text(
-        fileName,
-        style: TextStyle(
-          fontSize: 16,
-        ),
-      ),
-      onTap: () {
-        Navigator.push(
-          context,
-          CupertinoPageRoute(
-            builder: (context) =>
-                PDFViewPage(file: file, showDownloadButton: false),
-          ),
-        );
-      },
-      trailing: IconButton(
-        icon: Icon(Icons.delete),
-        onPressed: () {
-          showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-              title: Text('Confirm Deletion'),
-              content: Text('Are you sure you want to delete $fileName?'),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: Text('Cancel'),
-                ),
-                TextButton(
-                  onPressed: () {
-                    deleteFile(file);
-                    Navigator.pop(context);
-                  },
-                  child: Text('Delete'),
-                ),
-              ],
-            ),
-          );
-        },
       ),
     );
   }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart'; // Import Cupertino widgets
+import 'package:flutter/cupertino.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:ioe/LoginPages/authpage.dart';
+import 'package:ioe/screens/components/notification.dart';
 import 'package:ioe/College_Notes/College_Notes.dart';
 import 'package:ioe/FirebaseAPI/firebase_options.dart';
 import 'package:ioe/FirebaseAPI/firebaseapi.dart';
@@ -9,9 +12,6 @@ import 'package:ioe/IOE_Notes_Page/ioenotes.dart';
 import 'package:ioe/constants.dart';
 import 'package:ioe/screens/Articles.dart';
 import 'package:ioe/screens/News_Results.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:ioe/LoginPages/authpage.dart';
-import 'package:ioe/screens/components/notification.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
@@ -39,7 +39,6 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       home: Builder(
         builder: (context) {
-          // Initialize FirebaseAPI with the context
           FirebaseAPI().initNotification(context);
           return AuthPage();
         },
@@ -65,7 +64,6 @@ class MyApp extends StatelessWidget {
             return CupertinoPageRoute(
                 builder: (_) => Articles(), settings: settings);
           case '/notification':
-            // Ensure that the NotificationPage is expecting a list of notifications
             return CupertinoPageRoute(
                 builder: (_) => NotificationPage(notifications: []),
                 settings: settings);
