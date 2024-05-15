@@ -98,6 +98,7 @@ class AppliedMechanics extends StatelessWidget {
         SizedBox(height: 10),
         InsideButtons(
           text: 'Centroid',
+          fileSize: '41.54',
           icon: Icons.arrow_forward,
           onTap: () async {
             openPDF(context,

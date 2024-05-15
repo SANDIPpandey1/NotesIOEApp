@@ -3,14 +3,14 @@ import 'package:ioe/constants.dart';
 
 class InsideButtons extends StatelessWidget {
   final String text;
-  final String? fileSize; // Make fileSize optional
+  final String? fileSize; // fileSize is optional
   final IconData icon;
   final VoidCallback onTap;
 
   const InsideButtons({
     Key? key,
     required this.text,
-    this.fileSize, // Make fileSize optional
+    this.fileSize, // fileSize is optional
     required this.icon,
     required this.onTap,
   }) : super(key: key);
@@ -57,6 +57,17 @@ class InsideButtons extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
+                  if (fileSize != null) // Conditionally display fileSize
+                    Padding(
+                      padding: EdgeInsets.only(top: 3),
+                      child: Text(
+                        'File Size: $fileSize MB', // Nicely formatted file size
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
                 ],
               ),
             ),
