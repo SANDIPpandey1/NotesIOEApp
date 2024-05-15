@@ -54,7 +54,15 @@ class _NotificationPageState extends State<NotificationPage> {
                         itemBuilder: (context, index) {
                           if (widget.notifications.isEmpty) {
                             return const ListTile(
-                              title: Center(child: Text('No notifications')),
+                              title: Center(
+                                  child: Text(
+                                'No notifications',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              )),
                             );
                           }
                           return Dismissible(

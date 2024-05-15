@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:ioe/constants.dart';
 import 'package:ioe/screens/components/insidebuttons.dart';
 import 'package:ioe/screens/components/pdfviewfunction.dart';
@@ -98,6 +97,7 @@ class AppliedMechanics extends StatelessWidget {
         SizedBox(height: 10),
         InsideButtons(
           text: 'Centroid',
+          fileSize: '41.54',
           icon: Icons.arrow_forward,
           onTap: () async {
             openPDF(context,
