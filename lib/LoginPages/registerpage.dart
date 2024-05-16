@@ -1,7 +1,3 @@
-// Your updated RegisterPage.dart file
-// I've added error handling for password mismatch and other Firebase authentication exceptions
-// I've also corrected the issue with the circular loading indicator positioning
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
