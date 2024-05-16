@@ -1,9 +1,11 @@
+// Your updated RegisterPage.dart file
+// I've added error handling for password mismatch and other Firebase authentication exceptions
+// I've also corrected the issue with the circular loading indicator positioning
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ioe/LoginPages/googlesignin.dart';
-
 import 'package:ioe/constants.dart';
 import 'package:ioe/screens/components/buttons.dart';
 import 'package:ioe/screens/components/squaretile.dart';
@@ -11,7 +13,7 @@ import 'package:ioe/screens/components/textfield.dart';
 
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
-  const RegisterPage({super.key, required this.onTap});
+  const RegisterPage({Key? key, required this.onTap}) : super(key: key);
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -19,19 +21,15 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
   final emailController = TextEditingController();
-  final PhoneController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
 
   void signUserUp() async {
-    // Check if the state is still mounted before proceeding
     if (!mounted) {
       return;
     }
 
-    // Check if a user is already logged in
     if (FirebaseAuth.instance.currentUser != null) {
-      // User is already signed up, no need to sign up again
       return;
     }
 
@@ -50,16 +48,17 @@ class _RegisterPageState extends State<RegisterPage> {
           email: emailController.text,
           password: passwordController.text,
         );
-      } else {
-        // Handle password mismatch
         Navigator.pop(context);
-        showErrorMessage('Password mismatch. Please try correcting it.');
-        return; // Exit function early
+      } else {
+        Navigator.pop(context);
+        showErrorMessage('Password mismatch. Please try again.');
       }
-      Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
-      showErrorMessage(e.code);
+      showErrorMessage(e.message ?? 'An error occurred');
+    } catch (e) {
+      Navigator.pop(context);
+      showErrorMessage('An error occurred');
     }
   }
 
@@ -90,7 +89,6 @@ class _RegisterPageState extends State<RegisterPage> {
         child: SingleChildScrollView(
           child: Center(
             child: Column(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(height: 50),
                 Image.asset(
@@ -111,12 +109,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   hintText: "Email",
                   obscureText: false,
                 ),
-                //SizedBox(height: 20),
-                // TextFields(
-                //   controller: PhoneController,
-                //   hintText: "Phone Number",
-                //   obscureText: false,
-                // ),
                 SizedBox(height: 20),
                 TextFields(
                   controller: passwordController,
@@ -129,11 +121,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   hintText: "Confirm Password",
                   obscureText: true,
                 ),
-                // SizedBox(height: 10),
-                // Text(
-                //   'Forgot Password',
-                //   style: TextStyle(color: Colors.blueGrey),
-                // ),
                 SizedBox(height: 20),
                 MyButtons(
                   text: 'Register Now',
@@ -170,8 +157,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 SizedBox(height: 25),
                 GestureDetector(
-                    onTap: () => AuthService().signInWithGoogle(context),
-                    child: SquareTile(imagePath: 'assets/images/google.jpg')),
+                  onTap: () => AuthService().signInWithGoogle(context),
+                  child: SquareTile(imagePath: 'assets/images/google.jpg'),
+                ),
                 SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

@@ -10,8 +10,12 @@ class HomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final firstName =
-        user.displayName != null ? user.displayName!.split(' ')[0] : 'User';
+    final isGoogleSignIn = user.providerData[0].providerId == 'google.com';
+    final firstName = isGoogleSignIn
+        ? user.displayName!.split(' ')[0]
+        : user.email!
+            .split('@')[0]; // Display only username for non-Google sign-ins
+
     return SafeArea(
       child: ListView(
         children: [

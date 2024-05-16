@@ -1,4 +1,7 @@
-import 'dart:io'; // Import for SocketException
+// Your updated googlesignin.dart file
+// I've enhanced error handling for different scenarios
+
+import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/material.dart';
@@ -9,13 +12,8 @@ class AuthService {
 
   Future<void> signInWithGoogle(BuildContext context) async {
     try {
-      // Attempt to sign out before starting a new sign-in process
       await _googleSignIn.signOut();
-
-      // Store the current route
       _updatePreviousRoute(context);
-
-      // Show circular loading indicator
       _showLoadingIndicator(context);
 
       final GoogleSignInAccount? googleSignInAccount =
@@ -30,22 +28,17 @@ class AuthService {
           idToken: googleSignInAuthentication.idToken,
         );
 
-        // Sign in to Firebase with the Google credentials
         await FirebaseAuth.instance.signInWithCredential(credential);
       } else {
-        // Handle the case where user cancels the sign-in
         _handleSignInError(
             context, 'Sign-in process was cancelled by the user.');
       }
     } on SocketException {
-      // Handle no internet connection
       _handleSignInError(context,
           'No internet connection. Please connect to the internet and try again.');
     } catch (error) {
-      // Handle other errors gracefully
-      _handleSignInError(context, error);
+      _handleSignInError(context, 'An error occurred during sign-in.');
     } finally {
-      // Always close the loading indicator
       if (Navigator.canPop(context)) {
         Navigator.of(context, rootNavigator: true).pop();
       }
@@ -67,10 +60,8 @@ class AuthService {
   }
 
   void _handleSignInError(BuildContext context, dynamic error) {
-    // Log the error or send it to an error tracking service
     print('Sign-in error: $error');
 
-    // Show an error dialog with a specific message
     showDialog(
       context: context,
       builder: (context) {
@@ -87,7 +78,6 @@ class AuthService {
       },
     );
 
-    // Optionally, navigate back to the previous route if it's not null and if navigation can pop
     if (_previousRoute != null && Navigator.canPop(context)) {
       Navigator.of(context).popAndPushNamed(_previousRoute!);
     }

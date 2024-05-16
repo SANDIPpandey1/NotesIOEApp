@@ -1,3 +1,6 @@
+// Your updated LoginPage.dart file
+// I've enhanced error handling for Firebase authentication exceptions
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,7 +13,7 @@ import 'package:ioe/screens/components/textfield.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
-  const LoginPage({super.key, required this.onTap});
+  const LoginPage({Key? key, required this.onTap}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -18,12 +21,10 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
-
   final passwordController = TextEditingController();
 
   void signUserIn() async {
     if (FirebaseAuth.instance.currentUser != null) {
-      // User is already signed in, no need to sign in again
       return;
     }
 
@@ -44,7 +45,10 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
-      showErrorMessage(e.code);
+      showErrorMessage(e.message ?? 'An error occurred');
+    } catch (e) {
+      Navigator.pop(context);
+      showErrorMessage('An error occurred');
     }
   }
 
@@ -75,7 +79,6 @@ class _LoginPageState extends State<LoginPage> {
         child: SingleChildScrollView(
           child: Center(
             child: Column(
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(height: 50),
                 Image.asset(
@@ -155,8 +158,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 SizedBox(height: 25),
                 GestureDetector(
-                    onTap: () => AuthService().signInWithGoogle(context),
-                    child: SquareTile(imagePath: 'assets/images/google.jpg')),
+                  onTap: () => AuthService().signInWithGoogle(context),
+                  child: SquareTile(imagePath: 'assets/images/google.jpg'),
+                ),
                 SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
