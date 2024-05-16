@@ -1,11 +1,11 @@
+import 'dart:io'; // Import for SocketException
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/material.dart';
 
 class AuthService {
   final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
-  String?
-      _previousRoute; // Made nullable to handle cases where it might not be set
+  String? _previousRoute;
 
   Future<void> signInWithGoogle(BuildContext context) async {
     try {
@@ -32,9 +32,17 @@ class AuthService {
 
         // Sign in to Firebase with the Google credentials
         await FirebaseAuth.instance.signInWithCredential(credential);
+      } else {
+        // Handle the case where user cancels the sign-in
+        _handleSignInError(
+            context, 'Sign-in process was cancelled by the user.');
       }
+    } on SocketException {
+      // Handle no internet connection
+      _handleSignInError(context,
+          'No internet connection. Please connect to the internet and try again.');
     } catch (error) {
-      // Handle the error gracefully
+      // Handle other errors gracefully
       _handleSignInError(context, error);
     } finally {
       // Always close the loading indicator
@@ -62,13 +70,13 @@ class AuthService {
     // Log the error or send it to an error tracking service
     print('Sign-in error: $error');
 
-    // Show an error dialog
+    // Show an error dialog with a specific message
     showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
           title: Text('Sign-In Error'),
-          content: Text('Failed to sign in. Please try again.'),
+          content: Text(error.toString()),
           actions: [
             TextButton(
               child: Text('OK'),
@@ -79,8 +87,8 @@ class AuthService {
       },
     );
 
-    // Optionally, navigate back to the previous route if it's not null
-    if (_previousRoute != null) {
+    // Optionally, navigate back to the previous route if it's not null and if navigation can pop
+    if (_previousRoute != null && Navigator.canPop(context)) {
       Navigator.of(context).popAndPushNamed(_previousRoute!);
     }
   }
