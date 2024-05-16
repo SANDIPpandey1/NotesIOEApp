@@ -10,6 +10,8 @@ class HomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final firstName =
+        user.displayName != null ? user.displayName!.split(' ')[0] : 'User';
     return SafeArea(
       child: ListView(
         children: [
@@ -33,7 +35,7 @@ class HomeContent extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Hi ${user.email}",
+                          "Hi $firstName,",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -43,11 +45,11 @@ class HomeContent extends StatelessWidget {
                           height: 10.0,
                         ),
                         Text(
-                          "Today is a good day\nto learn something new!",
+                          "Guess what? Today’s a brilliant day\nto pretend we’re learning something new!",
                           style: TextStyle(
                             color: Colors.black54,
                             wordSpacing: 2.5,
-                            fontSize: 16,
+                            fontSize: 14.8,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
