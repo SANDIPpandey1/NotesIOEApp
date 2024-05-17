@@ -73,7 +73,7 @@ class AppliedMechanics extends StatelessWidget {
           icon: Icons.arrow_forward,
           onTap: () async {
             openPDF(context,
-                'https://notesioe.com/wp-content/uploads/2023/04/kinetics.pdf');
+                'https://notesioe.com/wp-content/uploads/2023/04/Applied-1.pdf');
           },
         ),
         SizedBox(height: 10),
