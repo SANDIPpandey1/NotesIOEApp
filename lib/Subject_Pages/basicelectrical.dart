@@ -65,11 +65,65 @@ class BasicElectricalEngineering extends StatelessWidget {
 
   Widget _buildNotesTab(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
       children: [
-        SizedBox(height: 20),
-        InsideButtons(text: 'Overview', icon: Icons.read_more, onTap: () {})
-
+        InsideButtons(
+          text: 'Chapter 1 - General Electriacl Signal',
+          fileSize: '11',
+          icon: Icons.arrow_forward,
+          onTap: () async {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2024/05/Ch1-General-Electric-System.pdf');
+          },
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        InsideButtons(
+          text: 'Chapter 2 - Direct Current',
+          fileSize: '4',
+          icon: Icons.arrow_forward,
+          onTap: () async {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2024/05/Ch2-DC-Circuit.pdf');
+          },
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        InsideButtons(
+          text: 'Chapter 3 - Network Theorem',
+          fileSize: '17',
+          icon: Icons.arrow_forward,
+          onTap: () async {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2024/05/Ch3-Network-Theorem.pdf');
+          },
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        InsideButtons(
+          text: 'Chapter 4 - Alternating Current',
+          fileSize: '10',
+          icon: Icons.arrow_forward,
+          onTap: () async {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2024/05/Ch4-Alternating-Quantities.pdf');
+          },
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        InsideButtons(
+          text: 'Chapter 5 - Single Phase AC',
+          fileSize: '8',
+          icon: Icons.arrow_forward,
+          onTap: () async {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2024/05/Ch5-Single-Phase-AC-Circuit.pdf');
+          },
+        ),
         // Add more InsideButtons as needed
       ],
     );

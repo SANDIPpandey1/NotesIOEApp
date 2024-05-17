@@ -34,7 +34,7 @@ class IOESyllabus extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => BCTSyllabus()),
+                  MaterialPageRoute(builder: (context) => BCTSyllabus()),
                 );
               },
             ),
@@ -45,7 +45,7 @@ class IOESyllabus extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => BCESyllabus()),
+                  MaterialPageRoute(builder: (context) => BCESyllabus()),
                 );
               },
             ),
@@ -56,7 +56,7 @@ class IOESyllabus extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => BEISyllabus()),
+                  MaterialPageRoute(builder: (context) => BEISyllabus()),
                 );
               },
             ),
@@ -67,7 +67,7 @@ class IOESyllabus extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => BELSyllabus()),
+                  MaterialPageRoute(builder: (context) => BELSyllabus()),
                 );
               },
             ),
@@ -78,7 +78,7 @@ class IOESyllabus extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => BMESyllabus()),
+                  MaterialPageRoute(builder: (context) => BMESyllabus()),
                 );
               },
             ),
@@ -89,7 +89,7 @@ class IOESyllabus extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(builder: (context) => BArchSyllabus()),
+                  MaterialPageRoute(builder: (context) => BArchSyllabus()),
                 );
               },
             ),
@@ -100,7 +100,7 @@ class IOESyllabus extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  CupertinoPageRoute(
+                  MaterialPageRoute(
                       builder: (context) => GeomaticsEngineeringSyllabus()),
                 );
               },
