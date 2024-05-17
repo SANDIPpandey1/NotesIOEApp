@@ -65,54 +65,87 @@ class AppliedMechanics extends StatelessWidget {
 
   Widget _buildNotesTab(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
       children: [
-        SizedBox(height: 20),
         InsideButtons(
-          text: 'Beam And Frame',
+          text: 'Chapter 1 - Introduction',
+          fileSize: '12',
+          icon: Icons.arrow_forward,
+          onTap: () async {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2023/04/kinetics.pdf');
+          },
+        ),
+        SizedBox(height: 10),
+        InsideButtons(
+          text: 'Chapter 3 - Force Acting on Particles and Rigid Body',
+          fileSize: '11',
           icon: Icons.arrow_forward,
           onTap: () {
             openPDF(context,
-                'https://notesioe.com/wp-content/uploads/2023/11/matrix.pdf');
+                'https://notesioe.com/wp-content/uploads/2023/04/Applied-3.pdf');
           },
         ),
         SizedBox(height: 10),
         InsideButtons(
-          text: 'Kinetics And Kinematics',
+          text: 'Chapter 4 - Centroid',
+          fileSize: '13',
           icon: Icons.arrow_forward,
           onTap: () async {
             openPDF(context,
-                'https://notesioe.com/wp-content/uploads/2023/11/matrix.pdf');
+                'https://notesioe.com/wp-content/uploads/2023/04/centroid1.pdf');
           },
         ),
         SizedBox(height: 10),
         InsideButtons(
-          text: 'Truss',
+          text: 'Chapter 5 - Friction',
+          fileSize: '3',
           icon: Icons.arrow_forward,
           onTap: () async {
             openPDF(context,
-                'https://notesioe.com/wp-content/uploads/2023/11/Polarization.pdf');
+                'https://notesioe.com/wp-content/uploads/2023/04/friction.pdf');
           },
         ),
         SizedBox(height: 10),
         InsideButtons(
-          text: 'Centroid',
-          fileSize: '41.54',
+          text: 'Chapter 6 - Beam And Frame',
+          fileSize: '24',
           icon: Icons.arrow_forward,
-          onTap: () async {
+          onTap: () {
             openPDF(context,
-                'https://notesioe.com/wp-content/uploads/2023/11/एक-चिहान-उपन्यास-.pdf');
+                'https://notesioe.com/wp-content/uploads/2023/04/beam-frame.pdf');
           },
         ),
         SizedBox(height: 10),
         InsideButtons(
-          text: 'Friction',
+          text: 'Chapte 7 - Truss',
+          fileSize: '9',
           icon: Icons.arrow_forward,
           onTap: () async {
             openPDF(context,
-                'https://notesioe.com/wp-content/uploads/2023/11/matrix.pdf');
+                'https://notesioe.com/wp-content/uploads/2023/04/applied-truss.pdf');
           },
         ),
+        SizedBox(height: 10),
+        InsideButtons(
+          text: 'Chapter 9 - Kinematics',
+          fileSize: '7',
+          icon: Icons.arrow_forward,
+          onTap: () async {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2023/04/kinematics.pdf');
+          },
+        ),
+        SizedBox(height: 10),
+        InsideButtons(
+          text: 'Chapter 10 - Kinetics',
+          fileSize: '3',
+          icon: Icons.arrow_forward,
+          onTap: () async {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2023/04/kinetics.pdf');
+          },
+        )
         // Add more InsideButtons as needed
       ],
     );
