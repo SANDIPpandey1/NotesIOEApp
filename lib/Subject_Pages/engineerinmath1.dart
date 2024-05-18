@@ -270,10 +270,11 @@ class EngineeringMath1 extends StatelessWidget {
             SizedBox(height: 20),
             InsideButtons(
               text: 'Old Questions',
+              fileSize: '0.5',
               icon: Icons.question_answer_outlined,
               onTap: () {
                 openPDF(context,
-                    'https://notesioe.com/wp-content/uploads/2023/10/Computer-Programming.pdf');
+                    'https://notesioe.com/wp-content/uploads/2024/05/Engineering-Mathematics-I.pdf');
               },
             ),
           ],
