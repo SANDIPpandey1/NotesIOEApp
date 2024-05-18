@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:ioe/screens/components/insidecard.dart';
 import 'package:ioe/screens/otherpageappbar.dart';
 

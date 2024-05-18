@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class NewsResults extends StatelessWidget {
   const NewsResults({super.key});
