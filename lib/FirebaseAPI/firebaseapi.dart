@@ -1,7 +1,8 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:ioe/main.dart';
 import 'package:ioe/screens/components/notification.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
 
 class FirebaseAPI {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
@@ -19,38 +20,17 @@ class FirebaseAPI {
     }
 
     await _firebaseMessaging.setForegroundNotificationPresentationOptions(
-      alert: true, // Required to display a heads up notification
+      alert: true,
       badge: true,
       sound: true,
     );
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      // Handle foreground messages
-      RemoteNotification? notification = message.notification;
-      AndroidNotification? android = message.notification?.android;
-      if (notification != null && android != null) {
-        showDialog(
-          context: context,
-          builder: (_) {
-            return AlertDialog(
-              title: Text(notification.title ?? 'No Title'),
-              content: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Text(notification.body ?? 'No Body')],
-                ),
-              ),
-            );
-          },
-        );
-      }
+      _handleMessage(message, context);
     });
 
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-      // Handle notification tap when the app is in background but opened and running
-      navigatorKey.currentState!.push(MaterialPageRoute(
-          builder: (context) => NotificationPage(
-              notifications: [message.notification?.body ?? 'No Body'])));
+      _handleMessage(message, context);
     });
 
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
@@ -58,7 +38,41 @@ class FirebaseAPI {
 
   static Future<void> _firebaseMessagingBackgroundHandler(
       RemoteMessage message) async {
-    // Handle background messages
     print("Handling a background message: ${message.messageId}");
+    await _saveNotification(message);
+  }
+
+  Future<void> _handleMessage(
+      RemoteMessage message, BuildContext context) async {
+    await _saveNotification(message);
+    String? link = message.data['link'];
+    if (link != null) {
+      Navigator.pushNamed(context, link);
+    } else {
+      List<String> notifications = await _getStoredNotifications();
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => NotificationPage(
+            notifications: notifications,
+          ),
+        ),
+      );
+    }
+  }
+
+  static Future<void> _saveNotification(RemoteMessage message) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> notifications = prefs.getStringList('notifications') ?? [];
+    notifications.add(jsonEncode({
+      'title': message.notification?.title ?? 'No Title',
+      'body': message.notification?.body ?? 'No Body',
+    }));
+    await prefs.setStringList('notifications', notifications);
+  }
+
+  static Future<List<String>> _getStoredNotifications() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getStringList('notifications') ?? [];
   }
 }

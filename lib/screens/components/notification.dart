@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:ioe/screens/home_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ioe/constants.dart';
 
 class NotificationPage extends StatefulWidget {
@@ -15,15 +17,25 @@ class NotificationPage extends StatefulWidget {
 
 class _NotificationPageState extends State<NotificationPage> {
   bool isLoading = true;
+  List<String> notifications = [];
 
   @override
   void initState() {
     super.initState();
-    // Simulate loading with a delay for 0.5 seconds
+    _loadNotificationsWithDelay();
+  }
+
+  Future<void> _loadNotificationsWithDelay() async {
     Timer(Duration(milliseconds: 500), () {
-      setState(() {
-        isLoading = false;
-      });
+      _loadNotifications();
+    });
+  }
+
+  Future<void> _loadNotifications() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      notifications = prefs.getStringList('notifications') ?? [];
+      isLoading = false;
     });
   }
 
@@ -45,32 +57,44 @@ class _NotificationPageState extends State<NotificationPage> {
                   : RefreshIndicator(
                       color: kblue,
                       onRefresh: () async {
-                        await fetchRecentNotifications();
+                        await Future.delayed(Duration(seconds: 1));
+                        await _loadNotifications();
                       },
                       child: ListView.builder(
-                        itemCount: widget.notifications.isEmpty
-                            ? 1
-                            : widget.notifications.length,
+                        itemCount:
+                            notifications.isEmpty ? 1 : notifications.length,
                         itemBuilder: (context, index) {
-                          if (widget.notifications.isEmpty) {
+                          if (notifications.isEmpty) {
                             return const ListTile(
                               title: Center(
-                                  child: Text(
-                                'No notifications',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.italic,
+                                child: Text(
+                                  'No notifications',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    fontStyle: FontStyle.italic,
+                                  ),
                                 ),
-                              )),
+                              ),
                             );
                           }
+                          String notification = notifications[index];
+                          Map<String, dynamic> notificationData =
+                              jsonDecode(notification);
+                          String notificationTitle =
+                              notificationData['title'] ?? 'No Title';
+                          String notificationBody =
+                              notificationData['body'] ?? 'No Body';
                           return Dismissible(
-                            key: Key(widget.notifications[index]),
-                            onDismissed: (direction) {
+                            key: Key(notification),
+                            onDismissed: (direction) async {
                               setState(() {
-                                widget.notifications.removeAt(index);
+                                notifications.removeAt(index);
                               });
+                              SharedPreferences prefs =
+                                  await SharedPreferences.getInstance();
+                              prefs.setStringList(
+                                  'notifications', notifications);
                             },
                             background: Container(
                               color: Colors.red[100],
@@ -82,7 +106,8 @@ class _NotificationPageState extends State<NotificationPage> {
                               ),
                             ),
                             child: NotificationTile(
-                              notification: widget.notifications[index],
+                              title: notificationTitle,
+                              body: notificationBody,
                             ),
                           );
                         },
@@ -100,21 +125,13 @@ class _NotificationPageState extends State<NotificationPage> {
       child: CircularProgressIndicator(),
     );
   }
-
-  Future<void> fetchRecentNotifications() async {
-    await Future.delayed(Duration(seconds: 2));
-    setState(() {
-      widget.notifications.insert(0, "New notification 1");
-      widget.notifications.insert(0, "New notification 2");
-      widget.notifications.insert(0, "New notification 3");
-    });
-  }
 }
 
 class NotificationTile extends StatelessWidget {
-  final String notification;
+  final String title;
+  final String body;
 
-  const NotificationTile({Key? key, required this.notification})
+  const NotificationTile({Key? key, required this.title, required this.body})
       : super(key: key);
 
   @override
@@ -137,14 +154,14 @@ class NotificationTile extends StatelessWidget {
         child: ListTile(
           contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           title: Text(
-            notification,
+            title,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
           ),
           subtitle: Text(
-            'Notification details go here',
+            body,
             style: TextStyle(
               fontSize: 14,
               color: Colors.grey[600],
