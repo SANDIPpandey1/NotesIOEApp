@@ -65,11 +65,17 @@ class EngineerinGDrawingI extends StatelessWidget {
 
   Widget _buildNotesTab(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
       children: [
-        SizedBox(height: 20),
-        InsideButtons(text: 'Overview', icon: Icons.read_more, onTap: () {})
-
+        InsideButtons(
+          text: 'Drawing Solutions',
+          fileSize: '16',
+          icon: Icons.arrow_forward,
+          onTap: () {
+            openPDF(context,
+                'https://notesioe.com/wp-content/uploads/2024/05/Drawing-I-Solution.pdf');
+          },
+        )
         // Add more InsideButtons as needed
       ],
     );

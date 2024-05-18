@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:ioe/constants.dart';
 
 class OtherPageAppBar extends StatelessWidget implements PreferredSizeWidget {
