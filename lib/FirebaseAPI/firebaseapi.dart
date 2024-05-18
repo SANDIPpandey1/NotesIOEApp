@@ -1,8 +1,10 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/material.dart';
-import 'package:ioe/screens/components/notification.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:async';
 import 'dart:convert';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:ioe/screens/components/notification.dart';
 
 class FirebaseAPI {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
@@ -44,20 +46,14 @@ class FirebaseAPI {
 
   Future<void> _handleMessage(
       RemoteMessage message, BuildContext context) async {
-    await _saveNotification(message);
     String? link = message.data['link'];
-    if (link != null) {
+
+    if (link != null && !kIsWeb) {
+      // If the app is in the foreground, navigate to the specified link
       Navigator.pushNamed(context, link);
     } else {
-      List<String> notifications = await _getStoredNotifications();
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => NotificationPage(
-            notifications: notifications,
-          ),
-        ),
-      );
+      // If the app is in the background or closed, save the notification and handle it later
+      await _saveNotification(message);
     }
   }
 
@@ -69,10 +65,5 @@ class FirebaseAPI {
       'body': message.notification?.body ?? 'No Body',
     }));
     await prefs.setStringList('notifications', notifications);
-  }
-
-  static Future<List<String>> _getStoredNotifications() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getStringList('notifications') ?? [];
   }
 }
