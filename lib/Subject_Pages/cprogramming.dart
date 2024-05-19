@@ -355,6 +355,7 @@ class CProgramming extends StatelessWidget {
             SizedBox(height: 20),
             InsideButtons(
               text: 'Old Questions',
+              fileSize: '0.7',
               icon: Icons.question_answer_outlined,
               onTap: () {
                 openPDF(context,
